@@ -4,7 +4,6 @@ import { recipe } from '@vanilla-extract/recipes'
 import { SIZES } from './constants'
 
 export const heightMenu = createVar()
-export const heightAvailableSpace = createVar()
 
 const ANIMATION_DURATION = 200 // in ms
 const ITEM_SENTIMENT = ['neutral', 'danger', 'primary'] as const
@@ -71,7 +70,7 @@ const footer = style({ padding: theme.space[1] })
 const list = style({
   backgroundColor: theme.colors.other.elevation.background.raised,
   color: theme.colors.neutral.text,
-  maxHeight: `calc(min(${heightMenu}, ${heightAvailableSpace}) - ${theme.space['0.5']})`,
+  maxHeight: `calc(${heightMenu} - ${theme.space['0.5']})`,
 })
 
 const searchInput = style({ padding: theme.space[1] })

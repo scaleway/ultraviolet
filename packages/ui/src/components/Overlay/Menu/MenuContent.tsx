@@ -14,16 +14,15 @@ import {
   useRef,
   useState,
 } from 'react'
-import type { ButtonHTMLAttributes, KeyboardEvent, MouseEvent, ReactNode, Ref } from 'react'
+import type { ButtonHTMLAttributes, KeyboardEvent, ReactNode, Ref } from 'react'
 import { SearchInput } from '../../Data Entry/SearchInput'
 import { Stack } from '../../Layout/Stack'
-import { Popup } from '../Popup'
+import { Popup } from '../Popup/v2'
+import { usePopupContext } from '../Popup/v2/context'
 import { getListItem, searchChildren } from './helpers'
 import { DisclosureContext, useMenu } from './MenuProvider'
 import type { MenuProps } from './types'
-import { heightAvailableSpace, heightMenu, menuStyle } from './styles.css'
-
-const SPACE_DISCLOSURE_POPUP = 24 // in px
+import { heightMenu, menuStyle } from './styles.css'
 
 const moveFocusDown = (indexOfCurrent: number, listItem: (HTMLButtonElement | HTMLAnchorElement)[]) => {
   if (indexOfCurrent < listItem.length - 1) {
@@ -40,6 +39,45 @@ const moveFocusUp = (indexOfCurrent: number, listItem: (HTMLButtonElement | HTML
   }
 }
 
+type MenuDisclosureProps = {
+  disclosure: MenuProps['disclosure']
+  triggerMethod: MenuProps['triggerMethod']
+}
+
+const MenuChildren = ({ children }: { children: (args: { toggle: () => void }) => ReactNode }): ReactNode => {
+  const { open, setOpen } = usePopupContext()
+
+  return children({ toggle: () => setOpen(!open) })
+}
+
+const MenuDisclosure = forwardRef(
+  ({ disclosure, triggerMethod = 'click' }: MenuDisclosureProps, ref: Ref<HTMLButtonElement | null>) => {
+    const { disclosureRef, registerCloseMenu } = useMenu()
+    const { open, setOpen } = usePopupContext()
+
+    useEffect(() => registerCloseMenu(() => setOpen(false)), [registerCloseMenu, setOpen])
+
+    // if you need dialog inside your component, use function, otherwise component is fine
+    const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(disclosure)
+      ? disclosure
+      : disclosure({ visible: open })
+    const innerRef = useRef(target as unknown as HTMLButtonElement)
+
+    useImperativeHandle(ref, () => innerRef.current)
+
+    const finalDisclosure = cloneElement(target, {
+      // @ts-expect-error not sure how to fix this
+      ref: disclosureRef,
+    })
+
+    return (
+      <Popup.Trigger triggerEvent={triggerMethod}>
+        <DisclosureContext.Provider value>{finalDisclosure}</DisclosureContext.Provider>
+      </Popup.Trigger>
+    )
+  },
+)
+
 export const Menu = forwardRef(
   (
     {
@@ -48,48 +86,26 @@ export const Menu = forwardRef(
       children,
       disclosure,
       hasArrow = false,
-      placement = 'auto-bottom',
+      placement = 'bottom',
       className,
       'data-testid': dataTestId,
       maxHeight,
       portalTarget = document.body,
       triggerMethod = 'click',
-      dynamicDomRendering,
-      align,
       searchable = false,
       footer,
-      shrink,
       style,
+      visible,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible, isNested, disclosureRef, menuRef, setShouldBeVisible, shouldBeVisible } = useMenu()
+    const { isNested, hasNestedMenu, disclosureRef, menuRef, closeMenu } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
-    const [popupMaxHeight, setPopupMaxHeight] = useState(maxHeight ?? '30rem')
     const contentRef = useRef<HTMLDivElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`
     const isTriggerMethodHover = triggerMethod === 'hover'
-
-    // if you need dialog inside your component, use function, otherwise component is fine
-    const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(disclosure)
-      ? disclosure
-      : disclosure({ visible: isVisible })
-    const innerRef = useRef(target as unknown as HTMLButtonElement)
-
-    useImperativeHandle(ref, () => innerRef.current)
-
-    const finalDisclosure = cloneElement(target, {
-      'aria-expanded': isVisible,
-      'aria-haspopup': 'dialog',
-      onClick: (event: MouseEvent<HTMLButtonElement>) => {
-        target.props.onClick?.(event)
-        setIsVisible(!isVisible)
-      },
-      // @ts-expect-error not sure how to fix this
-      ref: disclosureRef,
-    })
 
     const onSearch = useCallback(
       (value: string) => {
@@ -100,52 +116,9 @@ export const Menu = forwardRef(
       [children],
     )
 
-    useEffect(() => {
-      if (!(isVisible && searchable)) {
-        return undefined
-      }
-
-      const timeout = setTimeout(() => {
-        searchInputRef.current?.focus()
-      }, 50)
-
-      return () => clearTimeout(timeout)
-    }, [isVisible, searchable])
-
-    useEffect(() => {
-      if (disclosureRef.current && isTriggerMethodHover) {
-        const handler = (value: boolean | undefined) => {
-          setShouldBeVisible(value)
-        }
-        const onFocus = () => handler(true)
-        const onMouseEnter = () => handler(true)
-        const onMouseLeave = () => handler(false)
-        const onKeyDown = (event: globalThis.KeyboardEvent) => {
-          if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-            handler(false) // force close menu when navigating with arrow keys
-          }
-        }
-
-        const disclosureElement = disclosureRef.current
-        disclosureElement.addEventListener('focus', onFocus)
-        disclosureElement.addEventListener('mouseenter', onMouseEnter)
-        disclosureElement.addEventListener('mouseleave', onMouseLeave)
-        disclosureElement.addEventListener('keydown', onKeyDown)
-
-        return () => {
-          disclosureElement.removeEventListener('focus', onFocus)
-          disclosureElement.removeEventListener('mouseenter', onMouseEnter)
-          disclosureElement.removeEventListener('mouseleave', onMouseLeave)
-          disclosureElement.removeEventListener('keydown', onKeyDown)
-        }
-      }
-
-      return undefined
-    }, [setShouldBeVisible, disclosureRef, isTriggerMethodHover])
-
-    const finalChild = useMemo(() => {
+    const finalChild = useMemo((): ReactNode | null => {
       if (typeof children === 'function') {
-        return children({ toggle: () => setIsVisible(!isVisible) })
+        return <MenuChildren>{children}</MenuChildren>
       }
 
       if (searchable && localChild) {
@@ -153,17 +126,7 @@ export const Menu = forwardRef(
       }
 
       return children
-    }, [children, isVisible, localChild, searchable, setIsVisible])
-
-    const handleTabOpen = (event: KeyboardEvent) => {
-      if (contentRef.current) {
-        const listItem = getListItem([...contentRef.current.children])
-        if (listItem && isVisible && ['Tab', 'ArrowDown'].includes(event.key)) {
-          event?.preventDefault()
-          listItem[0]?.focus()
-        }
-      }
-    }
+    }, [children, localChild, searchable])
 
     const handleFocusKey = (
       key: string,
@@ -176,71 +139,60 @@ export const Menu = forwardRef(
         moveFocusUp(indexOfCurrent, listItem)
       } else if (key === 'ArrowLeft' && isTriggerMethodHover) {
         disclosureRef.current?.focus()
-        setShouldBeVisible(undefined)
       }
     }
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        // Let the browser move focus first, then close only if it left every menu.
+        setTimeout(() => {
+          if (!document.activeElement?.closest('[role="menu"]')) {
+            closeMenu()
+          }
+        }, 0)
+        return
+      }
+
       if (contentRef.current) {
         const listItem = getListItem([...contentRef.current.children])
-        if (listItem) {
+        if (listItem.length > 0) {
           const currentElement = listItem.find(item => item === document.activeElement)
           if (currentElement) {
             const indexOfCurrent = listItem.indexOf(currentElement)
-            event.preventDefault()
+            const handlesKey =
+              event.key === 'ArrowUp' ||
+              event.key === 'ArrowDown' ||
+              (event.key === 'ArrowLeft' && isTriggerMethodHover)
 
-            handleFocusKey(event.key, indexOfCurrent, listItem)
+            if (handlesKey) {
+              event.preventDefault()
+              handleFocusKey(event.key, indexOfCurrent, listItem)
+            }
           }
         }
       }
     }
 
-    useEffect(() => {
-      if (disclosureRef.current && placement === 'bottom' && shrink) {
-        const disclosureRect = disclosureRef.current.getBoundingClientRect()
-        const disclosureBottom = disclosureRect.bottom
-        const targetSize = portalTarget.getBoundingClientRect().bottom
-        const availableSpace = targetSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
-        setPopupMaxHeight(`${availableSpace}px`)
-      }
-    }, [isVisible, portalTarget, disclosureRef, placement, shrink])
-
     return (
-      <Popup
-        align={align}
-        aria-label={ariaLabel}
-        className={cn(className, menuStyle.menu({ arrow: hasArrow, searchable }))}
-        debounceDelay={isTriggerMethodHover ? 250 : 0}
-        dynamicDomRendering={dynamicDomRendering}
-        hasArrow={hasArrow}
-        hideOnClickOutside
-        id={finalId}
-        maxHeight={maxHeight ?? 'fit-content'}
-        onClose={() => {
-          setIsVisible(false)
-          setLocalChild(null)
-          if (triggerMethod === 'click') {
-            disclosureRef.current?.focus()
-          }
-          setShouldBeVisible(undefined)
-        }}
-        onKeyDown={handleTabOpen}
-        placement={isNested ? 'nested-menu' : placement}
-        portalTarget={portalTarget}
-        ref={menuRef}
-        role="dialog"
-        style={style}
-        tabIndex={-1}
-        text={
+      <Popup.Root visible={visible}>
+        <MenuDisclosure ref={ref} disclosure={disclosure} triggerMethod={triggerMethod} />
+        <Popup.Panel
+          aria-label={ariaLabel}
+          className={cn(className, menuStyle.menu({ arrow: hasArrow, searchable }))}
+          arrow={hasArrow}
+          id={finalId}
+          placement={isNested ? 'right-start' : placement}
+          closeOnFocusOut={!hasNestedMenu}
+          portalTarget={portalTarget}
+          ref={menuRef}
+          style={style}
+        >
           <Stack
             className={cn(className, menuStyle.list)}
             data-testid={dataTestId}
             onKeyDown={handleKeyDown}
-            onMouseEnter={() => setShouldBeVisible(true)}
-            onMouseLeave={() => setShouldBeVisible(false)}
             role="menu"
             style={assignInlineVars({
               [heightMenu]: maxHeight ?? '30rem',
-              [heightAvailableSpace]: popupMaxHeight,
             })}
           >
             <Stack className={menuStyle.content} ref={contentRef}>
@@ -251,11 +203,8 @@ export const Menu = forwardRef(
             </Stack>
             {footer ? <Stack className={menuStyle.footer}>{footer}</Stack> : null}
           </Stack>
-        }
-        visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
-      >
-        <DisclosureContext.Provider value>{finalDisclosure}</DisclosureContext.Provider>
-      </Popup>
+        </Popup.Panel>
+      </Popup.Root>
     )
   },
 )

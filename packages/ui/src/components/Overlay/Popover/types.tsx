@@ -1,15 +1,8 @@
 import type { CSSProperties, ReactNode } from 'react'
+import type { PopupPlacement } from '../types'
 import type { SIZES_WIDTH } from './constant'
 
 type SentimentType = 'neutral' | 'primary'
-
-/**
- * @deprecated "auto" is not required since the Popover placement is always flipped if needed to remain visible.
- */
-type LegacyPopoverPlacement = 'auto' | 'auto-top' | 'auto-bottom' | 'auto-left' | 'auto-right'
-
-export type NewPopoverPlacement = 'top' | 'right' | 'bottom' | 'left'
-export type PopoverPlacement = NewPopoverPlacement | LegacyPopoverPlacement
 
 export type PopoverProps = {
   children: ReactNode
@@ -32,7 +25,7 @@ export type PopoverProps = {
    */
   maxHeight?: string
   portalTarget?: HTMLElement
-  placement?: PopoverPlacement
+  placement?: PopupPlacement
   /**
    * @deprecated the Popover is always centered
    * This property is ignored and will be removed in the next major release.

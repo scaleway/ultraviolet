@@ -206,6 +206,33 @@ describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
       // allow for slow frames on loaded CI runners (webkit especially).
       await waitFor(() => expect(trigger).toHaveFocus(), { timeout: FOCUS_WAIT_TIMEOUT })
     })
+
+    it('should close when Tab moves focus outside the popup', async () => {
+      renderWithTheme(
+        <Popup.Root>
+          <Popup.Trigger>
+            <button type="button">Open</button>
+          </Popup.Trigger>
+
+          <Popup.Panel>
+            <button type="button">Inside</button>
+          </Popup.Panel>
+
+          <button type="button">Next</button>
+        </Popup.Root>,
+      )
+
+      await userEvent.click(screen.getByRole('button', { name: 'Open' }))
+      await waitFor(() => expect(screen.getByRole('button', { name: 'Inside' })).toHaveFocus(), {
+        timeout: FOCUS_WAIT_TIMEOUT,
+      })
+      await userEvent.keyboard('{Tab}')
+
+      await waitFor(() => {
+        expect(screen.getByRole('button', { name: 'Next' })).toHaveFocus()
+        expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+      })
+    })
   })
 
   describe('accessible name', () => {

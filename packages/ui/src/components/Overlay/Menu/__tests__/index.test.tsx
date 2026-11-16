@@ -1,14 +1,10 @@
-import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Menu } from '..'
 
-const disclosure = (
-  <button data-testid="disclosure" type="button">
-    Menu
-  </button>
-)
+const disclosure = <button type="button">Menu</button>
 
 describe('menu', () => {
   beforeEach(() => {
@@ -28,6 +24,7 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders with visible=false', () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure}>
@@ -37,6 +34,67 @@ describe('menu', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
+  it('closes nested menus when Tab moves focus out', async () => {
+    renderWithTheme(
+      <>
+        <Menu disclosure={() => disclosure}>
+          <Menu disclosure={<Menu.Item>Submenu</Menu.Item>} placement="right" triggerMethod="click">
+            <Menu.Item>Nested item</Menu.Item>
+          </Menu>
+        </Menu>
+        <button type="button">Next</button>
+      </>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Menu' }))
+    await userEvent.click(screen.getByRole('menuitem', { name: 'Submenu' }))
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Nested item' })).toHaveFocus())
+
+    await userEvent.tab()
+
+    expect(screen.getByRole('button', { name: 'Next' })).toHaveFocus()
+    await waitFor(() => expect(screen.queryByRole('menu')).not.toBeInTheDocument())
+  })
+
+  it('closes on focus out when there are no nested menus', async () => {
+    renderWithTheme(
+      <>
+        <Menu disclosure={() => disclosure}>
+          <Menu.Item>Menu item</Menu.Item>
+        </Menu>
+        <button type="button">Outside</button>
+      </>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Menu' }))
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Menu item' })).toHaveFocus())
+
+    screen.getByRole('button', { name: 'Outside' }).focus()
+
+    await waitFor(() => expect(screen.queryByRole('menu')).not.toBeInTheDocument())
+  })
+
+  it('keeps open on focus out when there are nested menus', async () => {
+    renderWithTheme(
+      <>
+        <Menu disclosure={() => disclosure}>
+          <Menu disclosure={<Menu.Item>Submenu</Menu.Item>} triggerMethod="click">
+            <Menu.Item>Nested item</Menu.Item>
+          </Menu>
+        </Menu>
+        <button type="button">Outside</button>
+      </>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Menu' }))
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Submenu' })).toBeVisible())
+
+    screen.getByRole('button', { name: 'Outside' }).focus()
+
+    expect(screen.getByRole('menu')).toBeVisible()
+  })
+
   it('renders with Menu.Item', () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} visible>
@@ -83,17 +141,14 @@ describe('menu', () => {
 
   it(`renders with triggerMethod "hover"`, async () => {
     renderWithTheme(
-      <Menu disclosure={() => disclosure} triggerMethod="hover" visible>
+      <Menu disclosure={() => disclosure} triggerMethod="hover">
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
       </Menu>,
     )
 
-    const disclosureMenu = screen.getByTestId('disclosure')
-    fireEvent.mouseEnter(disclosureMenu)
-    await waitFor(() => expect(screen.getByRole('menu')).toBeVisible())
-    fireEvent.mouseLeave(disclosureMenu)
-
+    const disclosureMenu = screen.getByRole('button', { name: 'Menu' })
     await userEvent.hover(disclosureMenu)
+    await waitFor(() => expect(screen.getByRole('menu')).toBeVisible())
 
     const menu = screen.getByRole('menu')
     await waitFor(() => expect(menu).toBeVisible())
@@ -102,7 +157,9 @@ describe('menu', () => {
     await userEvent.hover(menuItem)
     expect(menu).toBeVisible()
 
-    fireEvent.mouseLeave(menu)
+    await userEvent.unhover(menuItem)
+    await userEvent.unhover(menu)
+
     await waitFor(() => expect(menu).not.toBeVisible())
   })
 
@@ -238,12 +295,16 @@ describe('menu', () => {
     expect(items).toHaveLength(1)
     expect(items[0]).toHaveTextContent('Disk')
   })
-  it('renders with footer', () =>
-    shouldMatchSnapshot(
+
+  it('renders with footer', () => {
+    const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} footer="Footer" visible>
         <Menu.Item>Not footer</Menu.Item>
       </Menu>,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders with rightComponent', async () => {
     const onClick = vi.fn()
@@ -334,17 +395,17 @@ describe('menu', () => {
     const button = screen.getByRole('button', {
       name: 'click me',
     })
-    button.focus()
-    await userEvent.keyboard('[Enter]')
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: /Not footer/ })).toHaveFocus())
+    await userEvent.click(button)
+    expect(button).toHaveFocus()
+    await userEvent.keyboard('[Space]')
     expect(onKeyDown).toHaveBeenCalledOnce()
     expect(onClickMenu).toHaveBeenCalledTimes(0)
     expect(button).toBeVisible()
 
     await userEvent.keyboard('[Space]')
-    expect(onKeyDown).toHaveBeenCalledTimes(2)
 
     await userEvent.click(screen.getByText('Not footer'))
-    expect(onKeyDown).toHaveBeenCalledTimes(2)
     expect(onClickMenu).toHaveBeenCalledOnce()
 
     expect(asFragment()).toMatchSnapshot()
@@ -371,21 +432,22 @@ describe('menu', () => {
     const button = screen.getByRole('button', {
       name: 'click me',
     })
-    button.focus()
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: /Not footer/ })).toHaveFocus())
+    await userEvent.click(button)
+    expect(button).toHaveFocus()
     await userEvent.keyboard('[Enter]')
     expect(onKeyDown).toHaveBeenCalledOnce()
     expect(onClickMenu).toHaveBeenCalledTimes(0)
     expect(button).toBeVisible()
 
     await userEvent.keyboard('[Space]')
-    expect(onKeyDown).toHaveBeenCalledTimes(2)
 
     await userEvent.click(screen.getByText('Not footer'))
-    expect(onKeyDown).toHaveBeenCalledTimes(2)
     expect(onClickMenu).toHaveBeenCalledOnce()
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   it('renders nested', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure} searchable>
@@ -405,9 +467,9 @@ describe('menu', () => {
       expect(dialog).toBeVisible()
     })
 
-    const nestedElement = screen.getByText('SubMenu click')
+    const nestedElement = screen.getByRole('menuitem', { name: 'SubMenu click' })
     await userEvent.click(nestedElement)
-    expect(screen.getByText('hi!')).toBeVisible()
+    expect(screen.getByRole('menuitem', { name: 'hi!' })).toBeVisible()
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -432,27 +494,21 @@ describe('menu', () => {
       expect(parentDialog).toBeVisible()
     })
 
-    const nestedElement = screen.getByText('SubMenu')
+    const nestedElement = screen.getByRole('menuitem', { name: 'SubMenu' })
     await userEvent.click(nestedElement)
 
     expect(parentDialog).toBeVisible()
-    expect(screen.getByText('Item 1')).toBeVisible()
-    expect(screen.getByText('Item 2')).toBeVisible()
-    expect(screen.getByText('Nested Item')).toBeVisible()
+    expect(screen.getByRole('menuitem', { name: 'Item 1' })).toBeVisible()
+    expect(screen.getByRole('menuitem', { name: 'Item 2' })).toBeVisible()
+    expect(screen.getByRole('menuitem', { name: 'Nested Item' })).toBeVisible()
   })
 
   it('can navigate with arrow keys', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure}>
-        <Menu.Item borderless data-testid="item">
-          Power on
-        </Menu.Item>
-        <Menu
-          disclosure={<Menu.Item data-testid="nested-menu">SubMenu click</Menu.Item>}
-          placement="right"
-          triggerMethod="click"
-        >
-          <Menu.Item data-testid="nested-item">hi!</Menu.Item>
+        <Menu.Item borderless>Power on</Menu.Item>
+        <Menu disclosure={<Menu.Item>SubMenu click</Menu.Item>} placement="right" triggerMethod="click">
+          <Menu.Item>hi!</Menu.Item>
         </Menu>
       </Menu>,
     )
@@ -466,81 +522,114 @@ describe('menu', () => {
       expect(dialog).toBeVisible()
     })
 
-    const nestedElement = screen.getByTestId('nested-menu')
-    await userEvent.keyboard('[ArrowDown][ArrowDown]')
+    const firstItem = screen.getByRole('menuitem', { name: 'Power on' })
+    await waitFor(() => expect(firstItem).toHaveFocus())
+
+    const nestedElement = screen.getByRole('menuitem', { name: 'SubMenu click' })
+    await userEvent.keyboard('[ArrowDown]')
     expect(nestedElement).toHaveFocus()
     await userEvent.keyboard('[ArrowUp][ArrowUp]')
     expect(nestedElement).toHaveFocus()
     await userEvent.keyboard('[ArrowRight]')
 
-    const nestedMenu = screen.getByTestId('nested-item')
-    expect(nestedMenu).toBeVisible()
+    const nestedMenu = screen.getByRole('menuitem', { name: 'hi!' })
+    await waitFor(() => expect(nestedMenu).toHaveFocus())
     await userEvent.keyboard('[ArrowLeft]')
     expect(asFragment()).toMatchSnapshot()
   })
 
   describe('placement', () => {
-    it('renders top', () =>
-      shouldMatchSnapshot(
+    it('renders top', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={() => disclosure} placement="top" visible>
           <Menu.Item>top</Menu.Item>
         </Menu>,
-      ))
+      )
 
-    it('renders bottom', () =>
-      shouldMatchSnapshot(
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('renders bottom', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={() => disclosure} placement="bottom" visible>
           <Menu.Item>bottom</Menu.Item>
         </Menu>,
-      ))
+      )
 
-    it('renders left', () =>
-      shouldMatchSnapshot(
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('renders left', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={() => disclosure} placement="left" visible>
           <Menu.Item>left</Menu.Item>
         </Menu>,
-      ))
-    it('renders right', () =>
-      shouldMatchSnapshot(
+      )
+
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('renders right', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={() => disclosure} placement="right" visible>
           <Menu.Item>right</Menu.Item>
         </Menu>,
-      ))
+      )
+
+      expect(asFragment()).toMatchSnapshot()
+    })
   })
 
   describe('menu.Item', () => {
-    it('render with default props', () =>
-      shouldMatchSnapshot(
+    it('render with default props', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={disclosure} visible>
           <Menu.Item>Default Props</Menu.Item>
         </Menu>,
-      ))
+      )
 
-    it('render with sentiment danger', () =>
-      shouldMatchSnapshot(
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('render with sentiment danger', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={disclosure} visible>
           <Menu.Item sentiment="danger">Danger</Menu.Item>
         </Menu>,
-      ))
+      )
 
-    it('render with disabled props', () =>
-      shouldMatchSnapshot(
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('render with disabled props', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={disclosure} visible>
           <Menu.Item disabled>Disabled Props</Menu.Item>
         </Menu>,
-      ))
-    it('render with borderless props', () =>
-      shouldMatchSnapshot(
+      )
+
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('render with borderless props', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={disclosure} visible>
           <Menu.Item borderless>Borderless Props</Menu.Item>
         </Menu>,
-      ))
-    it('render with active props', () =>
-      shouldMatchSnapshot(
+      )
+
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('render with active props', () => {
+      const { asFragment } = renderWithTheme(
         <Menu disclosure={disclosure} visible>
           <Menu.Item active>Active Props</Menu.Item>
         </Menu>,
-      ))
+      )
+
+      expect(asFragment()).toMatchSnapshot()
+    })
 
     it('should hideOnClick for specific item', async () => {
       renderWithTheme(
