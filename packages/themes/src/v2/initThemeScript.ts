@@ -1,56 +1,43 @@
-import { DEFAULT_THEME_CLASSES, DEFAULT_THEME_STORAGE_KEY } from './constants'
-import type { GetThemeInitScriptOptions } from './types'
+import { DEFAULT_THEME_CLASSES, DEFAULT_THEME_STORAGE_KEY, DETAULT_INITIAL_THEME, THEME_OPTIONS } from './constants'
+import type { ThemeOption } from './types'
+
+type GetThemeInitScriptOptions = {
+  /**
+   * Theme used when nothing is persisted in the local storage.
+   * @default "system"
+   */
+  initialTheme?: ThemeOption
+  /**
+   * Key used to read the theme persisted by the `ThemeProvider`.
+   * @default "uv-theme"
+   */
+  storageKey?: string
+}
 
 /**
- * Returns an inline script that applies the theme class on the document element
- * before the first paint, to avoid a flash of the wrong theme (FOUC).
- *
- * The script mirrors the `ThemeProvider` logic: it reads the theme persisted in
- * `localStorage` under `storageKey` (falling back to `initialTheme`, like the
- * provider does when the stored value is corrupted), resolves the `"system"`
- * option through the `prefers-color-scheme` media query and adds the matching
- * class on the document element (the `typeof` check ignores unknown themes and
- * inherited properties, e.g. a stored `"toString"`). Storage key and class names
- * are derived from the same constants as the provider, so the script and the
- * provider can never drift apart.
- *
- * The returned string must be inlined in the `<head>` of the document, before
- * any stylesheet, so it runs before the first paint:
- *
- * ```tsx
- * <script dangerouslySetInnerHTML={{ __html: getThemeInitScript() }} />
- * ```
+ * Serializes a value into a JS string literal safe to embed in an inline
+ * `<script>`: `JSON.stringify` escapes quotes and backslashes, the extra
+ * replacements handle what it does not — `<` (so a value cannot close the
+ * script element) and the U+2028/U+2029 line separators.
+ */
+const serializeScriptValue = (value: string) =>
+  JSON.stringify(value)
+    .replaceAll('<', String.raw`\u003c`)
+    .replaceAll('\u2028', String.raw`\u2028`)
+    .replaceAll('\u2029', String.raw`\u2029`)
+
+/**
+ * Returns a self-contained, minified script to inline in the `<head>` of the
+ * document, before any stylesheet, so the theme class is applied before the
+ * first paint. Every value is inlined so the returned string has no
+ * dependency on the module scope once evaluated in the page.
  */
 export const getThemeInitScript = ({
-  initialTheme = 'system',
+  initialTheme = DETAULT_INITIAL_THEME,
   storageKey = DEFAULT_THEME_STORAGE_KEY,
-}: GetThemeInitScriptOptions = {}) => {
-  const script = `try {
-  var theme = ${JSON.stringify(initialTheme)}
-  var stored = localStorage.getItem(${JSON.stringify(storageKey)})
-  if (stored !== null) {
-    try {
-      var parsed = JSON.parse(stored)
-      if (typeof parsed === 'string' && parsed !== '') {
-        theme = parsed
-      }
-    } catch (e) {}
-  }
-  if (theme === 'system') {
-    theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
-  var themeClass = ${JSON.stringify(DEFAULT_THEME_CLASSES)}[theme]
-  if (typeof themeClass === 'string') {
-    document.documentElement.classList.add(themeClass)
-  }
-} catch (e) {}`
-
-  // The script is inlined inside a <script> tag in the HTML: a `</script>`
-  // sequence would close the tag early and break the page. `storageKey` is the
-  // only interpolated input, so fail loudly here instead of shipping broken HTML.
-  if (script.includes('</script>')) {
-    throw new Error('getThemeInitScript: the generated script must not contain a `</script>` sequence.')
-  }
-
-  return script
-}
+}: GetThemeInitScriptOptions = {}) =>
+  `try{var t=${serializeScriptValue(initialTheme)},o=${JSON.stringify(
+    THEME_OPTIONS,
+  )},c=${JSON.stringify(DEFAULT_THEME_CLASSES)},s=localStorage.getItem(${serializeScriptValue(
+    storageKey,
+  )});if(s){try{var n=JSON.parse(s);-1!==o.indexOf(n)&&(t=n)}catch{}}"system"===t&&(t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var a=c[t];a&&document.documentElement.classList.add(a)}catch{}`
