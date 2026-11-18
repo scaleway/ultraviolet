@@ -6,6 +6,7 @@ import { forwardRef, useCallback, useMemo, useRef } from 'react'
 import type { ForwardedRef, KeyboardEventHandler, MouseEventHandler } from 'react'
 import { Stack } from '../../Layout/Stack'
 import { Tooltip } from '../../Overlay/Tooltip'
+import { Text } from '../../Typography/Text'
 import { IllustrationContainer } from './IllustrationContainer'
 import { MultiStateInput } from './MultiStateInput'
 import type { SelectableCardProps } from './types'
@@ -68,7 +69,15 @@ export const SelectableCard = forwardRef(
       [innerRef],
     )
 
-    const isComplexChildren = ['function', 'array', 'object'].includes(typeof children)
+    const isTextChildren = useMemo(
+      () =>
+        (Array.isArray(children) ? children : [children]).every(
+          child => typeof child === 'string' || typeof child === 'number',
+        ),
+      [children],
+    )
+
+    const isComplexChildren = typeof children === 'function' || (typeof children === 'object' && !isTextChildren)
 
     const onClickContainer: MouseEventHandler<HTMLDivElement> = useCallback(
       event => {
@@ -105,6 +114,23 @@ export const SelectableCard = forwardRef(
       onFocus,
       type,
       value,
+    }
+
+    // oxlint-disable-next-line typescript/promise-function-async
+    const renderChildren = () => {
+      if (typeof children === 'function') {
+        return children({ checked, disabled })
+      }
+
+      if (isTextChildren) {
+        return (
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
+            {children}
+          </Text>
+        )
+      }
+
+      return children
     }
 
     const content = (
@@ -169,7 +195,7 @@ export const SelectableCard = forwardRef(
                 ref={childrenRef}
                 width="100%"
               >
-                {typeof children === 'function' ? children({ checked, disabled }) : children}
+                {renderChildren()}
               </Stack>
             ) : null}
           </IllustrationContainer>

@@ -18,14 +18,7 @@ describe('selectableCard', () => {
   describe.each(types)('%s', type => {
     it('renders correctly with default props', () => {
       const { asFragment } = renderWithTheme(
-        <SelectableCard
-          label="test"
-          name="test"
-          onChange={() => {
-            /* empty */
-          }}
-          value="choice"
-        >
+        <SelectableCard label="test" name="test" onChange={() => {}} value="choice">
           SelectableCard
         </SelectableCard>,
       )
@@ -35,14 +28,7 @@ describe('selectableCard', () => {
 
     it('renders correctly with aria label', () => {
       const { asFragment } = renderWithTheme(
-        <SelectableCard
-          aria-label="test"
-          name="test"
-          onChange={() => {
-            /* empty */
-          }}
-          value="choice"
-        >
+        <SelectableCard aria-label="test" name="test" onChange={() => {}} value="choice">
           SelectableCard
         </SelectableCard>,
       )
@@ -52,16 +38,7 @@ describe('selectableCard', () => {
 
     it('renders correctly with showTick', () => {
       const { asFragment } = renderWithTheme(
-        <SelectableCard
-          aria-label="test"
-          name="test"
-          onChange={() => {
-            /* empty */
-          }}
-          showTick
-          type={type}
-          value="choice"
-        >
+        <SelectableCard aria-label="test" name="test" onChange={() => {}} showTick type={type} value="choice">
           SelectableCard
         </SelectableCard>,
       )
@@ -71,16 +48,7 @@ describe('selectableCard', () => {
 
     it('renders correctly with checked prop', () => {
       const { asFragment } = renderWithTheme(
-        <SelectableCard
-          aria-label="test"
-          checked
-          name="test"
-          onChange={() => {
-            /* empty */
-          }}
-          type={type}
-          value="choice"
-        >
+        <SelectableCard aria-label="test" checked name="test" onChange={() => {}} type={type} value="choice">
           SelectableCard
         </SelectableCard>,
       )
@@ -90,16 +58,7 @@ describe('selectableCard', () => {
 
     it('renders correctly with disabled prop', () => {
       const { asFragment } = renderWithTheme(
-        <SelectableCard
-          aria-label="test"
-          disabled
-          name="test"
-          onChange={() => {
-            /* empty */
-          }}
-          type={type}
-          value="choice"
-        >
+        <SelectableCard aria-label="test" disabled name="test" onChange={() => {}} type={type} value="choice">
           SelectableCard
         </SelectableCard>,
       )
@@ -109,16 +68,7 @@ describe('selectableCard', () => {
 
     it('renders correctly with isError prop', () => {
       const { asFragment } = renderWithTheme(
-        <SelectableCard
-          isError
-          label="test"
-          name="test"
-          onChange={() => {
-            /* empty */
-          }}
-          type={type}
-          value="choice"
-        >
+        <SelectableCard isError label="test" name="test" onChange={() => {}} type={type} value="choice">
           SelectableCard
         </SelectableCard>,
       )
@@ -128,16 +78,7 @@ describe('selectableCard', () => {
 
     it('renders correctly with tooltip prop', () => {
       const { asFragment } = renderWithTheme(
-        <SelectableCard
-          label="test"
-          name="test"
-          onChange={() => {
-            /* empty */
-          }}
-          tooltip="test"
-          type={type}
-          value="choice"
-        >
+        <SelectableCard label="test" name="test" onChange={() => {}} tooltip="test" type={type} value="choice">
           SelectableCard
         </SelectableCard>,
       )
@@ -147,16 +88,7 @@ describe('selectableCard', () => {
 
     it('renders correctly with complex children', () => {
       const { asFragment } = renderWithTheme(
-        <SelectableCard
-          disabled
-          label="test"
-          name="test"
-          onChange={() => {
-            /* empty */
-          }}
-          type={type}
-          value="choice"
-        >
+        <SelectableCard disabled label="test" name="test" onChange={() => {}} type={type} value="choice">
           {({ checked, disabled }) => (
             <div
               style={{
@@ -175,15 +107,29 @@ describe('selectableCard', () => {
       expect(asFragment()).toMatchSnapshot()
     })
 
+    it('wraps string children in a Text component with the correct typography', () => {
+      const t = (translationKey: string) => translationKey.split('.').at(-1)
+
+      renderWithTheme(
+        <SelectableCard label="test" name="test" onChange={() => {}} type={type} value="choice">
+          {`${t('translation.key.description')}`} {2}
+        </SelectableCard>,
+      )
+
+      const description = screen.getByText('description 2')
+      expect(description.tagName).toBe('P')
+      expect(description.classList.toString()).toMatch('bodySmall')
+      expect(description.classList.toString()).toMatch('neutral')
+      expect(description.classList.toString()).toMatch('weak')
+    })
+
     it('renders correctly with labelDescription', () => {
       const { asFragment } = renderWithTheme(
         <SelectableCard
           disabled
           label="test"
           name="test"
-          onChange={() => {
-            /* empty */
-          }}
+          onChange={() => {}}
           type={type}
           value="choice"
           labelDescription="description"
@@ -207,9 +153,7 @@ describe('selectableCard', () => {
           illustration={<IllustrationExample />}
           label="label"
           name="label-14"
-          onChange={() => {
-            /* empty */
-          }}
+          onChange={() => {}}
           showTick
           type={type}
           value="label-14"
@@ -228,9 +172,7 @@ describe('selectableCard', () => {
           indented={false}
           label="label"
           name="label-14"
-          onChange={() => {
-            /* empty */
-          }}
+          onChange={() => {}}
           showTick
           type={type}
           value="label-14"
@@ -248,9 +190,7 @@ describe('selectableCard', () => {
         <SelectableCard
           label="label"
           name="label-14"
-          onChange={() => {
-            /* empty */
-          }}
+          onChange={() => {}}
           productIcon={<MacMiniProductIcon size="xlarge" />}
           showTick
           type={type}
