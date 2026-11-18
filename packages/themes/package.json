@@ -61,6 +61,10 @@
     "build": "vite build  && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "lintpublish": "pnpm publint",
+    "test:unit": "vitest --run --project unit",
+    "test:unit:coverage": "pnpm test:unit --coverage",
+    "test:browser": "vitest --run --project browser",
+    "test:browser:coverage": "pnpm test:browser --coverage",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
@@ -75,9 +79,13 @@
   },
   "devDependencies": {
     "@repo/config": "workspace:*",
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/react": "16.3.3",
+    "@vanilla-extract/vite-plugin": "5.2.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "vite": "catalog:"
+    "vite": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "react": "18.x || 19.x",
