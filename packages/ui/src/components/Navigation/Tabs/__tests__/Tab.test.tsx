@@ -1,5 +1,5 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 import { Tab } from '../Tab'
 
 describe('tab', () => {

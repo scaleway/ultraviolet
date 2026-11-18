@@ -1,7 +1,7 @@
-import { renderWithTheme } from '@utils/test'
 import { resetIntersectionMocking, setupIntersectionMocking } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { EstimateCost } from '..'
+import { renderWithTheme } from '../../../__tests__/helpers'
 import frFlag from './assets/fr.svg'
 
 describe('estimateCost - Region', () => {

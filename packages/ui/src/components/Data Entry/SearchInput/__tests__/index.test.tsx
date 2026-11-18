@@ -1,9 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { useState } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { SearchInput } from '..'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../../__tests__/helpers'
 import { Button } from '../../../Action/Button'
 
 describe('searchInput', () => {

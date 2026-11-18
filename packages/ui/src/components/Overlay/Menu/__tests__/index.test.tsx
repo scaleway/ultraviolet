@@ -1,8 +1,8 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Menu } from '..'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 const disclosure = (
   <button data-testid="disclosure" type="button">

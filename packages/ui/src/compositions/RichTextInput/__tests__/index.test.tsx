@@ -1,8 +1,8 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { RichTextInput } from '..'
+import { renderWithTheme } from '../../../__tests__/helpers'
 
 describe('richTextInput', () => {
   beforeAll(() => {

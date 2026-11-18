@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { ToggleGroup } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 describe('toggleGroup', () => {
   it('renders correctly', () =>

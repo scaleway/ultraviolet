@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { Filters } from '..'
+import { renderWithTheme } from '../../../__tests__/helpers'
 import type { FilterConfig } from '../types'
 
 type FilterValues = {

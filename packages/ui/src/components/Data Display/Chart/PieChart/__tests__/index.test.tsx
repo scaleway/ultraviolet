@@ -1,8 +1,8 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { PieChart } from '..'
+import { renderWithTheme } from '../../../../../__tests__/helpers'
 import {
   data,
   dataWithLegends,

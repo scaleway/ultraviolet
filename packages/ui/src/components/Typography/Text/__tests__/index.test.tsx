@@ -1,7 +1,8 @@
 import { textVariants } from '@ultraviolet/themes'
-import { MockResizeObserver, renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { MockResizeObserver } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Text } from '..'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 describe('text', () => {
   it.each(textVariants)('renders correctly with type="%s"', variant =>

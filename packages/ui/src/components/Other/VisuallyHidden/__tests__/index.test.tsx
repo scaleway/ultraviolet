@@ -1,9 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { DownloadIcon } from '@ultraviolet/icons'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { VisuallyHidden } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('visuallyHidden', () => {
   it('renders correctly with default props', () => {

@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Dialog } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { Button } from '../../../Action/Button'
 
 describe('dialog', () => {

@@ -3,9 +3,9 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
 import { SunIcon } from '@ultraviolet/icons/SunIcon'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { SwitchButton } from '..'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 // oxlint-disable-next-line vitest/require-hook
 let resizeCallback: ResizeObserverCallback = () => {}

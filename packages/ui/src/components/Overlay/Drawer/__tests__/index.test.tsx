@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Drawer } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('drawer', () => {
   beforeEach(() => {

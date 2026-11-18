@@ -1,5 +1,5 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
+import { shouldMatchSnapshot } from '../../../../../__tests__/helpers'
 import { BarChartTooltip } from '../Tooltip'
 
 describe('barChartTooltip', () => {

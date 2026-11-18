@@ -1,7 +1,8 @@
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { RadioGroup } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('radioGroup - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {

@@ -1,9 +1,10 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { SelectInput } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { dataGrouped, dataUnGrouped } from './resources'
 
 describe('selectInput - A11y', { tags: ['a11y'] }, () => {

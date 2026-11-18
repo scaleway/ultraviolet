@@ -39,8 +39,9 @@ export const unitProjectConfig = {
     },
     exclude: [
       ...configDefaults.exclude,
-      // Accessibility tests only run in the browser project, see below
+      // A11y and `*.browser.test.*` files only run in the browser project, see below
       '**/__tests__/a11y.test.tsx',
+      '**/*.browser.test.{ts,tsx}',
       '**/node_modules/**',
       '**/{dist,build}/**',
       '**/__stories__/**',

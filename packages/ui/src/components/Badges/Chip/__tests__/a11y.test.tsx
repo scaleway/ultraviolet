@@ -1,9 +1,10 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Chip } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('chip - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {

@@ -1,4 +1,4 @@
-export { ComponentWrapper, renderWithTheme, shouldMatchSnapshot } from './helpers'
+export { makeShouldMatchSnapshot } from './helpers/shouldMatchSnapshot'
 export { mockMatchMedia } from './mockMatchMedia'
 export { MockResizeObserver } from './mockResizeObserver'
 export { resetUserEvent } from './resetUserEvent'

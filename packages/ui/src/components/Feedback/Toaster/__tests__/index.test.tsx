@@ -1,8 +1,8 @@
 import { act, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { renderWithTheme } from '@utils/test'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Toast, toast, ToastContainer } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('toaster', () => {
   afterEach(() => {

@@ -1,10 +1,10 @@
 import { screen, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { renderWithTheme } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Tooltip } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('tooltip', () => {
   describe('wrapper div', () => {

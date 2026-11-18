@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { CodeEditor } from '..'
+import { renderWithTheme } from '../../../__tests__/helpers'
 
 // We are skipping this as CodeEditor seems to be generating new classNames
 // which is causing the snapshot to fail randomly. Also, CodeEditor component

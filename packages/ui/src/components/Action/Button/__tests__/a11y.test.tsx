@@ -1,8 +1,9 @@
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Button } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('button - A11y', { tags: ['a11y'] }, () => {
   it.for([...consoleThemesMap.entries()])(

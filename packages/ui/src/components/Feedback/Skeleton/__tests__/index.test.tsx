@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Skeleton, skeletonTypes } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('skeleton', () => {
   it('locks the default render DOM', () => {

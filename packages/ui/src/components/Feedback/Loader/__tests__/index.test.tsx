@@ -1,7 +1,7 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, it } from 'vitest'
 import { Loader } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 import { SENTIMENTS } from '../../../../theme'
 import { SIZES } from '../constants'
 

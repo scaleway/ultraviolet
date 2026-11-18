@@ -1,10 +1,9 @@
 import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { RichTextInputField } from '..'
-import { mockFormErrors, renderWithForm } from '../../../__tests__/helpers'
+import { mockFormErrors, renderWithForm, renderWithTheme } from '../../../__tests__/helpers'
 import { Submit } from '../../../components'
 import { Form } from '../../../components/Form'
 

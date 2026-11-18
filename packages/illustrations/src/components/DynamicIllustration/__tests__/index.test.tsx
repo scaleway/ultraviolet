@@ -1,7 +1,7 @@
 import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { DynamicIllustration } from '..'
+import { shouldMatchSnapshot } from '../../../__tests__/helpers'
 
 describe('dynamicIllustration', () => {
   it('should work with consoleLightTheme', () =>

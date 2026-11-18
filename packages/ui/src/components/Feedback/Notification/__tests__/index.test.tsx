@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { act } from 'react'
 import { toast } from 'react-toastify'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { notification, NotificationContainer } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('toaster', () => {
   afterEach(() => {

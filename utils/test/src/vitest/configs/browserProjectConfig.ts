@@ -52,7 +52,7 @@ export const browserProjectConfig = {
         },
       ],
     },
-    include: ['src/**/__tests__/a11y.test.tsx'],
+    include: ['src/**/__tests__/a11y.test.tsx', '**/*.browser.test.{ts,tsx}'],
     exclude: [
       ...configDefaults.exclude,
       '**/node_modules/**',

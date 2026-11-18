@@ -1,9 +1,10 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { Popover } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 // Floating UI focuses through a rAF-deferred queue. On loaded CI runners the
 // webkit instance can take well over the 1s waitFor default to reach the

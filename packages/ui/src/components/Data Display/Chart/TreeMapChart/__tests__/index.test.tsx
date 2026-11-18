@@ -1,11 +1,11 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { TreeMapChart } from '..'
+import { renderWithTheme } from '../../../../../__tests__/helpers'
 import { treeMapChartSimpleData, treeMapChartWithCustomContentData } from '../__stories__/mockData'
 import type { DataType } from '../types'
 

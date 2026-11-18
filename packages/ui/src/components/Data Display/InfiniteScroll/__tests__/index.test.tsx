@@ -1,7 +1,7 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { InfiniteScroll } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('infiniteScroll', () => {
   it('renders correctly ', () => {

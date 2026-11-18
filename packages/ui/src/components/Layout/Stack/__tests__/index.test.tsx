@@ -1,6 +1,6 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Stack } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 describe('stack', () => {
   it('should render correctly with default props', () =>

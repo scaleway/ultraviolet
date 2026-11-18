@@ -1,7 +1,7 @@
 import { RayTopArrowIcon } from '@ultraviolet/icons/RayTopArrowIcon'
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Separator } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 describe('separator', () => {
   it('renders correctly with default props', () => shouldMatchSnapshot(<Separator />))

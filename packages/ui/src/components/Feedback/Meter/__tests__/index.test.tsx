@@ -1,6 +1,6 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Meter } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 import { colors } from '../../../../theme'
 
 describe('meter', () => {

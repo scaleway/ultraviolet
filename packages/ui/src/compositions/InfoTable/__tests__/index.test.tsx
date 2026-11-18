@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { InfoTable } from '..'
+import { renderWithTheme } from '../../../__tests__/helpers'
 import { Button } from '../../../components/Action/Button'
 import { Stack } from '../../../components/Layout/Stack'
 import { Text } from '../../../components/Typography/Text'

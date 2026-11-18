@@ -1,6 +1,6 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { ActionBar } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 describe('actionBar', () => {
   it('renders correctly ', () => shouldMatchSnapshot(<ActionBar>Hello</ActionBar>))

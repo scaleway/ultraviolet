@@ -1,9 +1,9 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { InformationIcon } from '@ultraviolet/icons'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Filters, FiltersMainRow, FiltersProvider } from '..'
+import { renderWithTheme } from '../../../__tests__/helpers'
 import { Button, Tooltip } from '../../../components'
 import type { FilterComponentProps, FilterConfig } from '../types'
 

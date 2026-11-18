@@ -1,11 +1,11 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ProfileIcon } from '@ultraviolet/icons'
-import { renderWithTheme } from '@utils/test'
 import { forwardRef } from 'react'
 import type { AnchorHTMLAttributes } from 'react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { TagLink } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { SENTIMENTS } from '../styles.css'
 
 let writeTextMock: ReturnType<typeof vi.fn> | undefined = undefined
