@@ -30,7 +30,7 @@ const margedText = style({
 })
 
 const containerBase = style({
-  alignItems: 'flex-start',
+  alignItems: 'center',
   display: 'flex',
   flex: 1,
   position: 'relative',
@@ -52,9 +52,9 @@ const container = styleVariants({
 
 const textLabelBase = style({
   cursor: 'pointer',
-  flex: 1,
+  width: '100%',
   selectors: {
-    [`${containerBase}[aria-disabled='true'] > &`]: {
+    [`${containerBase}[aria-disabled='true'] &`]: {
       color: theme.colors.neutral.textDisabled,
       cursor: 'not-allowed',
     },
@@ -66,6 +66,7 @@ const textLabel = styleVariants({
     textLabelBase,
     {
       paddingTop: theme.space['0.25'],
+      minHeight: theme.sizing[300],
     },
   ],
   medium: [textLabelBase],
@@ -75,10 +76,9 @@ const label = style({
   selectors: {
     [`${switchButtonStyle.optionBase}[data-checked='true'] &`]: {
       color: theme.colors.neutral.textStrong,
-      transition: 'color 300ms ease-in-out',
     },
     [`${switchButtonStyle.optionBase} &`]: {
-      transition: 'color 300ms ease-in-out',
+      transition: 'color 200ms cubic-bezier(0.5, 0, 0.1, 1)',
     },
     [`${switchButtonStyle.optionPrimary}[data-checked="true"] &`]: {
       color: theme.colors.primary.textStrong,
@@ -101,13 +101,34 @@ const label = style({
 
 const labelStyle = style({
   cursor: 'pointer',
-  flex: 1,
+  width: '100%',
+})
+
+// 24x24 click area, holds the input and the (smaller) 20px ring centered.
+const iconWrapper = style({
+  alignSelf: 'start',
+  alignItems: 'center',
+  display: 'inline-flex',
+  flexShrink: 0,
+  height: theme.sizing['300'],
+  justifyContent: 'center',
+  position: 'relative',
+  width: theme.sizing['300'],
+  selectors: {
+    // no display:none so the real input stays in the accessibility tree.
+    [`[data-show-tick='false'] ${selectableCardStyle.selectableElement} > &`]: {
+      height: 0,
+      position: 'absolute',
+      width: 0,
+    },
+  },
 })
 
 const radio = style({
   borderWidth: 0,
   cursor: 'pointer',
-  height: theme.sizing['300'],
+  inset: 0,
+  height: '100%',
   opacity: 0,
   position: 'absolute',
   selectors: {
@@ -116,16 +137,16 @@ const radio = style({
     },
   },
   whiteSpace: 'nowrap',
-  width: theme.sizing['300'],
+  width: '100%',
 })
+
+// hover and keyboard focus-visible show the same highlight
+const active = `${containerBase}:is(:hover[aria-disabled='false'], :has(${radio}:focus-visible))`
 
 const ring = style({
   borderRadius: theme.radii.circle,
   fill: theme.colors.neutral.border,
-  height: theme.sizing['300'],
-  minHeight: theme.sizing['300'],
-  minWidth: theme.sizing['300'],
-  transition: 'fill 100ms',
+  transition: 'fill 300ms cubic-bezier(0.22, 1, 0.36, 1)',
   selectors: {
     [`${containerBase}[data-invalid='false'] ${radio}:checked + &`]: {
       fill: theme.colors.primary.backgroundStrong,
@@ -145,16 +166,37 @@ const ring = style({
     [`${containerBase}[data-invalid='true'] ${radio}:not(:disabled):active + &`]: {
       fill: theme.colors.danger.backgroundStrong,
     },
-    [`${containerBase}[data-invalid='false']:hover ${radio}:not(:disabled) + &`]: {
-      fill: theme.colors.primary.border,
+    [`${active}[data-invalid='false'] ${radio}:not(:disabled) + &`]: {
+      fill: theme.colors.primary.borderHover,
     },
     [`${containerBase}:disabled &`]: {
       cursor: 'not-allowed',
       fill: theme.colors.neutral.borderDisabled,
     },
-    [`[data-show-tick='false'] ${selectableCardStyle.selectableElement} > ${radio} + &`]: {
+    [`${containerBase} ${radio}:not(:disabled):focus-visible + &`]: {
+      boxShadow: theme.shadows.focusPrimary,
+    },
+    [`${containerBase}[data-invalid='true'] ${radio}:not(:disabled):focus-visible + &`]: {
+      boxShadow: theme.shadows.focusDanger,
+    },
+    [`[data-show-tick='false'] ${selectableCardStyle.selectableElement} > ${iconWrapper} &`]: {
       display: 'none',
     },
+  },
+})
+
+const ringSize = styleVariants({
+  medium: {
+    height: theme.sizing['250'],
+    minHeight: theme.sizing['250'],
+    minWidth: theme.sizing['250'],
+    width: theme.sizing['250'],
+  },
+  small: {
+    height: theme.sizing['200'],
+    minHeight: theme.sizing['200'],
+    minWidth: theme.sizing['200'],
+    width: theme.sizing['200'],
   },
 })
 
@@ -168,13 +210,13 @@ const mark = style({
     },
   },
   transformOrigin: 'center',
-  transition: '200ms transform ease-in-out',
+  transition: 'transform 300ms cubic-bezier(0.22, 1, 0.36, 1)',
 })
 
 const innerCircleRing = style({
-  transition: 'fill 100ms',
+  transition: 'fill 300ms cubic-bezier(0.22, 1, 0.36, 1)',
   selectors: {
-    [`${containerBase}:hover &`]: {
+    [`${active} &`]: {
       fill: theme.colors.primary.backgroundHover,
     },
     [`${radio}:disabled + ${ring} &`]: {
@@ -183,7 +225,7 @@ const innerCircleRing = style({
     [`${containerBase}[data-invalid='true'] &`]: {
       fill: theme.colors.danger.background,
     },
-    [`${containerBase}[data-invalid='true']:hover &`]: {
+    [`${active}[data-invalid='true'] &`]: {
       fill: theme.colors.danger.backgroundHover,
     },
     [`${containerBase}[data-invalid='true'] ${radio}:disabled + ${ring} &`]: {
@@ -195,29 +237,6 @@ const innerCircleRing = style({
   },
 })
 
-const focusRing = style({
-  fill: 'none',
-  opacity: 0,
-  stroke: theme.colors.primary.backgroundHover,
-  transition: 'opacity 100ms',
-  selectors: {
-    [`${containerBase}[data-invalid='false'] ${radio}:not(:disabled):focus-visible + ${ring} &`]: {
-      opacity: 1,
-    },
-    [`${containerBase}[data-invalid='false'] ${radio}:not(:disabled):active + ${ring} &`]: {
-      opacity: 1,
-    },
-    [`${containerBase}[data-invalid='true'] ${radio}:not(:disabled):focus-visible + ${ring} &`]: {
-      stroke: theme.colors.danger.backgroundHover,
-      opacity: 1,
-    },
-    [`${containerBase}[data-invalid='true'] ${radio}:not(:disabled):active + ${ring} &`]: {
-      stroke: theme.colors.danger.backgroundHover,
-      opacity: 1,
-    },
-  },
-})
-
 export const radioStyle = {
   stack,
   margedText,
@@ -225,9 +244,10 @@ export const radioStyle = {
   textLabel,
   label,
   labelStyle,
+  iconWrapper,
   radio,
   ring,
+  ringSize,
   mark,
   innerCircleRing,
-  focusRing,
 }

@@ -132,6 +132,7 @@ const activeState = (state: string) => `${active} input${state} + ${iconBase} &`
 const innerCheckbox = style({
   fill: theme.colors.neutral.background,
   stroke: theme.colors.neutral.border,
+  transition: '150ms fill cubic-bezier(0.22, 1, 0.36, 1)',
   selectors: {
     [`${containerBase}[aria-disabled='true'] &`]: {
       fill: theme.colors.neutral.backgroundDisabled,
@@ -156,8 +157,7 @@ const innerCheckbox = style({
     [`${containerBase} input:checked + ${iconBase} &`]: {
       fill: theme.colors.primary.backgroundStrong,
       stroke: theme.colors.primary.borderStrong,
-      transformOrigin: 'center',
-      transition: '300ms fill cubic-bezier(0.22, 1, 0.36, 1)',
+      transitionDuration: '300ms',
     },
     [`${containerBase} input[aria-invalid="true"]:checked + ${iconBase} &`]: {
       fill: theme.colors.danger.backgroundStrong,
@@ -203,11 +203,11 @@ const innerCheckbox = style({
 const iconPath = style({
   fill: theme.colors.neutral.background,
   transform: 'scale(0)',
+  transformOrigin: 'center',
+  transition: '300ms transform cubic-bezier(0.22, 1, 0.36, 1)',
   selectors: {
     [`${containerBase} input:checked + ${iconBase} &`]: {
       transform: 'scale(1)',
-      transformOrigin: 'center',
-      transition: '300ms transform cubic-bezier(0.22, 1, 0.36, 1)',
     },
   },
 })
