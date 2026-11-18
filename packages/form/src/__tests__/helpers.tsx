@@ -1,23 +1,18 @@
 import { render, renderHook } from '@testing-library/react'
 import type { RenderOptions } from '@testing-library/react'
-import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
+import { ThemeProvider } from '@ultraviolet/themes/v2'
+import type { ThemeOption } from '@ultraviolet/themes/v2'
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
 import type { FormErrors, UseFormProps } from '..'
 import { Form, useForm } from '..'
 
-export const ComponentWrapper = ({
-  children,
-  theme = consoleLightTheme,
-}: {
-  children?: ReactNode
-  theme?: typeof consoleLightTheme
-}) => (
-  <ThemeProvider theme={theme}>
+export const ComponentWrapper = ({ children, theme = 'light' }: { children?: ReactNode; theme?: ThemeOption }) => (
+  <ThemeProvider initialTheme={theme}>
     <div data-testid="testing">{children}</div>
   </ThemeProvider>
 )
 
-export const renderWithTheme = (component: ReactNode, theme?: typeof consoleLightTheme, options?: RenderOptions) => {
+export const renderWithTheme = (component: ReactNode, theme?: ThemeOption, options?: RenderOptions) => {
   const result = render(component, {
     ...options,
     wrapper: ({ children }) => <ComponentWrapper theme={theme}>{children}</ComponentWrapper>,
@@ -46,7 +41,7 @@ export const renderWithForm = (
   compoment: ReactElement,
   useFormProps?: UseFormProps,
   formProps?: Partial<ComponentProps<typeof Form>>,
-  theme?: typeof consoleLightTheme,
+  theme?: ThemeOption,
 ) => {
   const { result } = renderHook(() => useForm({ mode: 'onChange', ...useFormProps }))
 
