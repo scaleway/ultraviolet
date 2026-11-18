@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { inputDisplay, labelDisplay } from './variables.css'
 
 const container = recipe({
   base: {
@@ -112,14 +111,6 @@ const indentedCard = style({
 const selectableElement = style({
   alignItems: 'flex-start',
   display: 'inline-flex',
-})
-
-globalStyle(`${selectableElement} > input + svg`, {
-  display: inputDisplay,
-})
-
-globalStyle(`${selectableElement} > label`, {
-  display: labelDisplay,
 })
 
 export const selectableCardStyle = {

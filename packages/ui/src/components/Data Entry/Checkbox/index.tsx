@@ -78,10 +78,16 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 
     const childStack =
       children || required ? (
-        <Stack alignItems="center" direction="row" gap={0.5}>
+        <Stack alignItems="start" className={checkboxStyle.labelWrapper} direction="row" gap={0.5}>
           {children ? styledChildren : null}
           {required ? (
-            <Text as="sup" sentiment="danger" variant="body">
+            <Text
+              aria-hidden
+              as="span"
+              disabled={disabled}
+              sentiment="danger"
+              variant={size === 'default' ? 'bodyStrong' : 'bodySmallStrong'}
+            >
               *
             </Text>
           ) : null}
@@ -98,34 +104,40 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           data-testid={dataTestId}
           data-visibility={dataVisibility}
         >
-          <input
-            aria-checked={checked === 'indeterminate' ? 'mixed' : isCheck}
-            aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? `${localId}-hint` : undefined)}
-            aria-invalid={!!error}
-            aria-label={ariaLabel}
-            autoFocus={autoFocus}
-            checked={isCheck}
-            className={checkboxStyle.input[size]}
-            disabled={disabled}
-            id={localId}
-            name={name}
-            onBlur={onBlur}
-            onChange={onChange}
-            onFocus={onFocus}
-            onKeyDown={onKeyDown}
-            ref={ref}
-            required={required}
-            style={style}
-            tabIndex={tabIndex}
-            type="checkbox"
-            value={value}
-          />
-          <svg className={checkboxStyle.icon[size]} fill="none" viewBox="0 0 24 24">
-            <title>{name}</title>
-            <CheckboxIconContainer checked={checked} />
-          </svg>
+          <span className={checkboxStyle.iconWrapper}>
+            <input
+              aria-checked={checked === 'indeterminate' ? 'mixed' : isCheck}
+              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? `${localId}-hint` : undefined)}
+              aria-invalid={!!error}
+              aria-label={ariaLabel}
+              autoFocus={autoFocus}
+              checked={isCheck}
+              className={checkboxStyle.input}
+              disabled={disabled}
+              id={localId}
+              name={name}
+              onBlur={onBlur}
+              onChange={onChange}
+              onFocus={onFocus}
+              onKeyDown={onKeyDown}
+              ref={ref}
+              required={required}
+              style={style}
+              tabIndex={tabIndex}
+              type="checkbox"
+              value={value}
+            />
+            <svg
+              className={checkboxStyle.icon[size]}
+              fill="none"
+              viewBox={size === 'small' ? '0 0 16 16' : '0 0 20 20'}
+            >
+              <title>{name}</title>
+              <CheckboxIconContainer checked={checked} size={size} />
+            </svg>
+          </span>
           {children || required || helper || error ? (
-            <Stack flex={1} gap={0.5}>
+            <Stack flex={1} gap={size === 'default' ? 0.5 : 0}>
               {childStack}
               <Description
                 helper={helper}

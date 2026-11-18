@@ -28,11 +28,13 @@ const container = styleVariants({
   small: [containerBase, { gap: theme.space['0.5'] }],
 })
 
-const inputBase = style({
+const input = style({
   borderWidth: 0,
+  inset: 0,
+  height: '100%',
+  width: '100%',
   opacity: 0,
   position: 'absolute',
-  alignSelf: 'start',
   whiteSpace: 'nowrap',
   selectors: {
     '&:not(:disabled)': {
@@ -44,22 +46,33 @@ const inputBase = style({
   },
 })
 
-const input = styleVariants({
-  default: [inputBase, { height: theme.sizing[300], width: theme.sizing[300] }],
-  small: [
-    inputBase,
-    {
-      height: theme.sizing[200],
-      width: theme.sizing[200],
-      marginTop: theme.space['0.25'],
+// 24x24 click area, holds the input and the (smaller) square-shaped svg centered.
+const iconWrapper = style({
+  alignSelf: 'start',
+  alignItems: 'center',
+  display: 'inline-flex',
+  flexShrink: 0,
+  height: theme.sizing['300'],
+  justifyContent: 'center',
+  position: 'relative',
+  width: theme.sizing['300'],
+  selectors: {
+    // no display:none so the real input stays in the accessibility tree.
+    [`[data-show-tick='false'] ${selectableCardStyle.selectableElement} > &`]: {
+      height: 0,
+      position: 'absolute',
+      width: 0,
     },
-  ],
+  },
 })
 
 const iconBase = style({
-  alignSelf: 'start',
+  overflow: 'visible',
   borderRadius: theme.radii.default,
   selectors: {
+    [`[data-show-tick='false'] ${selectableCardStyle.selectableElement} > ${iconWrapper} &`]: {
+      display: 'none',
+    },
     [`${containerBase}[aria-disabled='true'] &`]: {
       fill: theme.colors.neutral.borderDisabled,
     },
@@ -69,48 +82,41 @@ const iconBase = style({
     [`${containerBase}[aria-disabled='true'] input[aria-invalid="true"] + &`]: {
       fill: theme.colors.danger.background,
     },
-    [`${containerBase}[aria-disabled='true'] input:checked + &`]: {
-      fill: theme.colors.primary.backgroundStrongDisabled,
-    },
-    [`${containerBase}[aria-disabled='true'] input[aria-checked="mixed"] + &`]: {
+    [`${containerBase}[aria-disabled='true'] input:is(:checked, [aria-checked="mixed"]) + &`]: {
       fill: theme.colors.primary.backgroundStrongDisabled,
     },
     [`${containerBase} input[aria-invalid="true"] + &`]: {
       fill: theme.colors.danger.backgroundStrong,
     },
-    [`${inputBase}:focus + &`]: {
-      backgroundColor: theme.colors.primary.background,
-      fill: theme.colors.danger.background,
-      outline: `1px solid ${theme.shadows.focusPrimary}`,
-    },
-    [`${inputBase}[aria-invalid='true']:focus + &`]: {
-      backgroundColor: theme.colors.danger.background,
-      fill: theme.colors.danger.background,
-      outline: `1px solid ${theme.shadows.focusDanger}`,
-    },
-    [`${inputBase}:not(:disabled):checked + &, ${inputBase}:not(:disabled)[aria-checked='mixed'] + &`]: {
+    [`${input}:not(:disabled):is(:checked, [aria-checked='mixed']) + &`]: {
       fill: theme.colors.primary.backgroundStrong,
     },
-    [`${inputBase}:not(:disabled)[aria-invalid='true'] + &, ${inputBase}:not(:disabled)[aria-invalid='mixed'] + &`]: {
+    [`${input}:not(:disabled):is([aria-invalid='true'], [aria-invalid='mixed']) + &`]: {
       fill: theme.colors.danger.background,
+    },
+    [`${input}:focus-visible + &`]: {
+      boxShadow: theme.shadows.focusPrimary,
+    },
+    [`${input}[aria-invalid='true']:focus-visible + &`]: {
+      boxShadow: theme.shadows.focusDanger,
     },
   },
 })
 
+// The svg is exactly the square size, so the focus ring hugs its edge.
 const icon = styleVariants({
   default: [
     iconBase,
     {
-      height: theme.sizing['300'],
-      minHeight: theme.sizing['300'],
-      minWidth: theme.sizing['300'],
-      width: theme.sizing['300'],
+      height: theme.sizing['250'],
+      minHeight: theme.sizing['250'],
+      minWidth: theme.sizing['250'],
+      width: theme.sizing['250'],
     },
   ],
   small: [
     iconBase,
     {
-      marginTop: theme.space['0.25'],
       height: theme.sizing['200'],
       minHeight: theme.sizing['200'],
       minWidth: theme.sizing['200'],
@@ -118,6 +124,10 @@ const icon = styleVariants({
     },
   ],
 })
+
+// hover and keyboard focus-visible show the same highlight
+const active = `${containerBase}:is(:hover[aria-disabled='false'], :has(input:focus-visible))`
+const activeState = (state: string) => `${active} input${state} + ${iconBase} &`
 
 const innerCheckbox = style({
   fill: theme.colors.neutral.background,
@@ -147,7 +157,7 @@ const innerCheckbox = style({
       fill: theme.colors.primary.backgroundStrong,
       stroke: theme.colors.primary.borderStrong,
       transformOrigin: 'center',
-      transition: '200ms fill ease-in-out',
+      transition: '300ms fill cubic-bezier(0.22, 1, 0.36, 1)',
     },
     [`${containerBase} input[aria-invalid="true"]:checked + ${iconBase} &`]: {
       fill: theme.colors.danger.backgroundStrong,
@@ -157,27 +167,19 @@ const innerCheckbox = style({
       fill: theme.colors.primary.backgroundStrong,
       stroke: theme.colors.primary.borderStrong,
     },
-    [`${containerBase}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='false'] + ${iconBase} &`]:
-      {
-        fill: theme.colors.primary.backgroundHover,
-        stroke: theme.colors.primary.borderHover,
-      },
-    [`${containerBase}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='true'] + ${iconBase} &`]:
-      {
-        fill: theme.colors.primary.backgroundStrongHover,
-        stroke: theme.colors.primary.borderStrongHover,
-      },
-    [`${containerBase}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='mixed'] + ${iconBase} &`]:
-      {
-        fill: theme.colors.primary.backgroundStrongHover,
-        stroke: theme.colors.primary.borderStrongHover,
-      },
-    [`${containerBase}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='false'] + ${iconBase} &`]:
-      {
-        fill: theme.colors.danger.backgroundHover,
-        stroke: theme.colors.danger.borderHover,
-      },
-    [`${containerBase}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='true'] + ${iconBase} &`]: {
+    [activeState("[aria-invalid='false'][aria-checked='false']")]: {
+      fill: theme.colors.primary.backgroundHover,
+      stroke: theme.colors.primary.borderHover,
+    },
+    [activeState("[aria-invalid='false']:is(:checked, [aria-checked='mixed'])")]: {
+      fill: theme.colors.primary.backgroundStrongHover,
+      stroke: theme.colors.primary.borderStrongHover,
+    },
+    [activeState("[aria-invalid='true'][aria-checked='false']")]: {
+      fill: theme.colors.danger.backgroundHover,
+      stroke: theme.colors.danger.borderHover,
+    },
+    [activeState("[aria-invalid='true'][aria-checked='true']")]: {
       fill: theme.colors.danger.backgroundStrongHover,
       stroke: theme.colors.danger.borderStrongHover,
     },
@@ -185,22 +187,12 @@ const innerCheckbox = style({
       fill: theme.colors.danger.background,
       stroke: theme.colors.danger.backgroundStrong,
     },
-    [`${inputBase}:focus + ${iconBase} &`]: {
-      fill: theme.colors.primary.backgroundHover,
-      stroke: theme.colors.primary.borderHover,
+    [`${input}:not(:disabled):is(:checked, [aria-checked='mixed']) + ${iconBase} &`]: {
+      stroke: theme.colors.primary.borderStrong,
     },
-    [`${inputBase}[aria-invalid='true']:focus + ${iconBase} &`]: {
-      fill: theme.colors.danger.backgroundHover,
-      stroke: theme.colors.danger.borderHover,
+    [`${input}:not(:disabled):is([aria-invalid='true'], [aria-invalid='mixed']) + ${iconBase} &`]: {
+      stroke: theme.colors.danger.border,
     },
-    [`${inputBase}:not(:disabled):checked + ${iconBase} &, ${inputBase}:not(:disabled)[aria-checked='mixed'] + ${iconBase} &`]:
-      {
-        stroke: theme.colors.primary.borderStrong,
-      },
-    [`${inputBase}:not(:disabled)[aria-invalid='true'] + ${iconBase} &, ${inputBase}:not(:disabled)[aria-invalid='mixed'] + ${iconBase} &`]:
-      {
-        stroke: theme.colors.danger.border,
-      },
     [`${listStyle.checkboxInRange} &`]: {
       fill: theme.colors.neutral.backgroundHover,
       stroke: theme.colors.neutral.borderHover,
@@ -213,9 +205,9 @@ const iconPath = style({
   transform: 'scale(0)',
   selectors: {
     [`${containerBase} input:checked + ${iconBase} &`]: {
-      transform: 'scale(1) translate(2px, 2px)',
+      transform: 'scale(1)',
       transformOrigin: 'center',
-      transition: '200ms transform ease-in-out',
+      transition: '300ms transform cubic-bezier(0.22, 1, 0.36, 1)',
     },
   },
 })
@@ -238,15 +230,28 @@ const label = style({
     [`${checkboxGroupStyle.checkboxGroup} &`]: {
       width: 'fit-content',
     },
+    [`${container.small} &`]: {
+      marginTop: theme.space[0.25],
+    },
+  },
+})
+
+const labelWrapper = style({
+  selectors: {
+    [`${container.small} &`]: {
+      minHeight: theme.sizing['300'],
+    },
   },
 })
 
 export const checkboxStyle = {
   container,
   input,
+  iconWrapper,
   icon,
   innerCheckbox,
   iconPath,
   checkMixedMark,
   label,
+  labelWrapper,
 }
