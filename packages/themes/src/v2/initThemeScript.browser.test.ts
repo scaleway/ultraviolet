@@ -2,16 +2,14 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { DEFAULT_THEME_STORAGE_KEY } from './constants'
 import { getThemeInitScript } from './initThemeScript'
 
-// The init script is a self-contained string evaluated in a page where none of
-// the module identifiers exist: `new Function` gives it the same isolation, so
-// any reference to an outer variable throws and applies no theme at all.
-// oxlint-disable-next-line eslint/no-new-func, typescript/no-implied-eval -- executing the emitted script is the point of these tests
+// allow us to execute the string template script
+// oxlint-disable-next-line eslint/no-new-func, typescript/no-implied-eval
 const runInitScript = (script: string) => new Function(script)()
 
-const mockPrefersDarkMode = (prefersDarkMode: boolean) => {
-  // oxlint-disable-next-line vitest/prefer-spy-on -- jsdom doesn't implement matchMedia
-  window.matchMedia = vi.fn().mockReturnValue({ matches: prefersDarkMode } as MediaQueryList)
-}
+// `matchMedia` exists in real browsers: spying on it is enough to control the
+// system color scheme.
+const mockPrefersDarkMode = (prefersDarkMode: boolean) =>
+  vi.spyOn(globalThis, 'matchMedia').mockReturnValue({ matches: prefersDarkMode } as MediaQueryList)
 
 const storeTheme = (storageKey: string, theme: string) => window.localStorage.setItem(storageKey, theme)
 
