@@ -10,7 +10,7 @@ import { IllustrationContainer } from './IllustrationContainer'
 import { MultiStateInput } from './MultiStateInput'
 import type { SelectableCardProps } from './types'
 import { selectableCardStyle } from './styles.css'
-import { inputDisplay, labelDisplay, widthSelectable } from './variables.css'
+import { widthSelectable } from './variables.css'
 
 /**
  * SelectableCard is a component that can be used to create a radio or checkbox card.
@@ -129,6 +129,7 @@ export const SelectableCard = forwardRef(
           data-checked={checked}
           data-disabled={disabled}
           data-error={isError}
+          data-show-tick={showTick}
           data-testid={dataTestId}
           data-type={type}
           direction={label ? 'column' : 'row'}
@@ -140,8 +141,6 @@ export const SelectableCard = forwardRef(
           role="button"
           style={{
             ...assignInlineVars({
-              [inputDisplay]: showTick ? 'inline' : 'none',
-              [labelDisplay]: showTick || label ? 'inline' : 'none',
               [widthSelectable]: label ? '100%' : 'auto',
             }),
             ...style,

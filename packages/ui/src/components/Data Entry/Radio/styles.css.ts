@@ -152,6 +152,9 @@ const ring = style({
       cursor: 'not-allowed',
       fill: theme.colors.neutral.borderDisabled,
     },
+    [`[data-show-tick='false'] ${selectableCardStyle.selectableElement} > ${radio} + &`]: {
+      display: 'none',
+    },
   },
 })
 

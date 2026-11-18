@@ -1,13 +1,14 @@
 import type { Meta } from '@storybook/react-vite'
 import { Checkbox } from '..'
+import { Stack } from '../../../Layout/Stack'
 
 export default {
   component: Checkbox,
   decorators: [
     StoryComponent => (
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Stack alignItems="start" gap={2}>
         <StoryComponent />
-      </div>
+      </Stack>
     ),
   ],
   title: 'UI/Data Entry/Checkbox',

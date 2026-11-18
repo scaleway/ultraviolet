@@ -16,7 +16,6 @@ export const ShowTick: StoryFn = args => {
         label="Radio Left"
         name="label-5"
         onChange={event => setRadio(event.currentTarget.value)}
-        showTick
         type="radio"
         value="label-5"
       />
@@ -26,7 +25,6 @@ export const ShowTick: StoryFn = args => {
         label="Radio Right"
         name="label-6"
         onChange={event => setRadio(event.currentTarget.value)}
-        showTick
         type="radio"
         value="label-6"
       />
@@ -37,7 +35,6 @@ export const ShowTick: StoryFn = args => {
         label="Checkbox 1"
         name="label-1"
         onChange={event => setCheckbox({ ...checkbox, 'label-1': event.currentTarget.checked })}
-        showTick
         type="checkbox"
         value="label-1"
       />
@@ -47,7 +44,6 @@ export const ShowTick: StoryFn = args => {
         label="Checkbox 2"
         name="label-2"
         onChange={event => setCheckbox({ ...checkbox, 'label-2': event.currentTarget.checked })}
-        showTick
         type="checkbox"
         value="label-2"
       />
@@ -58,7 +54,6 @@ export const ShowTick: StoryFn = args => {
         label="Toggle 1"
         name="label-1"
         onChange={event => setToggle({ ...toggle, 'label-1': event.currentTarget.checked })}
-        showTick
         type="toggle"
         value="label-1"
       />
@@ -68,12 +63,15 @@ export const ShowTick: StoryFn = args => {
         label="Toggle 2"
         name="label-2"
         onChange={event => setToggle({ ...toggle, 'label-2': event.currentTarget.checked })}
-        showTick
         type="toggle"
         value="label-2"
       />
     </>
   )
+}
+
+ShowTick.args = {
+  ShowTick: true,
 }
 
 ShowTick.parameters = {
