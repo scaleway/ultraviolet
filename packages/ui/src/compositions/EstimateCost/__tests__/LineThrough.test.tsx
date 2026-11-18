@@ -1,5 +1,5 @@
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
+import { renderWithTheme } from '../../../__tests__/helpers'
 import { LineThrough } from '../Components/LineThrough'
 
 describe('estimateCost - LineThrough', () => {

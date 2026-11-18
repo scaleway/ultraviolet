@@ -2,10 +2,10 @@ import type { TupleUnion } from '@scaleway/types'
 import { act, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MacMiniProductIcon } from '@ultraviolet/icons/product/MacMiniProductIcon'
-import { renderWithTheme } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { SelectableCard } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { IllustrationExample } from './illustrationTest'
 
 describe('selectableCard', () => {

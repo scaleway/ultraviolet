@@ -52,9 +52,6 @@ export const browserProjectConfig = {
         },
       ],
     },
-    // `a11y.test.tsx` suites stay colocated in `__tests__`; any other test
-    // needing a real browser opts in from any path with the `*.browser.test.tsx`
-    // (or `.ts`) suffix.
     include: ['src/**/__tests__/a11y.test.tsx', '**/*.browser.test.{ts,tsx}'],
     exclude: [
       ...configDefaults.exclude,

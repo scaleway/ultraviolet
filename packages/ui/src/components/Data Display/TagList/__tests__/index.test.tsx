@@ -1,9 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { afterAll, describe, expect, it, vi } from 'vitest'
 import { TagList } from '..'
 import type { TagType } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 vi.mock('@ultraviolet/utils', async importOriginal => {
   // oxlint-disable-next-line typescript/consistent-type-imports

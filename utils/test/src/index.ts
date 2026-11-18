@@ -1,10 +1,3 @@
-export {
-  ComponentWrapper,
-  mockMatchMedia,
-  MockResizeObserver,
-  renderWithTheme,
-  resetUserEvent,
-  shouldMatchSnapshot,
-} from './vitest'
+export { makeShouldMatchSnapshot, mockMatchMedia, MockResizeObserver, resetUserEvent } from './vitest'
 
 export * from './axe'

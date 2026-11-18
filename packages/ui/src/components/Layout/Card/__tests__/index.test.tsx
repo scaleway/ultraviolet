@@ -1,6 +1,6 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Card } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 describe('card', () => {
   it('renders correctly with header', () => shouldMatchSnapshot(<Card header="Title">Hello</Card>))

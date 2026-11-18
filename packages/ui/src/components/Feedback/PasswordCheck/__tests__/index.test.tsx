@@ -1,6 +1,6 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { PasswordCheck } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 describe('passwordCheck', () => {
   it('render with custom values', () =>

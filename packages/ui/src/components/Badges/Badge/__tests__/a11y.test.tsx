@@ -1,9 +1,10 @@
 import { screen } from '@testing-library/react'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Badge } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { VisuallyHidden } from '../../../Other/VisuallyHidden'
 
 describe('badge - A11y', { tags: ['a11y'] }, () => {

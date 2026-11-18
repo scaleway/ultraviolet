@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
+import { renderWithTheme } from '../../../__tests__/helpers'
 import { AddressIcon, ArrowDownIcon, InformationIcon, LeftRightArrowIcon } from '../__generated__'
 
 describe('icon - A11y', { tags: ['a11y'] }, () => {

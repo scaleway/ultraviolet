@@ -1,7 +1,8 @@
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, it } from 'vitest'
 import { CopyButton } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('copy button - A11y', { tags: ['a11y'] }, () => {
   it.for([...consoleThemesMap.entries()])('should render with default props  theme %s ', async ([, currentTheme]) => {

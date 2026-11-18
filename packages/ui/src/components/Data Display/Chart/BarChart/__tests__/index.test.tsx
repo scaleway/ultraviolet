@@ -1,9 +1,9 @@
 import type * as Nivo from '@nivo/core'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, it, vi } from 'vitest'
 import { BarChart } from '..'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../../../__tests__/helpers'
 import { barChartMultiData, barChartPositiveNegativeData, barChartSimpleData } from '../__stories__/mockData'
 
 // Mock the ResponsiveWrapper component

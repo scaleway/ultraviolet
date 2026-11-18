@@ -1,6 +1,6 @@
-import { renderHook } from '@testing-library/react'
+import { render, renderHook } from '@testing-library/react'
+import type { RenderOptions } from '@testing-library/react'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
-import { renderWithTheme } from '@utils/test'
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
 import type { FormErrors, UseFormProps } from '..'
 import { Form, useForm } from '..'
@@ -16,6 +16,15 @@ export const ComponentWrapper = ({
     <div data-testid="testing">{children}</div>
   </ThemeProvider>
 )
+
+export const renderWithTheme = (component: ReactNode, theme?: typeof consoleLightTheme, options?: RenderOptions) => {
+  const result = render(component, {
+    ...options,
+    wrapper: ({ children }) => <ComponentWrapper theme={theme}>{children}</ComponentWrapper>,
+  })
+
+  return result
+}
 
 export const mockFormErrors: FormErrors = {
   isNumber: ({ value }) => `This field should be a number: ${value} `,

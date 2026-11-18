@@ -1,6 +1,6 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Row } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 
 describe('row', () => {
   it('renders correctly with default props', () =>

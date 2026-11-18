@@ -1,6 +1,6 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Status } from '..'
+import { shouldMatchSnapshot } from '../../../../__tests__/helpers'
 import { SENTIMENTS } from '../constant'
 
 describe('status', () => {

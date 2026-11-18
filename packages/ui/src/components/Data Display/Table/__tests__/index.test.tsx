@@ -1,11 +1,11 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { theme as defaultTheme, ThemeProvider } from '@ultraviolet/themes'
-import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Table } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 type WrapperProps = {
   theme?: typeof defaultTheme

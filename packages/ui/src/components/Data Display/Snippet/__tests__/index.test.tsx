@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../../__tests__/helpers'
 import { Snippet } from '../index'
 
 const TEST_VALUE_MULTILINE = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

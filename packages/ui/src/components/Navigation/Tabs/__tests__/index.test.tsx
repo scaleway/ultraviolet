@@ -1,8 +1,8 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Tabs } from '..'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../../__tests__/helpers'
 import { Link } from '../../../Action/Link'
 
 describe('tabs', () => {

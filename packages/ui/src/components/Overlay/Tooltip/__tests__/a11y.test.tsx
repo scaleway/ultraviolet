@@ -2,9 +2,10 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { SettingsIcon } from '@ultraviolet/icons'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Tooltip } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { TextInput } from '../../../Data Entry/TextInput'
 
 describe('tooltip - A11y', { tags: ['a11y'] }, () => {

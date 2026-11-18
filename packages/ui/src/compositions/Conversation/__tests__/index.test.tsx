@@ -1,6 +1,6 @@
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Conversation } from '..'
+import { shouldMatchSnapshot } from '../../../__tests__/helpers'
 
 describe('conversation', () => {
   it('should work with Default', () =>

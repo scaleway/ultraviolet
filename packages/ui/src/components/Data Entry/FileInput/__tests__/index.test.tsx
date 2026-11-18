@@ -1,9 +1,9 @@
 // oxlint-disable typescript/no-unsafe-type-assertion
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { FileInput } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { defaultFiles } from '../__mock__/mockFile'
 
 describe('fileInput', () => {

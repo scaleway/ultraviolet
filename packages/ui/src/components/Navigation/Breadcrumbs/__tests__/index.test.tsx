@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import type { PropsWithChildren } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Breadcrumbs } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 const CustomLink = ({ children, ...props }: PropsWithChildren<{ href: string }>) => (
   <a data-custom-link="true" {...props}>

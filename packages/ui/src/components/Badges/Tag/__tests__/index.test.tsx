@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { LockIcon } from '@ultraviolet/icons/LockIcon'
-import { renderWithTheme } from '@utils/test'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { Tag } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 let writeTextMock: ReturnType<typeof vi.fn> | undefined = undefined
 

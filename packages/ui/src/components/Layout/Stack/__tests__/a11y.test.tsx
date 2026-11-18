@@ -1,6 +1,7 @@
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Stack } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('stack - A11Y', { tags: ['a11y'] }, () => {
   it('should not have violation with default props', async () => {

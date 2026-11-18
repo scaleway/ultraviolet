@@ -2,10 +2,10 @@
 import type * as Nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { LineChart } from '..'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../../../__tests__/helpers'
 import { lineChartData, lineChartHoursData, lineChartMultipleData } from '../__stories__/mockData'
 
 // Mock the ResponsiveWrapper component

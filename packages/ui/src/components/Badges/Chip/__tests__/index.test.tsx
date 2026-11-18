@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { AddressIcon } from '@ultraviolet/icons/AddressIcon'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Chip } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('chip', () => {
   it('renders correctly', () => {

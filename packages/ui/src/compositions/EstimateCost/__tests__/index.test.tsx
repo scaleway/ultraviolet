@@ -1,7 +1,7 @@
-import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { resetIntersectionMocking, setupIntersectionMocking } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { EstimateCost } from '..'
+import { renderWithTheme, shouldMatchSnapshot } from '../../../__tests__/helpers'
 
 describe('estimateCost - index', () => {
   beforeEach(() => {

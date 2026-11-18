@@ -1,6 +1,7 @@
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { WireIllustration } from '..'
+import { renderWithTheme } from '../../../__tests__/helpers'
 
 describe('wireIllustration - A11y', { tags: ['a11y'] }, () => {
   it('should be decorative by default', () => {

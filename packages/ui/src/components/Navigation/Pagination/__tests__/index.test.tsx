@@ -1,10 +1,11 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { MockResizeObserver, renderWithTheme } from '@utils/test'
+import { MockResizeObserver } from '@utils/test'
 import { forwardRef } from 'react'
 import type { AnchorHTMLAttributes } from 'react'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { Pagination } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('pagination', () => {
   beforeAll(() => {

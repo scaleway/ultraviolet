@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { NumberInput } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('numberInput', () => {
   it('should renders correctly', () => {

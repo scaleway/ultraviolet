@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { TagInput } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('tagInput', () => {
   it('should renders correctly', () => {

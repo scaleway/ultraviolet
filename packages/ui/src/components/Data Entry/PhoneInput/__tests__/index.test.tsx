@@ -1,8 +1,9 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { PhoneInput } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('ui - PhoneInput', () => {
   it('should render correctly with basic props', async () => {

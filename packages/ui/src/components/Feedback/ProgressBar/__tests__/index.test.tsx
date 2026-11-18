@@ -1,6 +1,6 @@
-import { renderWithTheme } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { ProgressBar } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { PROGRESS_BAR_SENTIMENTS } from '../constants'
 
 describe('progressBar', () => {

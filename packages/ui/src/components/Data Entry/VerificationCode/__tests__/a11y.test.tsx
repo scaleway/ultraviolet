@@ -1,8 +1,9 @@
 import { screen } from '@testing-library/react'
 import { consoleThemesMap } from '@ultraviolet/themes'
-import { expectNoViolations, renderWithTheme } from '@utils/test'
+import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { VerificationCode } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 describe('verificationCode - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {

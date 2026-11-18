@@ -1,9 +1,9 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { useState } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { SelectInput } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 import { cities, dataGrouped, dataGroupedSmall, dataGroupEmpty, dataUnGrouped, OptionalInfo } from './resources'
 
 // checkboxes are hidden (to avoid inputs inside a button)

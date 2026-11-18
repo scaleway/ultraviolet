@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 import { DateInput } from '..'
+import { renderWithTheme } from '../../../../__tests__/helpers'
 
 const DECEMBER = /December/iv
 const YEAR = /1995/iv

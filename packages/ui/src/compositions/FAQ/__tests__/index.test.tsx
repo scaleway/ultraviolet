@@ -1,7 +1,7 @@
 import { SupportProductIcon } from '@ultraviolet/icons/product/SupportProductIcon'
-import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { FAQ } from '..'
+import { shouldMatchSnapshot } from '../../../__tests__/helpers'
 
 describe('fAQ', () => {
   it('should work with default props', () => shouldMatchSnapshot(<FAQ description="Description" title="Title" />))

@@ -276,9 +276,6 @@ importers:
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:packages/ui
-      '@utils/test':
-        specifier: workspace:*
-        version: link:utils/test
       '@vanilla-extract/vite-plugin':
         specifier: 5.2.6
         version: 5.2.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(supports-color@8.1.1)(terser@5.51.2)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(yaml@2.9.1)
@@ -782,6 +779,9 @@ importers:
       '@testing-library/react':
         specifier: 16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@utils/test':
+        specifier: workspace:*
+        version: link:../../utils/test
       '@vanilla-extract/vite-plugin':
         specifier: 5.2.6
         version: 5.2.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(supports-color@8.1.1)(terser@5.51.2)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(yaml@2.9.1)
@@ -1048,9 +1048,6 @@ importers:
       '@testing-library/react':
         specifier: 16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@ultraviolet/themes':
-        specifier: workspace:*
-        version: link:../../packages/themes
       '@vitest/browser':
         specifier: 5.1.0
         version: 5.1.0(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(vitest@5.1.0)
