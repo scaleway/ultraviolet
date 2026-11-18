@@ -1,18 +1,14 @@
 import { screen } from '@testing-library/react'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Label } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 
 describe('label - A11y', { tags: ['a11y'] }, () => {
-  it.for([...consoleThemesMap.entries()])(
-    'should not have violations with required prop (theme: %s)',
-    async ([, currentTheme]) => {
-      const { container } = renderWithTheme(<Label required>Label</Label>, currentTheme)
-      await expectNoViolations(container)
-    },
-  )
+  it.for(THEMES)('should not have violations with required prop (theme: %s)', async currentTheme => {
+    const { container } = renderWithTheme(<Label required>Label</Label>, currentTheme)
+    await expectNoViolations(container)
+  })
 
   it('hides the required asterisk from assistive technologies and removes the dropped aria-label', () => {
     renderWithTheme(<Label required>Label</Label>)

@@ -1,53 +1,40 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Chip } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 
 describe('chip - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations with default chip (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(<Chip>test</Chip>, currentTheme)
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('should not have violations with default chip (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(<Chip>test</Chip>, currentTheme)
+      await expectNoViolations(container)
+    })
 
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations with active chip (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(<Chip active>test</Chip>, currentTheme)
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('should not have violations with active chip (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(<Chip active>test</Chip>, currentTheme)
+      await expectNoViolations(container)
+    })
 
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations with disabled chip (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(<Chip disabled>test</Chip>, currentTheme)
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('should not have violations with disabled chip (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(<Chip disabled>test</Chip>, currentTheme)
+      await expectNoViolations(container)
+    })
 
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations with closable chip (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(
-          <Chip
-            onClose={() => {
-              /* empty */
-            }}
-          >
-            test
-          </Chip>,
-          currentTheme,
-        )
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('should not have violations with closable chip (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(
+        <Chip
+          onClose={() => {
+            /* empty */
+          }}
+        >
+          test
+        </Chip>,
+        currentTheme,
+      )
+      await expectNoViolations(container)
+    })
   })
 
   describe('toggle button semantics (WCAG 4.1.2)', () => {

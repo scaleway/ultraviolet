@@ -1,42 +1,35 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { SelectInput } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 import { dataGrouped, dataUnGrouped } from './resources'
 
 describe('selectInput - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations when closed (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(<SelectInput label="Label" options={dataUnGrouped} />, currentTheme)
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('should not have violations when closed (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(<SelectInput label="Label" options={dataUnGrouped} />, currentTheme)
+      await expectNoViolations(container)
+    })
 
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations when open (theme: %s)',
-      async ([, currentTheme]) => {
-        renderWithTheme(
-          <main>
-            <SelectInput label="Label" options={dataUnGrouped} />
-          </main>,
-          currentTheme,
-        )
+    it.for(THEMES)('should not have violations when open (theme: %s)', async currentTheme => {
+      renderWithTheme(
+        <main>
+          <SelectInput label="Label" options={dataUnGrouped} />
+        </main>,
+        currentTheme,
+      )
 
-        await userEvent.click(screen.getByRole('combobox', { name: 'Label' }))
-        const dropdown = screen.getByRole('dialog')
-        await waitFor(() => {
-          expect(dropdown).toBeVisible()
-        })
+      await userEvent.click(screen.getByRole('combobox', { name: 'Label' }))
+      const dropdown = screen.getByRole('dialog')
+      await waitFor(() => {
+        expect(dropdown).toBeVisible()
+      })
 
-        // The panel is portaled to document.body, so scan the whole body
-        await expectNoViolations(document.body)
-      },
-    )
+      // The panel is portaled to document.body, so scan the whole body
+      await expectNoViolations(document.body)
+    })
 
     it('should not have violations in multiselect with select-all and group select', async () => {
       renderWithTheme(

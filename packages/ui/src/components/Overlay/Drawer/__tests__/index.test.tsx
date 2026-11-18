@@ -1,6 +1,5 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleLightTheme } from '@ultraviolet/themes'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Drawer } from '..'
 import { renderWithTheme } from '../../../../__tests__/helpers'
@@ -150,7 +149,7 @@ describe('drawer', () => {
       >
         <div>drawer</div>
       </Drawer>,
-      consoleLightTheme,
+      'light',
       {
         container: document.body,
       },

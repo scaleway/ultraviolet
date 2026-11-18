@@ -1,11 +1,10 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { useState } from 'react'
 import { describe, expect, it } from 'vitest'
 import { Modal } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 import { Button } from '../../../Action/Button'
 import { Text } from '../../../Typography/Text'
 import illustration from '../__stories__/assets/illustration.webp'
@@ -27,7 +26,7 @@ const ProgrammaticModal = () => {
 
 describe('modal - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    it.for([...consoleThemesMap.entries()])('should not have violations when open (theme: %s)', async ([, theme]) => {
+    it.for(THEMES)('should not have violations when open (theme: %s)', async currentTheme => {
       renderWithTheme(
         <Modal accessibleLabel="Settings" open>
           <Text as="h2" sentiment="neutral" variant="headingSmallStrong">
@@ -35,7 +34,7 @@ describe('modal - A11y', { tags: ['a11y'] }, () => {
           </Text>
           <Button>Save</Button>
         </Modal>,
-        theme,
+        currentTheme,
       )
 
       await expectNoViolations(document.body)

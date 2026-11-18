@@ -1,5 +1,4 @@
 import { fireEvent, screen } from '@testing-library/react'
-import { consoleLightTheme } from '@ultraviolet/themes'
 import { describe, expect, it, vi } from 'vitest'
 import { Tabs } from '..'
 import { renderWithTheme, shouldMatchSnapshot } from '../../../../__tests__/helpers'
@@ -56,7 +55,7 @@ describe('tabs', () => {
           <Tabs.MenuItem value={4}>Test 2</Tabs.MenuItem>
         </Tabs.Menu>
       </Tabs>,
-      consoleLightTheme,
+      'light',
       {
         container: document.body,
       },

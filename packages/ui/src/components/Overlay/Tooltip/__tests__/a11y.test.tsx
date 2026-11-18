@@ -1,28 +1,24 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { SettingsIcon } from '@ultraviolet/icons'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Tooltip } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 import { TextInput } from '../../../Data Entry/TextInput'
 
 describe('tooltip - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations when visible (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(
-          <Tooltip text="helpful information" visible>
-            <button type="button">Trigger</button>
-          </Tooltip>,
-          currentTheme,
-        )
+    it.for(THEMES)('should not have violations when visible (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(
+        <Tooltip text="helpful information" visible>
+          <button type="button">Trigger</button>
+        </Tooltip>,
+        currentTheme,
+      )
 
-        await expectNoViolations(container)
-      },
-    )
+      await expectNoViolations(container)
+    })
   })
 
   describe('interactions', () => {

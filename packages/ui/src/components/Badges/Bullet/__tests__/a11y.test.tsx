@@ -2,25 +2,21 @@ import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Bullet } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 
 describe('bullet - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    it.for([...consoleThemesMap.entries()])(
-      'text bullet should not have violations (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(<Bullet>1</Bullet>, currentTheme)
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('text bullet should not have violations (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(<Bullet>1</Bullet>, currentTheme)
+      await expectNoViolations(container)
+    })
 
-    it.for([...consoleThemesMap.entries()])(
+    it.for(THEMES)(
       'decorative icon bullet hidden with aria-hidden should not have violations (theme: %s)',
-      async ([, currentTheme]) => {
+      async currentTheme => {
         const { container } = renderWithTheme(
           <Bullet aria-hidden>
             <MoonIcon />

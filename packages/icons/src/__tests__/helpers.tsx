@@ -1,9 +1,11 @@
+import type { TupleUnion } from '@scaleway/types'
 import { render } from '@testing-library/react'
 import type { RenderOptions } from '@testing-library/react'
 import { ThemeProvider } from '@ultraviolet/themes/v2'
-import type { ThemeOption } from '@ultraviolet/themes/v2'
-// import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
+import type { Theme, ThemeOption } from '@ultraviolet/themes/v2'
 import type { ReactNode } from 'react'
+
+export const THEMES: TupleUnion<Theme> = ['dark', 'darker', 'light'] as const
 
 const ComponentWrapper = ({ children, theme = 'light' }: { children?: ReactNode; theme?: ThemeOption }) => (
   <ThemeProvider initialTheme={theme}>

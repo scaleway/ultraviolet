@@ -1,10 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { Popover } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 
 // Floating UI focuses through a rAF-deferred queue. On loaded CI runners the
 // webkit instance can take well over the 1s waitFor default to reach the
@@ -34,19 +33,16 @@ describe('popover - A11y', { tags: ['a11y'] }, () => {
     })
 
     // the panel is portaled to document.body, so scan the whole body
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations when open (theme: %s)',
-      async ([, currentTheme]) => {
-        renderWithTheme(
-          <Popover content="Popover content" title="Popover title" visible>
-            <button type="button">Open Popover</button>
-          </Popover>,
-          currentTheme,
-        )
+    it.for(THEMES)('should not have violations when open (theme: %s)', async currentTheme => {
+      renderWithTheme(
+        <Popover content="Popover content" title="Popover title" visible>
+          <button type="button">Open Popover</button>
+        </Popover>,
+        currentTheme,
+      )
 
-        await expectNoViolations(document.body)
-      },
-    )
+      await expectNoViolations(document.body)
+    })
   })
 
   describe('accessible name', () => {

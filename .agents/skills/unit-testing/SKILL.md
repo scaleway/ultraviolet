@@ -137,7 +137,7 @@ The browser project doesn't need it: playwright's `contextOptions` set `locale`/
 3. Delete redundant variant snapshots — assert the behavior those variants enable instead.
 4. If no `a11y.test.tsx` exists next to the rewritten file, create one with:
    - `expectNoViolations(container)` across every theme in `consoleThemesMap` (use
-     `it.for([...consoleThemesMap.entries()])`), rendering the component with a
+     `it.for(THEMES)`), rendering the component with a
      realistic full set of props.
    - Any component-specific a11y assertions (decorative `alt=""` images, ARIA
      wiring, accessible name/description via jest-dom semantic matchers like
