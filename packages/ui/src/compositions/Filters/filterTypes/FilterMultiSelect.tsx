@@ -47,7 +47,13 @@ export const FilterMultiSelect = <V extends AnyObject>({
         value={value}
       >
         {options.map(option => (
-          <CheckboxGroup.Checkbox key={option.value} name={config.name} value={option.value}>
+          <CheckboxGroup.Checkbox
+            key={option.value}
+            name={config.name}
+            value={option.value}
+            disabled={option.disabled}
+            tooltip={option.tooltip}
+          >
             <Stack direction="row" alignItems="center" gap={1}>
               {option.label}
               {option.optionalInfo}

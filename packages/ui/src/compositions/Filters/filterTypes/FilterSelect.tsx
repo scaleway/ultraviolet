@@ -48,6 +48,8 @@ export const FilterSelect = <V extends AnyObject>({
               </Stack>
             }
             value={option.value}
+            disabled={option.disabled}
+            tooltip={option.tooltip}
           />
         ))}
       </RadioGroup>
