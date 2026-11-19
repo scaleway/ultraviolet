@@ -59,7 +59,6 @@ export const FiltersDrawer = <V extends AnyObject>({ config, components, labels 
         </Row>
       }
       header={labels.drawerHeader}
-      hideOnClickOutside={false}
       onClose={() => {
         filters.discard()
         closeDrawer()
