@@ -124,6 +124,13 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       setSearchTerms(value ?? '')
     }
 
+    const onCloseCallback = () => {
+      onClose?.()
+      if (isOpen) {
+        toggleIsOpen()
+      }
+    }
+
     const onSearchCallback = (localValue: string) => {
       setSearchTerms(localValue)
 
@@ -135,13 +142,6 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           onCloseCallback()
         }
       } catch {
-        toggleIsOpen()
-      }
-    }
-
-    const onCloseCallback = () => {
-      onClose?.()
-      if (isOpen) {
         toggleIsOpen()
       }
     }
