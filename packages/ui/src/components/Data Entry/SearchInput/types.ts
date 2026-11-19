@@ -12,10 +12,6 @@ type ChildrenProps = {
 export type SearchBarChildrenFunctionProps = ({ searchTerms, isOpen, toggleIsOpen }: ChildrenProps) => ReactNode
 
 export type SearchInputProps = {
-  /**
-   * @deprecated the Popup is always aligned at the bottom start of the SearchInput (and flips when missing space).
-   * This property is ignored.
-   */
   popupPlacement?: ComponentProps<typeof Popup.Panel>['placement']
   /**
    * Close the results panel when the search string is shorter than the threshold.

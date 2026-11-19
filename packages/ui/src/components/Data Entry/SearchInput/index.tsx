@@ -36,6 +36,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       labelDescription,
       loading,
       size = 'large',
+      popupPlacement = 'bottom-start',
       threshold = 0,
       children,
       onSearch,
@@ -290,7 +291,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
               data-testid={`popup-${dataTestId}`}
               initialFocus={-1}
               matchTriggerWidth
-              placement="bottom-start"
+              placement={popupPlacement}
             >
               {content}
             </Popup.Panel>
