@@ -108,6 +108,8 @@ jobs:
     needs: [build]
     container:
       image: mcr.microsoft.com/playwright:v1.64.1-noble
+      # Match the UID that owns $HOME (/github/home); Firefox refuses to start otherwise.
+      options: --user 1001
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -243,6 +245,8 @@ jobs:
     needs: [build]
     container:
       image: mcr.microsoft.com/playwright:v1.64.1-noble
+      # Match the UID that owns $HOME (/github/home); Firefox refuses to start otherwise.
+      options: --user 1001
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/setup@731dfb6463bbd11c11fd0ee11fe00ed0e36d48a1 # v3.2.0
