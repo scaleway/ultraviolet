@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { Stack } from '../../../components'
 import { CheckboxGroup } from '../../../components/Data Entry/CheckboxGroup'
 import { SelectInput } from '../../../components/Data Entry/SelectInput'
 import { Label } from '../../../components/Typography/Label'
@@ -47,7 +48,10 @@ export const FilterMultiSelect = <V extends AnyObject>({
       >
         {options.map(option => (
           <CheckboxGroup.Checkbox key={option.value} name={config.name} value={option.value}>
-            {option.label}
+            <Stack direction="row" alignItems="center" gap={1}>
+              {option.label}
+              {option.optionalInfo}
+            </Stack>
           </CheckboxGroup.Checkbox>
         ))}
       </CheckboxGroup>

@@ -1,5 +1,5 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
-import { Tooltip } from '../../../components'
+import { Badge, Bullet, Tooltip } from '../../../components'
 import type { FilterConfig } from '../types'
 
 export type FilterValues = {
@@ -59,8 +59,8 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
         clearable: true,
         placeholder: 'Select status',
         options: [
-          { label: 'Active', value: 'active' },
-          { label: 'Inactive', value: 'inactive' },
+          { label: 'Active', value: 'active', optionalInfo: <Bullet size="small">3</Bullet> },
+          { label: 'Inactive', value: 'inactive', optionalInfo: <Bullet size="small">5</Bullet> },
         ],
       },
       {
@@ -69,13 +69,11 @@ export const demoFilters: FilterConfig<FilterValues>[] = [
         label: 'Environment',
         labelDescription,
         placeholder: 'Select environment',
-        selectAll: {
-          label: 'All Environments',
-        },
         options: [
           { label: 'Production', value: 'prod' },
           { label: 'Development', value: 'dev' },
           { label: 'Staging', value: 'staging' },
+          { label: 'Review', value: 'review', optionalInfo: <Badge size="small">Legacy</Badge> },
         ],
       },
     ],
