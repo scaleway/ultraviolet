@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { Stack } from '../../../components'
 import { RadioGroup } from '../../../components/Data Entry/RadioGroup'
 import { SelectInput } from '../../../components/Data Entry/SelectInput'
 import { Label } from '../../../components/Typography/Label'
@@ -38,7 +39,22 @@ export const FilterSelect = <V extends AnyObject>({
         value={value}
       >
         {options.map(option => (
-          <RadioGroup.Radio key={option.value} label={option.label} value={option.value} />
+          <RadioGroup.Radio
+            key={option.value}
+            label={
+              option.optionalInfo ? (
+                <Stack direction="row" alignItems="center" gap={1}>
+                  {option.label}
+                  {option.optionalInfo}
+                </Stack>
+              ) : (
+                option.label
+              )
+            }
+            value={option.value}
+            disabled={option.disabled}
+            tooltip={option.tooltip}
+          />
         ))}
       </RadioGroup>
     )
