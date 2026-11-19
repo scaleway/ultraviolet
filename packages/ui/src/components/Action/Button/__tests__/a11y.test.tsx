@@ -1,25 +1,21 @@
 import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Button } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 
 describe('button - A11y', { tags: ['a11y'] }, () => {
-  it.for([...consoleThemesMap.entries()])(
-    'should not have violations with default props (theme: %s)',
-    async ([, currentTheme]) => {
-      const { container } = renderWithTheme(
-        <Button disabled>
-          <PencilIcon />
-          Hello
-        </Button>,
-        currentTheme,
-      )
+  it.for(THEMES)('should not have violations with default props (theme: %s)', async currentTheme => {
+    const { container } = renderWithTheme(
+      <Button disabled>
+        <PencilIcon />
+        Hello
+      </Button>,
+      currentTheme,
+    )
 
-      await expectNoViolations(container)
-    },
-  )
+    await expectNoViolations(container)
+  })
 
   it('should not have violations with icon-only button labelled via accessibleLabel', async () => {
     const { container } = renderWithTheme(

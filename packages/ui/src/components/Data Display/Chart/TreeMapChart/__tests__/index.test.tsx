@@ -1,6 +1,5 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleLightTheme } from '@ultraviolet/themes'
 import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { describe, expect, it, vi } from 'vitest'
@@ -85,22 +84,19 @@ vi.mock('@nivo/treemap', () => ({
 
 describe('treeMapChart', () => {
   it('renders correctly with data', () => {
-    const { asFragment } = renderWithTheme(<TreeMapChart data={treeMapChartSimpleData} />, consoleLightTheme)
+    const { asFragment } = renderWithTheme(<TreeMapChart data={treeMapChartSimpleData} />, 'light')
 
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders complex content with React components', () => {
-    const { asFragment } = renderWithTheme(<TreeMapChart data={treeMapChartWithCustomContentData} />, consoleLightTheme)
+    const { asFragment } = renderWithTheme(<TreeMapChart data={treeMapChartWithCustomContentData} />, 'light')
 
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('renders with custom height', () => {
-    const { container } = renderWithTheme(
-      <TreeMapChart data={treeMapChartSimpleData} height="400px" />,
-      consoleLightTheme,
-    )
+    const { container } = renderWithTheme(<TreeMapChart data={treeMapChartSimpleData} height="400px" />, 'light')
 
     const chartContainer = container.querySelector('[style*="height"]')
     expect(chartContainer).toHaveStyle({ height: '400px' })
@@ -114,7 +110,7 @@ describe('treeMapChart', () => {
 
     const { container } = renderWithTheme(
       <TreeMapChart data={treeMapChartSimpleData} tooltipFunction={tooltipFunction} />,
-      consoleLightTheme,
+      'light',
     )
 
     // Find the first node element (treemap node)

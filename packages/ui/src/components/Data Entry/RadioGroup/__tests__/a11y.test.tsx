@@ -1,12 +1,11 @@
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { RadioGroup } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 
 describe('radioGroup - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    it.for([...consoleThemesMap.entries()])('should not have violations (theme: %s)', async ([, currentTheme]) => {
+    it.for(THEMES)('should not have violations (theme: %s)', async currentTheme => {
       const { container } = renderWithTheme(
         <RadioGroup legend="Group legend" name="radio" onChange={() => {}} value="value-1">
           <RadioGroup.Radio label="Radio 1" value="value-1" />

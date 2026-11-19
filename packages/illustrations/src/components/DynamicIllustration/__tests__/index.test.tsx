@@ -1,14 +1,20 @@
-import { consoleDarkerTheme, consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
-import { describe, it } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { DynamicIllustration } from '..'
-import { shouldMatchSnapshot } from '../../../__tests__/helpers'
+import { renderWithTheme } from '../../../__tests__/helpers'
 
 describe('dynamicIllustration', () => {
-  it('should work with consoleLightTheme', () =>
-    shouldMatchSnapshot(<DynamicIllustration name="empty" />, consoleLightTheme))
-  it('should work with consoleDarkTheme', () =>
-    shouldMatchSnapshot(<DynamicIllustration name="empty" />, consoleDarkTheme))
+  it('should work with consoleLightTheme', () => {
+    const { asFragment } = renderWithTheme(<DynamicIllustration name="empty" />, 'light')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should work with consoleDarkerTheme', () =>
-    shouldMatchSnapshot(<DynamicIllustration name="empty" />, consoleDarkerTheme))
+  it('should work with consoleDarkTheme', () => {
+    const { asFragment } = renderWithTheme(<DynamicIllustration name="empty" />, 'dark')
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should work with consoleDarkerTheme', () => {
+    const { asFragment } = renderWithTheme(<DynamicIllustration name="empty" />, 'darker')
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

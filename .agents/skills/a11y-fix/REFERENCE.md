@@ -113,7 +113,7 @@ import { describe, it } from 'vitest'
 import { Component } from '..'
 
 describe('component - A11y', { tags: ['a11y'] }, () => {
-  it.for([...consoleThemesMap.entries()])('should not have violations with (theme: %s)', async ([, currentTheme]) => {
+  it.for(THEMES)('should not have violations with (theme: %s)', async currentTheme => {
     const { container } = renderWithTheme(<Component>label</Component>, currentTheme)
     await expectNoViolations(container)
   })

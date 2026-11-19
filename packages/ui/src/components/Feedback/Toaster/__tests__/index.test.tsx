@@ -1,5 +1,4 @@
 import { act, screen } from '@testing-library/react'
-import { consoleLightTheme } from '@ultraviolet/themes'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Toast, toast, ToastContainer } from '..'
 import { renderWithTheme } from '../../../../__tests__/helpers'
@@ -30,7 +29,7 @@ describe('toaster', () => {
   })
 
   it('renders correctly with all kind of toast', async () => {
-    const { asFragment } = renderWithTheme(<ToastContainer />, consoleLightTheme, {
+    const { asFragment } = renderWithTheme(<ToastContainer />, 'light', {
       container: document.body,
     })
 

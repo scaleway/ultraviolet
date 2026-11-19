@@ -20,7 +20,13 @@ if (process.platform === 'darwin' && !process.env['CFFIXED_USER_HOME']) {
 export const browserProjectConfig = {
   optimizeDeps: {
     exclude: ['@vanilla-extract/recipes', '@vanilla-extract/sprinkles'],
-    include: ['@vanilla-extract/css', '@vanilla-extract/css/fileScope', '@vitest/coverage-istanbul'],
+    include: [
+      '@vanilla-extract/dynamic',
+      '@vanilla-extract/css',
+      '@vanilla-extract/css/fileScope',
+      '@vitest/coverage-istanbul',
+      'deepmerge',
+    ],
   },
   test: {
     tags: [

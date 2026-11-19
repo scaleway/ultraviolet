@@ -1,13 +1,12 @@
 import { screen } from '@testing-library/react'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Radio } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 
 describe('radio - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    it.for([...consoleThemesMap.entries()])('should not have violations (theme: %s)', async ([, currentTheme]) => {
+    it.for(THEMES)('should not have violations (theme: %s)', async currentTheme => {
       const { container } = renderWithTheme(
         <Radio checked label="Choice" name="radio" onChange={() => {}} value="choice" />,
         currentTheme,

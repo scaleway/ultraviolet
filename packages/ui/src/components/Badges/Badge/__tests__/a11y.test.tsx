@@ -1,21 +1,17 @@
 import { screen } from '@testing-library/react'
 import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Badge } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 import { VisuallyHidden } from '../../../Other/VisuallyHidden'
 
 describe('badge - A11y', { tags: ['a11y'] }, () => {
-  it.for([...consoleThemesMap.entries()])(
-    'should not have violations with default props (theme: %s)',
-    async ([, currentTheme]) => {
-      const { container } = renderWithTheme(<Badge>Sample badge</Badge>, currentTheme)
+  it.for(THEMES)('should not have violations with default props (theme: %s)', async currentTheme => {
+    const { container } = renderWithTheme(<Badge>Sample badge</Badge>, currentTheme)
 
-      await expectNoViolations(container)
-    },
-  )
+    await expectNoViolations(container)
+  })
 
   describe('semantic role (WCAG 1.3.1)', () => {
     it('renders a status role when provided', () => {

@@ -1,6 +1,5 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleDarkTheme } from '@ultraviolet/themes'
 import { describe, expect, it } from 'vitest'
 import { Banner } from '..'
 import { renderWithTheme, shouldMatchSnapshot } from '../../../../__tests__/helpers'
@@ -76,6 +75,6 @@ describe('banner', () => {
       <Banner linkText="Learn more" title="Title">
         Descritpion
       </Banner>,
-      consoleDarkTheme,
+      'dark',
     ))
 })

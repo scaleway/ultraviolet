@@ -1,11 +1,10 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { useRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Popup } from '..'
-import { renderWithTheme } from '../../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../../__tests__/helpers'
 import { Modal } from '../../../Modal'
 
 // Floating UI focuses through a rAF-deferred queue. On loaded CI runners the
@@ -38,14 +37,11 @@ const renderPopup = (
 describe('popup v2 - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
     // the panel is portaled to document.body, so scan the whole body
-    it.for([...consoleThemesMap.entries()])(
-      'should not have violations when open (theme: %s)',
-      async ([, currentTheme]) => {
-        renderPopup({ rootProps: { defaultVisible: true }, panelProps: { accessibleLabel: 'Settings' } }, currentTheme)
+    it.for(THEMES)('should not have violations when open (theme: %s)', async currentTheme => {
+      renderPopup({ rootProps: { defaultVisible: true }, panelProps: { accessibleLabel: 'Settings' } }, currentTheme)
 
-        await expectNoViolations(document.body)
-      },
-    )
+      await expectNoViolations(document.body)
+    })
   })
 
   describe('trigger ARIA', () => {

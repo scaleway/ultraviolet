@@ -1,36 +1,26 @@
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { consoleThemesMap } from '@ultraviolet/themes'
 import { expectNoViolations } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { Tag } from '..'
-import { renderWithTheme } from '../../../../__tests__/helpers'
+import { renderWithTheme, THEMES } from '../../../../__tests__/helpers'
 
 describe('tag - A11y', { tags: ['a11y'] }, () => {
   describe('axe checks', () => {
-    it.for([...consoleThemesMap.entries()])(
-      'copiable should not have violations (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(<Tag copiable>test</Tag>, currentTheme)
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('copiable should not have violations (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(<Tag copiable>test</Tag>, currentTheme)
+      await expectNoViolations(container)
+    })
 
-    it.for([...consoleThemesMap.entries()])(
-      'removable should not have violations (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(<Tag onClose={() => {}}>test</Tag>, currentTheme)
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('removable should not have violations (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(<Tag onClose={() => {}}>test</Tag>, currentTheme)
+      await expectNoViolations(container)
+    })
 
-    it.for([...consoleThemesMap.entries()])(
-      'key-value should not have violations (theme: %s)',
-      async ([, currentTheme]) => {
-        const { container } = renderWithTheme(<Tag keyValue={{ key: 'key', value: 'value' }} />, currentTheme)
-        await expectNoViolations(container)
-      },
-    )
+    it.for(THEMES)('key-value should not have violations (theme: %s)', async currentTheme => {
+      const { container } = renderWithTheme(<Tag keyValue={{ key: 'key', value: 'value' }} />, currentTheme)
+      await expectNoViolations(container)
+    })
 
     it('disabled copiable should not have violations', async () => {
       const { container } = renderWithTheme(

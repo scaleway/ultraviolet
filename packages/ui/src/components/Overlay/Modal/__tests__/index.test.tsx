@@ -1,6 +1,5 @@
 import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleLightTheme } from '@ultraviolet/themes'
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Modal } from '..'
 import { renderWithTheme } from '../../../../__tests__/helpers'
@@ -119,7 +118,7 @@ describe('modal', () => {
       >
         <div>modal</div>
       </Modal>,
-      consoleLightTheme,
+      'light',
       {
         container: document.body,
       },
@@ -148,7 +147,7 @@ describe('modal', () => {
       >
         <div>modal</div>
       </Modal>,
-      consoleLightTheme,
+      'light',
       {
         container: document.body,
       },
@@ -171,7 +170,7 @@ describe('modal', () => {
       >
         <div>modal</div>
       </Modal>,
-      consoleLightTheme,
+      'light',
     )
 
     await userEvent.click(screen.getByRole('button', { name: 'Open modal' }))

@@ -1,6 +1,5 @@
 import { screen, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { consoleLightTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { Tooltip } from '..'
@@ -9,13 +8,13 @@ import { renderWithTheme } from '../../../../__tests__/helpers'
 describe('tooltip', () => {
   describe('wrapper div', () => {
     it('should render a focusable wrapper div around the children if a text is provided', () => {
-      const { asFragment, container } = renderWithTheme(<Tooltip text="test">Hover me</Tooltip>, consoleLightTheme)
+      const { asFragment, container } = renderWithTheme(<Tooltip text="test">Hover me</Tooltip>, 'light')
       expect(container.querySelector('[tabindex="0"]')).toBeDefined()
       expect(asFragment()).toMatchSnapshot()
     })
 
     it('should render the children directly if no text is provided', () => {
-      const { asFragment } = renderWithTheme(<Tooltip>Hover me</Tooltip>, consoleLightTheme)
+      const { asFragment } = renderWithTheme(<Tooltip>Hover me</Tooltip>, 'light')
       expect(asFragment()).toMatchSnapshot()
     })
 
@@ -26,14 +25,14 @@ describe('tooltip', () => {
             <button type="button">interactive element</button>
           </div>
         </Tooltip>,
-        consoleLightTheme,
+        'light',
       )
       expect(container.querySelector('[tabindex="0"]')).toBeNull()
       expect(asFragment()).toMatchSnapshot()
     })
 
     it('should not add a wrapper div if the children are a function', () => {
-      const { asFragment } = renderWithTheme(<Tooltip>{() => <span>Hover me</span>}</Tooltip>, consoleLightTheme)
+      const { asFragment } = renderWithTheme(<Tooltip>{() => <span>Hover me</span>}</Tooltip>, 'light')
       expect(asFragment()).toMatchSnapshot()
     })
   })

@@ -49,7 +49,7 @@ Create `packages/ui/src/components/<Component>/__tests__/a11y.test.tsx` followin
 - One `describe('<component> - A11y', { tags: ['a11y'] }, ...)` block.
 - For issues detectable by axe (missing role, contrast, labels, ARIA attributes), render the relevant variant and call `await expectNoViolations(container)`.
 - For issues axe cannot catch (focus management, keyboard navigation), use React Testing Library queries and `@testing-library/user-event` to assert the desired behaviour (e.g. `expect(trigger).toHaveFocus()` after dismiss, `expect(menu).toBeVisible()` after ArrowDown).
-- When color contrast is relevant, iterate themes with `it.for([...consoleThemesMap.entries()])('should not have violations with (theme: %s)', ...)`.
+- When color contrast is relevant, iterate themes with `it.for(THEMES)('should not have violations with (theme: %s)', ...)`.
 - Only cover rules **Enforced by the component**. Skip **To apply when using the component** rules — those belong in consumer code.
 
 Run the suite with `pnpm test:unit -- <component-path>` and confirm the expected tests fail. Do not proceed to the fix until the suite accurately documents the issues.
