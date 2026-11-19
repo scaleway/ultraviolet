@@ -42,10 +42,14 @@ export const FilterSelect = <V extends AnyObject>({
           <RadioGroup.Radio
             key={option.value}
             label={
-              <Stack direction="row" alignItems="center" gap={1}>
-                {option.label}
-                {option.optionalInfo}
-              </Stack>
+              option.optionalInfo ? (
+                <Stack direction="row" alignItems="center" gap={1}>
+                  {option.label}
+                  {option.optionalInfo}
+                </Stack>
+              ) : (
+                option.label
+              )
             }
             value={option.value}
             disabled={option.disabled}

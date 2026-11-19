@@ -54,10 +54,14 @@ export const FilterMultiSelect = <V extends AnyObject>({
             disabled={option.disabled}
             tooltip={option.tooltip}
           >
-            <Stack direction="row" alignItems="center" gap={1}>
-              {option.label}
-              {option.optionalInfo}
-            </Stack>
+            {option.optionalInfo ? (
+              <Stack direction="row" alignItems="center" gap={1}>
+                {option.label}
+                {option.optionalInfo}
+              </Stack>
+            ) : (
+              option.label
+            )}
           </CheckboxGroup.Checkbox>
         ))}
       </CheckboxGroup>
