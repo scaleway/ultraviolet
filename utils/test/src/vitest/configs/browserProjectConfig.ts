@@ -25,7 +25,6 @@ export const browserProjectConfig = {
       '@vanilla-extract/css',
       '@vanilla-extract/css/fileScope',
       '@vitest/coverage-istanbul',
-      'deepmerge',
     ],
   },
   test: {
