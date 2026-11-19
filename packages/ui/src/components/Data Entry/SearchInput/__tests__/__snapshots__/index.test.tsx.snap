@@ -6,13 +6,10 @@ exports[`searchInput > renders correctly without children props 1`] = `
     data-testid="testing"
   >
     <div
-      style="width: 100%;"
+      class="styles__q9b75z2"
     >
       <div
-        aria-controls="_r_0_"
-        aria-describedby="_r_0_"
-        class="styles__10e61c29"
-        tabindex="0"
+        class="styles__12tze4lb"
       >
         <div
           class="styles__q9b75z1 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
@@ -29,7 +26,7 @@ exports[`searchInput > renders correctly without children props 1`] = `
               data-size="large"
             >
               <div
-                class="styles__q9b75z2 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+                class="styles__q9b75z3 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
                 data-testid="search-icon"
               >
                 <svg
@@ -48,10 +45,12 @@ exports[`searchInput > renders correctly without children props 1`] = `
               </div>
             </div>
             <input
+              aria-expanded="false"
+              aria-haspopup="dialog"
               aria-invalid="false"
               class="styles__12pwfcp9"
               data-size="large"
-              id="_r_1_"
+              id="_r_2_"
               placeholder="Type something"
               type="text"
               value=""
@@ -70,12 +69,13 @@ exports[`searchInput > renders with disabled prop 1`] = `
     data-testid="testing"
   >
     <div
-      style="width: 100%;"
+      class="styles__q9b75z2"
     >
       <div
-        aria-controls="_r_5_"
-        aria-describedby="_r_5_"
-        class="styles__10e61c29"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="styles__12tze4lb"
+        role="button"
         tabindex="0"
       >
         <div
@@ -93,7 +93,7 @@ exports[`searchInput > renders with disabled prop 1`] = `
               data-size="large"
             >
               <div
-                class="styles__q9b75z2 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+                class="styles__q9b75z3 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
                 data-testid="search-icon"
               >
                 <svg
@@ -116,7 +116,7 @@ exports[`searchInput > renders with disabled prop 1`] = `
               class="styles__12pwfcp9"
               data-size="large"
               disabled=""
-              id="_r_6_"
+              id="_r_9_"
               placeholder="Type something"
               type="text"
               value=""
@@ -135,13 +135,10 @@ exports[`searchInput > renders with error prop 1`] = `
     data-testid="testing"
   >
     <div
-      style="width: 100%;"
+      class="styles__q9b75z2"
     >
       <div
-        aria-controls="_r_u_"
-        aria-describedby="_r_u_"
-        class="styles__10e61c29"
-        tabindex="0"
+        class="styles__12tze4lb"
       >
         <div
           class="styles__q9b75z1 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
@@ -158,7 +155,7 @@ exports[`searchInput > renders with error prop 1`] = `
               data-size="large"
             >
               <div
-                class="styles__q9b75z2 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+                class="styles__q9b75z3 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
                 data-testid="search-icon"
               >
                 <svg
@@ -177,11 +174,13 @@ exports[`searchInput > renders with error prop 1`] = `
               </div>
             </div>
             <input
-              aria-describedby="_r_10_"
+              aria-describedby="_r_19_"
+              aria-expanded="false"
+              aria-haspopup="dialog"
               aria-invalid="true"
               class="styles__12pwfcp9"
               data-size="large"
-              id="_r_v_"
+              id="_r_18_"
               placeholder="Type something"
               type="text"
               value=""
@@ -206,7 +205,7 @@ exports[`searchInput > renders with error prop 1`] = `
           </div>
           <span
             class="style__1do42ls0 style_prominence_default__1do42ls4 style_sentiment_danger__1do42ls9 style_variant_caption__1do42lsp style_undefined_compound_0__1do42ls1a style_undefined_compound_48__1do42ls2m"
-            id="_r_10_"
+            id="_r_19_"
             role="status"
           >
             there is an error
@@ -224,13 +223,10 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
     data-testid="testing"
   >
     <div
-      style="width: 100%;"
+      class="styles__q9b75z2"
     >
       <div
-        aria-controls="_r_j_"
-        aria-describedby="_r_j_"
-        class="styles__10e61c29"
-        tabindex="0"
+        class="styles__12tze4lb"
       >
         <div
           class="styles__q9b75z1 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
@@ -247,7 +243,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
               data-size="large"
             >
               <div
-                class="styles__q9b75z2 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+                class="styles__q9b75z3 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
                 data-testid="search-icon"
               >
                 <svg
@@ -266,10 +262,12 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
               </div>
             </div>
             <input
+              aria-expanded="false"
+              aria-haspopup="dialog"
               aria-invalid="false"
               class="styles__12pwfcp9"
               data-size="large"
-              id="_r_k_"
+              id="_r_r_"
               placeholder="Type something"
               type="text"
               value=""
@@ -279,7 +277,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
               data-size="large"
             >
               <div
-                class="styles__q9b75z2 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j"
+                class="styles__q9b75z3 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j"
               >
                 <kbd
                   class="styles__1sxodgr0 styles_prominence_default__1sxodgr2 styles_sentiment_neutral__1sxodgr4 styles_size_medium__1sxodgr6"
@@ -336,13 +334,10 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
     data-testid="testing"
   >
     <div
-      style="width: 100%;"
+      class="styles__q9b75z2"
     >
       <div
-        aria-controls="_r_a_"
-        aria-describedby="_r_a_"
-        class="styles__10e61c29"
-        tabindex="0"
+        class="styles__12tze4lb"
       >
         <div
           class="styles__q9b75z1 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d styles_gap_0.25rem_xxsmall__xf61n45j"
@@ -359,7 +354,7 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
               data-size="large"
             >
               <div
-                class="styles__q9b75z2 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
+                class="styles__q9b75z3 styles__xf61n40 styles_flexDirection_column_xxsmall__xf61n42d"
                 data-testid="search-icon"
               >
                 <svg
@@ -378,10 +373,12 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
               </div>
             </div>
             <input
+              aria-expanded="false"
+              aria-haspopup="dialog"
               aria-invalid="false"
               class="styles__12pwfcp9"
               data-size="large"
-              id="_r_b_"
+              id="_r_g_"
               placeholder="Type something"
               type="text"
               value=""
@@ -391,7 +388,7 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
               data-size="large"
             >
               <div
-                class="styles__q9b75z2 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j"
+                class="styles__q9b75z3 styles__xf61n40 styles_flexDirection_row_xxsmall__xf61n42j styles_gap_0.25rem_xxsmall__xf61n45j"
               >
                 <kbd
                   class="styles__1sxodgr0 styles_prominence_default__1sxodgr2 styles_sentiment_neutral__1sxodgr4 styles_size_medium__1sxodgr6"

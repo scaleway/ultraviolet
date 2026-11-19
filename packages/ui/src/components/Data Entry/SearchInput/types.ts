@@ -1,5 +1,5 @@
 import type { ComponentProps, DispatchWithoutAction, ReactNode } from 'react'
-import type { Popup } from '../../Overlay/Popup'
+import type { Popup } from '../../Overlay/Popup/v2'
 import type { TextInput } from '../TextInput'
 import type { KeyGroup } from './KeyGroup'
 
@@ -12,7 +12,7 @@ type ChildrenProps = {
 export type SearchBarChildrenFunctionProps = ({ searchTerms, isOpen, toggleIsOpen }: ChildrenProps) => ReactNode
 
 export type SearchInputProps = {
-  popupPlacement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
+  popupPlacement?: ComponentProps<typeof Popup.Panel>['placement']
   /**
    * Close the results panel when the search string is shorter than the threshold.
    */
