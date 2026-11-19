@@ -337,6 +337,44 @@ describe('filters', () => {
     expect(onSubmit).not.toHaveBeenCalled()
   })
 
+  it('should close and discard edits when pressing Escape in the drawer', async () => {
+    const onSubmit = vi.fn()
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <Filters config={config} defaultValues={defaultValues} labels={labels} onSubmit={onSubmit} onChange={onChange} />,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'All filters' }))
+    await userEvent.click(screen.getByRole('checkbox', { name: 'Production' }))
+    expect(onChange).toHaveBeenLastCalledWith({ ...defaultValues, env: ['prod'] })
+
+    await userEvent.keyboard('{Escape}')
+
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+    expect(onChange).toHaveBeenLastCalledWith(defaultValues)
+    expect(onSubmit).not.toHaveBeenCalled()
+  })
+
+  it('should close and discard edits when clicking on the drawer backdrop', async () => {
+    const onSubmit = vi.fn()
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <Filters config={config} defaultValues={defaultValues} labels={labels} onSubmit={onSubmit} onChange={onChange} />,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'All filters' }))
+    await userEvent.click(screen.getByRole('checkbox', { name: 'Production' }))
+    expect(onChange).toHaveBeenLastCalledWith({ ...defaultValues, env: ['prod'] })
+
+    await userEvent.click(screen.getByRole('dialog').parentElement!)
+
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+    expect(onChange).toHaveBeenLastCalledWith(defaultValues)
+    expect(onSubmit).not.toHaveBeenCalled()
+  })
+
   it('should accept initial values different from default values', async () => {
     const onSubmit = vi.fn()
     const onChange = vi.fn()
