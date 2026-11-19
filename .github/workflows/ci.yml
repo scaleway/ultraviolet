@@ -106,6 +106,9 @@ jobs:
   test_browser:
     runs-on: ubuntu-26.04
     needs: [build]
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble
+      options: --user 1001
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -114,9 +117,6 @@ jobs:
         with:
           cache: true
           require-lockfile: true
-      - uses: ./.github/actions/setup-playwright
-        with:
-          install-args: chromium firefox webkit
       - run: pnpm run test:browser:coverage
       - uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
         with:
@@ -242,15 +242,15 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-26.04
     needs: [build]
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble
+      options: --user 1001
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/setup@731dfb6463bbd11c11fd0ee11fe00ed0e36d48a1 # v3.2.0
         with:
           cache: true
           require-lockfile: true
-      - uses: ./.github/actions/setup-playwright
-        with:
-          install-args: --only-shell
       - run: pnpm run test:e2e
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() }}
