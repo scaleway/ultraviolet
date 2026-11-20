@@ -7,7 +7,6 @@ import { renderWithTheme } from '../../../../__tests__/helpers'
 describe('textArea', () => {
   beforeEach(() => {
     const original = window.getComputedStyle.bind(window)
-    // jsdom 31 returns a read-only CSSStyleDeclaration, so override the property instead of assigning
     vi.spyOn(window, 'getComputedStyle').mockImplementation(elt =>
       Object.defineProperty(original(elt), 'lineHeight', { value: '16px' }),
     )

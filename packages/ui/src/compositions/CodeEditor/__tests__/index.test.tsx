@@ -4,7 +4,6 @@ import { describe, expect, it, vi } from 'vitest'
 import { CodeEditor } from '..'
 import { renderWithTheme } from '../../../__tests__/helpers'
 
-// jsdom doesn't implement Range.getClientRects, but CodeMirror calls it on mouse events
 Range.prototype.getClientRects = () => Object.assign([], { item: () => null })
 
 // We are skipping this as CodeEditor seems to be generating new classNames

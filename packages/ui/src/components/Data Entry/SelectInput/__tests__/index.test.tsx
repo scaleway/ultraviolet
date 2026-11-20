@@ -859,8 +859,9 @@ describe('selectInput', () => {
     const dropdown = screen.getByRole('dialog')
     // Venus lives in the second group, so type-ahead must search every group, not only the first one
     const venus = screen.getByRole('option', { name: /venus/iv })
+    await waitFor(() => expect(screen.getByRole('option', { name: /jupiter/iv })).toHaveFocus())
     await userEvent.type(dropdown, 'v')
-    expect(venus).toHaveFocus()
+    await waitFor(() => expect(venus).toHaveFocus())
   })
 
   it('renders with onChange', async () => {
@@ -1191,7 +1192,7 @@ describe('selectInput', () => {
 
     await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
 
-    const selectAll = screen.getByRole('option', { name: /select.*all/iv })
+    const selectAll = screen.getByRole('option', { name: 'Select all' })
     expect(selectAll).toBeVisible()
 
     await userEvent.click(selectAll)
