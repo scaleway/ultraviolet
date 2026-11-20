@@ -76,7 +76,6 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
-export { Template } from './Template.stories'
 export { Checkbox } from './Checkbox.stories'
 export { Radio } from './Radio.stories'
 export { Required } from './Required.stories'

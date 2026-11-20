@@ -7,14 +7,16 @@ import type { SelectableCardProps } from './types'
 import { selectableCardStyle } from './styles.css'
 
 export const IllustrationContainer = ({
-  children: subChildren,
+  children,
   productIcon,
   illustration,
+  size,
 }: {
   children: ReactNode
-  productIcon: SelectableCardProps['productIcon']
-  illustration: SelectableCardProps['illustration']
-}) => {
+  productIcon?: SelectableCardProps['productIcon']
+  illustration?: SelectableCardProps['illustration']
+  size: SelectableCardProps['size']
+}): ReactNode => {
   if (productIcon || illustration) {
     const computedIllustration = isValidElement(illustration)
       ? cloneElement(illustration, {
@@ -24,17 +26,17 @@ export const IllustrationContainer = ({
 
     return (
       <Stack alignItems="stretch" direction="row" flex={1} justifyContent="space-between" width="100%">
-        <Stack className={selectableCardStyle.illustration}>{subChildren}</Stack>
-        <Stack justifyContent="center">{productIcon ? productIcon : null}</Stack>
+        <Stack className={selectableCardStyle.illustration({ size })}>{children}</Stack>
+        <Stack justifyContent="center">{productIcon ?? null}</Stack>
 
         {illustration ? (
           <div className={selectableCardStyle.div}>
-            {illustration ? <div className={selectableCardStyle.image}>{computedIllustration}</div> : null}
+            {computedIllustration ? <div className={selectableCardStyle.image}>{computedIllustration}</div> : null}
           </div>
         ) : null}
       </Stack>
     )
   }
 
-  return subChildren
+  return children
 }
