@@ -59,6 +59,12 @@
       "groupName": "storybook"
     },
     {
+      "matchDatasources": ["npm", "docker"],
+      "matchPackageNames": ["@playwright/test", "playwright", "mcr.microsoft.com/playwright"],
+      "minimumReleaseAge": "3 days",
+      "groupName": "playwright"
+    },
+    {
       "matchManagers": ["dockerfile", "github-actions"],
       "semanticCommitType": "chore",
       "semanticCommitScope": "devdeps"
