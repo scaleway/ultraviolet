@@ -59,8 +59,8 @@
       "groupName": "storybook"
     },
     {
-      "matchPackageNames": ["mcr.microsoft.com/playwright"],
-      "groupName": "playwright monorepo"
+      "matchPackageNames": ["@playwright/test", "playwright", "mcr.microsoft.com/playwright"],
+      "groupName": "playwright"
     },
     {
       "matchManagers": ["dockerfile", "github-actions"],
