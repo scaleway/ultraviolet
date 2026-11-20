@@ -59,10 +59,8 @@
       "groupName": "storybook"
     },
     {
-      "matchDatasources": ["npm", "docker"],
-      "matchPackageNames": ["@playwright/test", "playwright", "mcr.microsoft.com/playwright"],
-      "minimumReleaseAge": "3 days",
-      "groupName": "playwright"
+      "matchPackageNames": ["mcr.microsoft.com/playwright"],
+      "groupName": "playwright monorepo"
     },
     {
       "matchManagers": ["dockerfile", "github-actions"],
