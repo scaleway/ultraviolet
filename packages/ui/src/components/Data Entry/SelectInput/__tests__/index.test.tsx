@@ -1191,7 +1191,7 @@ describe('selectInput', () => {
 
     await userEvent.click(screen.getByRole('combobox', { name: 'label' }))
 
-    const selectAll = screen.getByRole('option', { name: 'Selectall' })
+    const selectAll = screen.getByRole('option', { name: /select.*all/iv })
     expect(selectAll).toBeVisible()
 
     await userEvent.click(selectAll)
