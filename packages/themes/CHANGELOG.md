@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.3.2
+
+### Patch Changes
+
+- [#7129](https://github.com/scaleway/ultraviolet/pull/7129) [`9c15bc8`](https://github.com/scaleway/ultraviolet/commit/9c15bc85fed805436e95e53ef310f4b625f50e7a) Thanks [@philibea](https://github.com/philibea)! - feat(themes): expose `getThemeInitScript` to apply the theme class before the first paint and avoid a flash of the wrong theme
+
 ## 3.3.1
 
 ### Patch Changes
