@@ -1,3 +1,4 @@
+import { getThemeInitScript } from '@ultraviolet/themes/v2'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
@@ -20,7 +21,12 @@ class MyDocument extends Document {
           <link href="/favicon/favicon-lightdark.svg" rel="icon" type="image/svg+xml" />
           <link href="/favicon/favicon.ico" rel="icon" />
           <link href="/favicon/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
-          <script>{`try{var t=JSON.parse(localStorage.getItem('next-app-theme'))||'system';if(t==='system'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}if(['light','dark','darker'].includes(t)){document.documentElement.classList.add(t+'-theme')}}catch(e){}`}</script>
+          <script
+            id="theme-init"
+            dangerouslySetInnerHTML={{
+              __html: getThemeInitScript({ storageKey: 'next-app-theme' }),
+            }}
+          />
         </Head>
         <body>
           <Main />

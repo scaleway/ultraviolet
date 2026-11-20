@@ -2,12 +2,12 @@
 
 import { useLocalStorage } from '@scaleway/use-storage'
 import { useContext, useEffect, useMemo } from 'react'
-import { DEFAULT_THEME_CLASSES, DEFAULT_THEME_STORAGE_KEY } from './constants'
+import { DEFAULT_THEME_CLASSES, DEFAULT_THEME_STORAGE_KEY, DETAULT_INITIAL_THEME } from './constants'
 import { ThemeContext } from './helpers'
 import type { ThemeContextType, ThemeOption, ThemeProviderProps } from './types'
 import { usePrefersDarkMode } from './usePrefersDarkMode'
 
-const RootThemeProvider = ({ initialTheme = 'system', children, storageKey }: ThemeProviderProps) => {
+const RootThemeProvider = ({ initialTheme = DETAULT_INITIAL_THEME, children, storageKey }: ThemeProviderProps) => {
   const [storedTheme, setStoredTheme] = useLocalStorage<ThemeOption>(
     storageKey ?? DEFAULT_THEME_STORAGE_KEY,
     initialTheme,
