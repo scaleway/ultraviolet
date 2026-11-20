@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.30.2
+
+### Patch Changes
+
+- [#7174](https://github.com/scaleway/ultraviolet/pull/7174) [`10e3c4e`](https://github.com/scaleway/ultraviolet/commit/10e3c4e077ae094e7338979d2f0635e26229e2f4) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectableCard`, `SelectableCardField`: deprecate the `type="toggle"`
+
 ## 3.30.1
 
 ### Patch Changes
