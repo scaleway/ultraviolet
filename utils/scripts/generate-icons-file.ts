@@ -152,22 +152,23 @@ const generateVariableName = (filePath: string) => {
 }
 
 const readDirectoryRecursive = async (dir: string) => {
-  let results: string[] = []
-
   const list = await promises.readdir(dir, { withFileTypes: true })
 
-  for (const file of list) {
-    const filePath = path.resolve(dir, file.name)
+  const results = await Promise.all(
+    list.map(async file => {
+      const filePath = path.resolve(dir, file.name)
 
-    if (file.isDirectory()) {
-      const subDirResults = await readDirectoryRecursive(filePath)
-      results = [...results, ...subDirResults]
-    } else if (path.extname(file.name).toLowerCase() === '.svg') {
-      results.push(filePath)
-    }
-  }
+      if (file.isDirectory()) {
+        return readDirectoryRecursive(filePath)
+      }
+      if (path.extname(file.name).toLowerCase() === '.svg') {
+        return [filePath]
+      }
+      return []
+    }),
+  )
 
-  return results
+  return results.flat()
 }
 
 const readSvg = async (filePath: string, suffix: string) => {
@@ -259,26 +260,6 @@ const generateContent = (
   return templateIcon(generatedName, svg.default, svg.small, svg.disabled)
 }
 
-const appendExportToIndex = async (output: string, iconName: string) => {
-  const exportStatement = `export { ${iconName} } from './${iconName}'\n`
-
-  try {
-    await promises.appendFile(`${output}/index.ts`, exportStatement)
-  } catch (error) {
-    console.error('Error appending to index file:', error)
-  }
-}
-
-const appendTypeToIndex = async (output: string, typeName: string, iconNames: string[]) => {
-  const typeDefinition = `export type ${typeName} = ${iconNames.map(name => `"${name}"`).join(' | ')}\n`
-
-  try {
-    await promises.appendFile(`${output}/index.ts`, typeDefinition)
-  } catch (error) {
-    console.error('Error appending type to index file:', error)
-  }
-}
-
 const resetIconsFolder = async (folderPath: string) => {
   try {
     const files = await promises.readdir(folderPath)
@@ -291,72 +272,70 @@ const resetIconsFolder = async (folderPath: string) => {
 }
 
 const main = async () => {
-  for (const component of COMPONENTS) {
-    console.log(`Generating ${component.name}...`)
-    await resetIconsFolder(component.output) // we clean the folder before generating the new icons
+  await Promise.all(
+    COMPONENTS.map(async component => {
+      console.log(`Generating ${component.name}...`)
+      await resetIconsFolder(component.output) // we clean the folder before generating the new icons
 
-    try {
-      await promises.appendFile(`${component.output}/index.ts`, `${COMMENT_HEADER}\n`)
-    } catch (error) {
-      console.error('Error appending to index file:', error)
-    }
+      const iconNames: string[] = []
 
-    const iconNames: string[] = []
+      try {
+        const files = await readDirectoryRecursive(component.input)
+        const generatedIcons = await Promise.all(
+          files
+            .filter(
+              file =>
+                !file.includes('small') &&
+                !file.includes('disabled') &&
+                !(file.includes('/dark/') && component.name === 'Logo'),
+            )
+            .map(async file => {
+              const generatedName = `${generateVariableName(file)}${component.suffix}`
+              const smallFile = getSmallFile(file)
+              const disabledFile = getDisabledFile(file)
+              const darkFile = getDarkFile(file)
 
-    try {
-      const files = await readDirectoryRecursive(component.input)
-      for (const file of files) {
-        if (
-          file.includes('small') ||
-          file.includes('disabled') ||
-          (file.includes('/dark/') && component.name === 'Logo')
-        ) {
-          // We do not generate an icon component for small/disabled/dark variants of icons/logos/flags
-          continue
-        }
+              const svgContent = await readSvg(file, component.suffix)
+              const svgContentSmall = smallFile === file ? undefined : await readSvg(smallFile, component.suffix)
+              const svgContentDisabled =
+                component.name === 'Flags' && disabledFile !== file
+                  ? await readSvg(disabledFile, component.suffix)
+                  : undefined
+              const svgContentDark =
+                component.name === 'Logo' && darkFile !== file ? await readSvg(darkFile, component.suffix) : undefined
 
-        const svgContent = await readSvg(file, component.suffix)
-        const generatedName = `${generateVariableName(file)}${component.suffix}`
+              return {
+                generatedName,
+                content: generateContent(component.name, generatedName, {
+                  default: svgContent,
+                  small: svgContentSmall,
+                  disabled: svgContentDisabled,
+                  dark: svgContentDark,
+                }),
+              }
+            }),
+        )
 
-        iconNames.push(generatedName)
+        iconNames.push(...generatedIcons.map(({ generatedName }) => generatedName))
 
-        const smallFile = getSmallFile(file)
-        const disabledFile = getDisabledFile(file)
-        const darkFile = getDarkFile(file)
+        await Promise.all(
+          generatedIcons.map(({ generatedName, content }) =>
+            promises.writeFile(`${component.output}/${generatedName}.tsx`, content),
+          ),
+        )
 
-        const svgContentSmall = smallFile === file ? undefined : await readSvg(smallFile, component.suffix)
-
-        const svgContentDisabled =
-          component.name === 'Flags' && disabledFile !== file
-            ? await readSvg(disabledFile, component.suffix)
-            : undefined
-
-        const svgContentDark =
-          component.name === 'Logo' && darkFile !== file ? await readSvg(darkFile, component.suffix) : undefined
-
-        const generatedComponent = generateContent(component.name, generatedName, {
-          default: svgContent,
-          small: svgContentSmall,
-          disabled: svgContentDisabled,
-          dark: svgContentDark,
-        })
-
-        const filePath = `${component.output}/${generatedName}.tsx`
-
-        try {
-          await promises.writeFile(filePath, generatedComponent)
-          await appendExportToIndex(component.output, generatedName)
-        } catch (error) {
-          console.error('Error writing to file:', error)
-        }
+        const exports = generatedIcons
+          .map(({ generatedName }) => `export { ${generatedName} } from './${generatedName}'\n`)
+          .join('')
+        await promises.appendFile(
+          `${component.output}/index.ts`,
+          `${COMMENT_HEADER}\n${exports}export type ${component.typeName} = ${iconNames.map(name => `"${name}"`).join(' | ')}\n`,
+        )
+      } catch (error) {
+        console.error('Error reading directory:', error)
       }
-
-      // Append the type definition to the index file
-      await appendTypeToIndex(component.output, component.typeName, iconNames)
-    } catch (error) {
-      console.error('Error reading directory:', error)
-    }
-  }
+    }),
+  )
 }
 
 await main()
