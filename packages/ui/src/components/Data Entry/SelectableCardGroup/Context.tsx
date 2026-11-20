@@ -7,6 +7,7 @@ type SelectableCardGroupContextType = {
   groupName?: string
   groupValue: string | number | (string | number)[]
   type: 'radio' | 'checkbox'
+  size: 'small' | 'medium' | 'large'
   showTick: boolean
   error: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &

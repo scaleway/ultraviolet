@@ -25,11 +25,7 @@ export const Examples: StoryFn = args => {
         value={value}
       >
         <SelectableCardGroup.Card
-          label={
-            <Text as="span" variant="bodyStrong">
-              Option 1
-            </Text>
-          }
+          label="Option 1"
           labelDescription={
             <Text as="span" variant="bodyStronger">
               1.99€
@@ -38,16 +34,10 @@ export const Examples: StoryFn = args => {
           name="label-14"
           value="label-14"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 1.99€ and provide you with a lot of happiness
-          </Text>
+          This option will cost you 1.99€ and provide you with a lot of happiness
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
-          label={
-            <Text as="span" variant="bodyStrong">
-              Option 2
-            </Text>
-          }
+          label="Option 2"
           labelDescription={
             <Text as="span" variant="bodyStronger">
               2.99€
@@ -56,9 +46,7 @@ export const Examples: StoryFn = args => {
           name="label-14"
           value="label-15"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
+          This option will cost you 2.99€ and provide you with a lot more of happiness
         </SelectableCardGroup.Card>
       </SelectableCardGroup>
 
@@ -82,11 +70,7 @@ export const Examples: StoryFn = args => {
         value={valueCheckbox}
       >
         <SelectableCardGroup.Card
-          label={
-            <Text as="span" variant="bodyStrong">
-              Backup
-            </Text>
-          }
+          label="Backup"
           labelDescription={
             <Badge sentiment="primary" size="small">
               Recommended
@@ -95,17 +79,11 @@ export const Examples: StoryFn = args => {
           labelDescriptionAlignment="left"
           value="label-22"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
+          This option will cost you 2.99€ and provide you with a lot more of happiness
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
           {...args}
-          label={
-            <Text as="span" variant="bodyStrong">
-              Redundancy
-            </Text>
-          }
+          label="Redundancy"
           labelDescription={
             <Badge sentiment="primary" size="small">
               Recommended
@@ -115,17 +93,11 @@ export const Examples: StoryFn = args => {
           name="label-23"
           value="label-23"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
+          This option will cost you 2.99€ and provide you with a lot more of happiness
         </SelectableCardGroup.Card>
 
         <SelectableCardGroup.Card
-          label={
-            <Text as="span" variant="bodyStrong">
-              Morning Reboot 9am
-            </Text>
-          }
+          label="Morning Reboot 9am"
           labelDescription={
             <Badge sentiment="neutral" size="small">
               Optional
@@ -135,17 +107,11 @@ export const Examples: StoryFn = args => {
           name="label-24"
           value="label-24"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
+          This option will cost you 2.99€ and provide you with a lot more of happiness
         </SelectableCardGroup.Card>
 
         <SelectableCardGroup.Card
-          label={
-            <Text as="span" variant="bodyStrong">
-              Monitoring
-            </Text>
-          }
+          label="Monitoring"
           labelDescription={
             <Badge sentiment="neutral" size="small">
               Optional
@@ -155,9 +121,7 @@ export const Examples: StoryFn = args => {
           name="label-25"
           value="label-25"
         >
-          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
-            This option will cost you 2.99€ and provide you with a lot more of happiness
-          </Text>
+          This option will cost you 2.99€ and provide you with a lot more of happiness
         </SelectableCardGroup.Card>
       </SelectableCardGroup>
 
