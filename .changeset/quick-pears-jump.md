@@ -2,4 +2,4 @@
 "@ultraviolet/ui": minor
 ---
 
-`SelectableCardGroup`: new prop `size`
+`SelectableCardGroup`: new prop `size` with values `small`, `medium` and `large`
