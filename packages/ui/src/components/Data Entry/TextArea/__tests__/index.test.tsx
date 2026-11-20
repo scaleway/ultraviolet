@@ -7,7 +7,9 @@ import { renderWithTheme } from '../../../../__tests__/helpers'
 describe('textArea', () => {
   beforeEach(() => {
     const original = window.getComputedStyle.bind(window)
-    vi.spyOn(window, 'getComputedStyle').mockImplementation(elt => Object.assign(original(elt), { lineHeight: '16px' }))
+    vi.spyOn(window, 'getComputedStyle').mockImplementation(elt =>
+      Object.defineProperty(original(elt), 'lineHeight', { value: '16px' }),
+    )
   })
   afterEach(() => {
     vi.restoreAllMocks()
