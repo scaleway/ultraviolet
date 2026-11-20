@@ -71,7 +71,7 @@ export const ShowTick: StoryFn = args => {
 }
 
 ShowTick.args = {
-  ShowTick: true,
+  showTick: true,
 }
 
 ShowTick.parameters = {

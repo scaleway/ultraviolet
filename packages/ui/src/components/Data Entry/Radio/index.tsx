@@ -83,50 +83,59 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             data-invalid={!!error}
             data-testid={dataTestId}
           >
-            <input
-              aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
-              aria-disabled={disabled}
-              aria-label={ariaLabel}
-              autoFocus={autoFocus}
-              checked={checked}
-              className={radioStyle.radio}
-              disabled={disabled}
-              id={localId}
-              name={name}
-              onBlur={onBlur}
-              onChange={onChange}
-              onFocus={onFocus}
-              onKeyDown={onKeyDown}
-              ref={forwadedRef}
-              style={style}
-              tabIndex={tabIndex}
-              type="radio"
-              value={value}
-            />
-            <svg className={radioStyle.ring} viewBox="0 0 24 24">
-              <title>radio</title>
-              <RadioMarkedIcon size={size} />
-            </svg>
-            {label ? (
-              typeof label === 'string' ? (
-                <Text
-                  as="label"
-                  className={cn(radioStyle.textLabel[size], radioStyle.label)}
-                  htmlFor={localId}
-                  prominence="default"
-                  sentiment="neutral"
-                  variant={size === 'small' ? 'bodySmall' : 'body'}
-                >
-                  {label}
-                </Text>
-              ) : (
-                <label className={cn(radioStyle.labelStyle, radioStyle.label)} htmlFor={localId}>
-                  {label}
-                </label>
-              )
+            <span className={radioStyle.iconWrapper}>
+              <input
+                aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
+                aria-disabled={disabled}
+                aria-label={ariaLabel}
+                autoFocus={autoFocus}
+                checked={checked}
+                className={radioStyle.radio}
+                disabled={disabled}
+                id={localId}
+                name={name}
+                onBlur={onBlur}
+                onChange={onChange}
+                onFocus={onFocus}
+                onKeyDown={onKeyDown}
+                ref={forwadedRef}
+                style={style}
+                tabIndex={tabIndex}
+                type="radio"
+                value={value}
+              />
+              <svg
+                className={cn(radioStyle.ring, radioStyle.ringSize[size])}
+                viewBox={size === 'small' ? '0 0 16 16' : '0 0 20 20'}
+              >
+                <title>radio</title>
+                <RadioMarkedIcon size={size} />
+              </svg>
+            </span>
+            {label || helper || error ? (
+              <Stack flex={1} gap={size === 'medium' ? 0.5 : 0}>
+                {label ? (
+                  typeof label === 'string' ? (
+                    <Text
+                      as="label"
+                      className={cn(radioStyle.textLabel[size], radioStyle.label)}
+                      htmlFor={localId}
+                      prominence="default"
+                      sentiment="neutral"
+                      variant={size === 'small' ? 'bodySmall' : 'body'}
+                    >
+                      {label}
+                    </Text>
+                  ) : (
+                    <label className={cn(radioStyle.labelStyle, radioStyle.label)} htmlFor={localId}>
+                      {label}
+                    </label>
+                  )
+                ) : null}
+                <Description error={error} helper={helper} id={ariaDescribedBy ?? helperId} disabled={disabled} />
+              </Stack>
             ) : null}
           </div>
-          <Description error={error} helper={helper} id={ariaDescribedBy ?? helperId} disabled={disabled} />
         </Stack>
       </Tooltip>
     )

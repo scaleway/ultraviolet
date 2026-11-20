@@ -1,8 +1,16 @@
 import type { Meta } from '@storybook/react-vite'
 import { Radio } from '..'
+import { Stack } from '../../../Layout/Stack'
 
 export default {
   component: Radio,
+  decorators: [
+    StoryComponent => (
+      <Stack alignItems="start" gap={2}>
+        <StoryComponent />
+      </Stack>
+    ),
+  ],
   title: 'UI/Data Entry/Radio',
   parameters: {
     a11yStatus: {
