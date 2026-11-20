@@ -1,5 +1,26 @@
 # Change Log
 
+## 3.30.1
+
+### Patch Changes
+
+- [#7171](https://github.com/scaleway/ultraviolet/pull/7171) [`7ae8be7`](https://github.com/scaleway/ultraviolet/commit/7ae8be759b382dc94529add43bc968b9d88417ce) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`: forward props `optionalInfo`, `disabled`, `tooltip` from the Select options to the checkbox/radio groups in the Drawer
+
+- [#7160](https://github.com/scaleway/ultraviolet/pull/7160) [`7666d8d`](https://github.com/scaleway/ultraviolet/commit/7666d8db2d7e367cb8c7bc188b2c1b0ed7d60358) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectableCard`: apply the correct typography on string descriptions
+
+- [#7167](https://github.com/scaleway/ultraviolet/pull/7167) [`d9276b1`](https://github.com/scaleway/ultraviolet/commit/d9276b1ba14ad54ba073769eb2b4b0542220adc1) Thanks [@jsulpis](https://github.com/jsulpis)! - `Checkbox`: style updates to match the design
+
+- [#7116](https://github.com/scaleway/ultraviolet/pull/7116) [`75a7820`](https://github.com/scaleway/ultraviolet/commit/75a7820488cf25ec54ab215a6b4e5db2eb00640f) Thanks [@jsulpis](https://github.com/jsulpis)! - `SearchInput`: migrate to the new Popup component
+  - add max-height of 410px and scroll on the panel
+
+- [#7170](https://github.com/scaleway/ultraviolet/pull/7170) [`d53e3be`](https://github.com/scaleway/ultraviolet/commit/d53e3be317af5576484fa7af9d23c2da87735659) Thanks [@jsulpis](https://github.com/jsulpis)! - `Filters`: allow to close the drawer by clicking on the backdrop
+
+- [#7169](https://github.com/scaleway/ultraviolet/pull/7169) [`6cd0f63`](https://github.com/scaleway/ultraviolet/commit/6cd0f632fd9f411614671099c1f4c408f3a4bc6e) Thanks [@jsulpis](https://github.com/jsulpis)! - `Radio`: update the focus-visible state to match the design and checkbox states, fix helper and error positioning
+
+- [#7161](https://github.com/scaleway/ultraviolet/pull/7161) [`fa25c4c`](https://github.com/scaleway/ultraviolet/commit/fa25c4cf6b4aebbbb74a10404c2de21884116b27) Thanks [@jsulpis](https://github.com/jsulpis)! - `Menu`: fix spacings between and around the buttons
+- Updated dependencies [[`9c15bc8`](https://github.com/scaleway/ultraviolet/commit/9c15bc85fed805436e95e53ef310f4b625f50e7a)]:
+  - @ultraviolet/themes@3.3.2
+
 ## 3.30.0
 
 ### Minor Changes
