@@ -22,6 +22,7 @@ type SelectableCardGroupProps = {
   columns?: number
   children: ReactNode
   type: 'radio' | 'checkbox'
+  size?: 'small' | 'medium' | 'large'
   required?: boolean
   showTick?: boolean
   name?: string
@@ -44,6 +45,7 @@ const SelectableCardGroupComponent = ({
   name,
   required = false,
   type,
+  size = 'large',
   showTick = false,
   'aria-describedby': ariaDescribedBy,
 }: SelectableCardGroupProps) => {
@@ -55,22 +57,23 @@ const SelectableCardGroupComponent = ({
       onChange,
       required,
       showTick,
+      size,
       type,
     }),
-    [name, value, onChange, required, type, showTick, error],
+    [name, value, onChange, required, type, showTick, size, error],
   )
   const helperId = useId()
 
   return (
     <SelectableCardGroupContext.Provider value={contextValue}>
-      <Stack gap={1}>
+      <Stack gap={0.5}>
         <fieldset
           className={cn(className, selectableCardGroupStyle.fieldset)}
           aria-describedby={ariaDescribedBy || (hasHelperText(helper, error) ? helperId : undefined)}
         >
-          <Stack gap={1.5}>
+          <Stack gap={0.5}>
             {legend ? (
-              <Label as="legend" labelDescription={legendDescription} required={required}>
+              <Label as="legend" labelDescription={legendDescription} required={required} size={size}>
                 {legend}
               </Label>
             ) : null}

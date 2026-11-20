@@ -6,8 +6,8 @@ import { Submit } from '../../Submit'
 
 export const Required: StoryFn<ComponentProps<typeof SelectableCardField>> = args => (
   <Stack gap={1}>
-    <SelectableCardField {...args} value="option 1" />
-    <SelectableCardField {...args} value="option 2" />
+    <SelectableCardField {...args} value="option 1" label="Option 1" aria-label={undefined} />
+    <SelectableCardField {...args} value="option 2" label="Option 2" aria-label={undefined} />
     <Submit>Submit</Submit>
   </Stack>
 )
