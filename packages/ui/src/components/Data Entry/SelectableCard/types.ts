@@ -1,13 +1,18 @@
 import type { ChangeEventHandler, CSSProperties, FocusEventHandler, ReactElement, ReactNode, RefObject } from 'react'
 import type { LabelProp } from '../../../types'
 
+/**
+ * @deprecated The `toggle` type is deprecated and will be removed in a future version. Use the `checkbox` type or a `Card` + `Toggle` component instead.
+ */
+export type DeprecatedToggleType = 'toggle'
+
 export type SelectableCardProps = {
   name?: string
   children?: (({ disabled, checked }: Pick<SelectableCardProps, 'checked' | 'disabled'>) => ReactNode) | ReactNode
   value: string | number
   onChange: ChangeEventHandler<HTMLInputElement>
   showTick?: boolean
-  type?: 'radio' | 'checkbox' | 'toggle'
+  type?: 'radio' | 'checkbox' | DeprecatedToggleType
   disabled?: boolean
   checked?: boolean
   className?: string

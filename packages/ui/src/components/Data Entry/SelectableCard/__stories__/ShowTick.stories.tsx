@@ -6,7 +6,6 @@ import { Row } from '../../../Layout/Row'
 export const ShowTick: StoryFn = args => {
   const [radio, setRadio] = useState('label-5')
   const [checkbox, setCheckbox] = useState({ 'label-1': true, 'label-2': true })
-  const [toggle, setToggle] = useState({ 'label-1': true, 'label-2': true })
 
   return (
     <>
@@ -45,25 +44,6 @@ export const ShowTick: StoryFn = args => {
         name="label-2"
         onChange={event => setCheckbox({ ...checkbox, 'label-2': event.currentTarget.checked })}
         type="checkbox"
-        value="label-2"
-      />
-
-      <SelectableCard
-        {...args}
-        checked={toggle['label-1']}
-        label="Toggle 1"
-        name="label-1"
-        onChange={event => setToggle({ ...toggle, 'label-1': event.currentTarget.checked })}
-        type="toggle"
-        value="label-1"
-      />
-      <SelectableCard
-        {...args}
-        checked={toggle['label-2']}
-        label="Toggle 2"
-        name="label-2"
-        onChange={event => setToggle({ ...toggle, 'label-2': event.currentTarget.checked })}
-        type="toggle"
         value="label-2"
       />
     </>
