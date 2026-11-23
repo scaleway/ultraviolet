@@ -1,5 +1,29 @@
 # Change Log
 
+## 3.31.0
+
+### Minor Changes
+
+- [#7139](https://github.com/scaleway/ultraviolet/pull/7139) [`91dbf6f`](https://github.com/scaleway/ultraviolet/commit/91dbf6fe107d23f90828bd14fcb783352acdabd2) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCardGroup`: new prop `size` with values `small`, `medium` and `large`
+
+- [#7139](https://github.com/scaleway/ultraviolet/pull/7139) [`91dbf6f`](https://github.com/scaleway/ultraviolet/commit/91dbf6fe107d23f90828bd14fcb783352acdabd2) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCard`: UI updates:
+  - new prop `size` with values `small`, `medium` and `large`
+  - update the Card paddings on all sizes
+  - update the focus-visible state to match other components
+
+### Patch Changes
+
+- [#7180](https://github.com/scaleway/ultraviolet/pull/7180) [`002f8bf`](https://github.com/scaleway/ultraviolet/commit/002f8bfe3f79ec10b4b2c4d3887a05097b122b90) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `csstype` to `3.2.4`.
+
+- [#7183](https://github.com/scaleway/ultraviolet/pull/7183) [`8190d20`](https://github.com/scaleway/ultraviolet/commit/8190d20cd7c0518be8ba783e3d79ef560a560ecd) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@handlewithcare/react-prosemirror` to `3.3.0`.
+  Updated dependency `prosemirror-model` to `1.25.13`.
+  Updated dependency `prosemirror-schema-list` to `1.6.0`.
+  Updated dependency `prosemirror-view` to `1.42.9`.
+
+- [#7185](https://github.com/scaleway/ultraviolet/pull/7185) [`46cd0fc`](https://github.com/scaleway/ultraviolet/commit/46cd0fca575fd731385f0e4982befe14e9207e33) Thanks [@jsulpis](https://github.com/jsulpis)! - `Menu`: fix broken max-width
+
+- [#7174](https://github.com/scaleway/ultraviolet/pull/7174) [`10e3c4e`](https://github.com/scaleway/ultraviolet/commit/10e3c4e077ae094e7338979d2f0635e26229e2f4) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectableCard`, `SelectableCardField`: deprecate the `type="toggle"`
+
 ## 3.30.1
 
 ### Patch Changes
