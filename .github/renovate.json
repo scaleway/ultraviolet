@@ -39,6 +39,19 @@
       "semanticCommitScope": "devdeps"
     },
     {
+      "matchFileNames": ["utils/test/package.json"],
+      "matchDepTypes": ["dependencies"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "devdeps"
+    },
+    {
+      "matchFileNames": ["utils/test/package.json"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "non-major devDependencies",
+      "groupSlug": "non-major-dev-deps"
+    },
+    {
       "extends": ["packages:linters"],
       "matchPackageNames": ["/oxfmt/", "/oxlint/", "publint", "lint-staged"],
       "matchDepTypes": ["devDependencies"],
