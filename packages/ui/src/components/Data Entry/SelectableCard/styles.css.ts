@@ -30,6 +30,9 @@ const container = recipe({
       '&[data-error="true"]': {
         border: `${borderWidth} solid ${theme.colors.danger.border}`,
       },
+      '&[data-error="true"]:focus-visible': {
+        boxShadow: theme.shadows.focusDanger,
+      },
       '&[data-disabled="true"]': {
         border: `${borderWidth} solid ${theme.colors.neutral.borderDisabled}`,
         color: theme.colors.neutral.textDisabled,
