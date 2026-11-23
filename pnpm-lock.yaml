@@ -180,7 +180,7 @@ catalogs:
 overrides:
   vite: 8.3.8
   vitest: 5.1.1
-  axe-core: 4.14.0
+  axe-core: 4.14.1
 
 importers:
 
@@ -1079,8 +1079,8 @@ importers:
         specifier: 5.1.1
         version: 5.1.1(vitest@5.1.1)
       axe-core:
-        specifier: 4.14.0
-        version: 4.14.0
+        specifier: 4.14.1
+        version: 4.14.1
       playwright:
         specifier: 1.64.1
         version: 1.64.1
@@ -4937,8 +4937,8 @@ packages:
     resolution: {integrity: sha512-zw23nvKt6gLGgCrKZ5Z7ZK0lm3k39/uZTw+cWp5tpiXVfEFSt9AEVFDzSycws76G64xOMrIVp2upYvJxwRgzvw==}
     engines: {node: '>=18'}
 
-  axe-core@4.14.0:
-    resolution: {integrity: sha512-9WTZxEjsZ7b13TH8JPmbV2z8CHbl80/2hm3XPEG4JgNdQLK81IBRXmSxHfMAOkSqQeRxT/0dwNDz2GOm3zzpcQ==}
+  axe-core@4.14.1:
+    resolution: {integrity: sha512-FHfa+lmNjQZfJz1q8wKqIDwC6DExcHt/pkjNQb09a3NPjCKg2rhu5qb2S4r76ASyFNNtuFooJpZe37OgudVGtQ==}
     engines: {node: '>=4'}
 
   b4a@1.9.0:
@@ -11477,7 +11477,7 @@ snapshots:
   '@storybook/addon-a11y@10.6.7(storybook@10.6.7(@types/react@19.3.0)(react@19.3.1))':
     dependencies:
       '@storybook/global': 5.0.0
-      axe-core: 4.14.0
+      axe-core: 4.14.1
       storybook: 10.6.7(@types/react@19.3.0)(react@19.3.1)
 
   '@storybook/addon-docs@10.6.7(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(storybook@10.6.7(@types/react@19.3.0)(react@19.3.1))':
@@ -12377,7 +12377,7 @@ snapshots:
 
   awesome-phonenumber@7.8.0: {}
 
-  axe-core@4.14.0: {}
+  axe-core@4.14.1: {}
 
   b4a@1.9.0: {}
 
@@ -15971,7 +15971,7 @@ snapshots:
   vitest-axe@0.1.0(vitest@5.1.1):
     dependencies:
       aria-query: 5.3.2
-      axe-core: 4.14.0
+      axe-core: 4.14.1
       chalk: 5.6.2
       dom-accessibility-api: 0.5.16
       lodash-es: 4.18.1
