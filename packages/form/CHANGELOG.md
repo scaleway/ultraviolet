@@ -1,5 +1,15 @@
 # Change Log
 
+## 6.6.12
+
+### Patch Changes
+
+- [#7182](https://github.com/scaleway/ultraviolet/pull/7182) [`e241fea`](https://github.com/scaleway/ultraviolet/commit/e241fea0c74ab3901a2dec1e49bffa20a6af95ce) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.92.0`.
+
+- [#7174](https://github.com/scaleway/ultraviolet/pull/7174) [`10e3c4e`](https://github.com/scaleway/ultraviolet/commit/10e3c4e077ae094e7338979d2f0635e26229e2f4) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectableCard`, `SelectableCardField`: deprecate the `type="toggle"`
+- Updated dependencies [[`91dbf6f`](https://github.com/scaleway/ultraviolet/commit/91dbf6fe107d23f90828bd14fcb783352acdabd2), [`002f8bf`](https://github.com/scaleway/ultraviolet/commit/002f8bfe3f79ec10b4b2c4d3887a05097b122b90), [`8190d20`](https://github.com/scaleway/ultraviolet/commit/8190d20cd7c0518be8ba783e3d79ef560a560ecd), [`46cd0fc`](https://github.com/scaleway/ultraviolet/commit/46cd0fca575fd731385f0e4982befe14e9207e33), [`91dbf6f`](https://github.com/scaleway/ultraviolet/commit/91dbf6fe107d23f90828bd14fcb783352acdabd2), [`10e3c4e`](https://github.com/scaleway/ultraviolet/commit/10e3c4e077ae094e7338979d2f0635e26229e2f4)]:
+  - @ultraviolet/ui@3.31.0
+
 ## 6.6.11
 
 ### Patch Changes
