@@ -32,7 +32,7 @@ export const CardSelectableCard = ({
     throw new Error('SelectableCardGroup.Card can only be used inside a SelectableCardGroup')
   }
 
-  const { groupName, onChange, groupValue, type, showTick, error } = context
+  const { groupName, onChange, groupValue, type, showTick, error, size } = context
 
   return (
     <SelectableCard
@@ -48,6 +48,7 @@ export const CardSelectableCard = ({
       onChange={onChange}
       onFocus={onFocus}
       showTick={showTick}
+      size={size}
       style={style}
       tooltip={tooltip}
       type={type}

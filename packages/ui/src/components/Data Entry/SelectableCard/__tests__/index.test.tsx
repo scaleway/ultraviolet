@@ -15,6 +15,8 @@ describe('selectableCard', () => {
     'toggle',
   ] as const
 
+  const sizes = ['small', 'medium', 'large'] as const
+
   describe.each(types)('%s', type => {
     it('renders correctly with default props', () => {
       const { asFragment } = renderWithTheme(
@@ -24,6 +26,17 @@ describe('selectableCard', () => {
       )
 
       expect(asFragment()).toMatchSnapshot()
+    })
+    describe.each(sizes)('%s', size => {
+      it('renders correctly', () => {
+        const { asFragment } = renderWithTheme(
+          <SelectableCard label="test" name="test" onChange={() => {}} value="choice" size={size}>
+            SelectableCard
+          </SelectableCard>,
+        )
+
+        expect(asFragment()).toMatchSnapshot()
+      })
     })
 
     it('renders correctly with aria label', () => {
