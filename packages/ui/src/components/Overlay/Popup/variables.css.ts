@@ -7,7 +7,6 @@ const maxHeightPopup = createVar()
 const popupPosition = createVar()
 const animationDurationPopup = createVar()
 const popupInitialPosition = createVar()
-const maxWidthPopup = createVar()
 
 export {
   arrowTop,
@@ -17,5 +16,4 @@ export {
   popupInitialPosition,
   popupPosition,
   animationDurationPopup,
-  maxWidthPopup,
 }
