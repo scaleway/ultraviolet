@@ -36,7 +36,6 @@ import {
   arrowTop,
   arrowTransform,
   maxHeightPopup,
-  maxWidthPopup,
   popupInitialPosition,
   popupPosition,
 } from './variables.css'
@@ -623,7 +622,6 @@ export const Popup = forwardRef(
                     [popupPosition]: positions.popupPosition,
                     [animationDurationPopup]: `${animationDuration}ms`,
                     [popupInitialPosition]: positions.popupInitialPosition,
-                    [maxWidthPopup]: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
                     [maxHeightPopup]: typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight,
                   }),
                   ...style,

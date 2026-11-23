@@ -8,7 +8,6 @@ import {
   arrowTop,
   arrowTransform,
   maxHeightPopup,
-  maxWidthPopup,
   popupInitialPosition,
   popupPosition,
 } from './variables.css'
@@ -56,7 +55,6 @@ const popup = recipe({
     inset: '0 auto auto 0',
     left: 0,
     maxHeight: maxHeightPopup,
-    maxWidth: maxWidthPopup,
     opacity: 0,
     overflowWrap: 'break-word',
     position: 'absolute',
