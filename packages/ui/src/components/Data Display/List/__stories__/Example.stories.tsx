@@ -93,7 +93,11 @@ export const Example: StoryFn = args => {
           <List.Cell>
             <Menu
               disclosure={
-                <Button size="small" sentiment="neutral" variant="outlined">
+                <Button
+                  size="small"
+                  sentiment={planet.id === 'home-sweet-home' ? 'info' : 'neutral'}
+                  variant="outlined"
+                >
                   <DotsVerticalIcon />
                 </Button>
               }
