@@ -239,7 +239,6 @@ const customRail = style({
   background: theme.colors.neutral.borderWeak,
   borderRadius: theme.radii.default,
   height: theme.sizing[100],
-  minWidth: '13.75rem',
   position: 'absolute',
   top: '50%',
   transform: 'translateY(-50%)',
