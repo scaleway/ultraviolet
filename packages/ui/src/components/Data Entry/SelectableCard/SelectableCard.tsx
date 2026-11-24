@@ -126,7 +126,7 @@ export const SelectableCard = forwardRef(
 
       if (isTextChildren) {
         return (
-          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="bodySmall" disabled={disabled}>
             {children}
           </Text>
         )
