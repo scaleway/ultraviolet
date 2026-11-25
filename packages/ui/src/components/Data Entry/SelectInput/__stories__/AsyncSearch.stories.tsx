@@ -7,7 +7,7 @@ export const AsyncSearch: StoryFn<typeof SelectInput> = () => {
   const [options, setOptions] = useState(dataUnGrouped)
   const [isLoading, setIsLoading] = useState(false)
 
-  // Simulates a debounced async query, e.g. a request to an API with the search as a param
+  // Simulates an async query with the search as a param, debounced by 300ms by the component
   const onSearch = useCallback((search: string) => {
     setIsLoading(true)
     setTimeout(() => {
@@ -33,9 +33,9 @@ AsyncSearch.parameters = {
   docs: {
     description: {
       story: `When \`onSearch\` is provided, the search bar does not filter the options locally anymore:
-the callback is called with the search value on every keystroke, and the consumer is responsible
-for updating the \`options\` prop, e.g. from an async query. The search bar stays visible while
-\`isLoading\` is true so it can still be typed in.`,
+it is called with the search value, debounced by 300 milliseconds,
+and the consumer is responsible for updating the \`options\` prop, e.g. from an async query.
+The search bar stays visible while \`isLoading\` is true so it can still be typed in.`,
     },
   },
 }
