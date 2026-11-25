@@ -1874,7 +1874,7 @@ describe('selectInput', () => {
     })
   })
 
-  it('should call onSearch on each keystroke and not filter the list when onSearch is provided', async () => {
+  it('should debounce the onSearch callback, not filter the list and be called with the final value', async () => {
     const onSearch = vi.fn()
 
     renderWithTheme(
@@ -1895,18 +1895,57 @@ describe('selectInput', () => {
     await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
     await userEvent.keyboard('e')
 
-    expect(onSearch).toHaveBeenCalledWith('e')
+    // The callback is debounced, it is not called synchronously
+    expect(onSearch).not.toHaveBeenCalled()
     // The list is not filtered locally: all options are still displayed
     expect(screen.getByTestId('option-venus')).toBeVisible()
     expect(screen.getByTestId('option-earth')).toBeVisible()
 
     await userEvent.keyboard('a')
-    expect(onSearch).toHaveBeenLastCalledWith('ea')
+
+    // Only one call, with the final search value
+    await waitFor(() => {
+      expect(onSearch).toHaveBeenCalledTimes(1)
+    })
+    expect(onSearch).toHaveBeenCalledWith('ea')
 
     // Clearing the search calls the callback with an empty string
     await userEvent.keyboard('[Backspace]')
     await userEvent.keyboard('[Backspace]')
-    expect(onSearch).toHaveBeenLastCalledWith('')
+    await waitFor(() => {
+      expect(onSearch).toHaveBeenLastCalledWith('')
+    })
+  })
+
+  it('should debounce the onSearch callback by 300ms', async () => {
+    const onSearch = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        name="test"
+        onSearch={onSearch}
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+      />,
+    )
+    await userEvent.click(screen.getByText('placeholder'))
+    await waitFor(() => {
+      expect(screen.getByRole('dialog')).toBeVisible()
+    })
+
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
+    await userEvent.keyboard('j')
+
+    // Not called before the 300ms debounce has elapsed
+    await new Promise(resolve => {
+      setTimeout(resolve, 150)
+    })
+    expect(onSearch).not.toHaveBeenCalled()
+
+    await waitFor(() => {
+      expect(onSearch).toHaveBeenCalledWith('j')
+    })
   })
 
   it('should display options from an async search when onSearch updates the options', async () => {
@@ -1945,10 +1984,13 @@ describe('selectInput', () => {
     await userEvent.keyboard('Mer')
 
     // Async results replace the displayed options
-    await waitFor(() => {
-      expect(screen.getByTestId('option-mercury')).toBeVisible()
-      expect(screen.queryByTestId('option-venus')).not.toBeInTheDocument()
-    })
+    await waitFor(
+      () => {
+        expect(screen.getByTestId('option-mercury')).toBeVisible()
+        expect(screen.queryByTestId('option-venus')).not.toBeInTheDocument()
+      },
+      { timeout: 2000 },
+    )
     // The search bar is still visible and keeps its value while options update
     expect(screen.getByRole('textbox', { name: 'search-bar' })).toHaveValue('Mer')
   })

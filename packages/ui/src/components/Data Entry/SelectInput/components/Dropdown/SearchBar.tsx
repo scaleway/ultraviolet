@@ -2,7 +2,7 @@
 
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
-import { cn } from '@ultraviolet/utils'
+import { cn, useDebouncedCallback } from '@ultraviolet/utils'
 import type { Dispatch, KeyboardEvent, RefObject, SetStateAction } from 'react'
 import { searchInputStyle } from '../../../../styles'
 import { TextInput } from '../../../TextInput'
@@ -75,6 +75,11 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
 
 const escapeRegExp = (string: string) => string.replaceAll(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
+const noop = () => {}
+
+// Debounce of the onSearch callback, in milliseconds
+const SEARCH_DEBOUNCE = 300
+
 export const SearchBar = ({
   placeholder,
   displayedOptions,
@@ -96,9 +101,11 @@ export const SearchBar = ({
     size,
   } = useSelectInput()
 
+  const debouncedOnSearch = useDebouncedCallback(onSearch ?? noop, SEARCH_DEBOUNCE)
+
   const handleChange = (search: string) => {
     if (onSearch) {
-      onSearch(search)
+      debouncedOnSearch(search)
     } else if (search.length > 0) {
       const query = escapeRegExp(search)
       const filteredOptions = Array.isArray(options)

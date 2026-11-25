@@ -76,10 +76,10 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    */
   addOption?: { text: string; onClick: (searchText: string) => void }
   /**
-   * Called with the search value on every change of the search input.
    * When provided, the search bar does not filter the options locally anymore:
-   * the consumer is responsible for updating `options` accordingly (e.g. from an async query).
-   * Please wrap that definition in useCallback and debounce it if it triggers a request.
+   * it is called with the search value, debounced by 300 milliseconds,
+   * and the consumer is responsible for updating `options` accordingly (e.g. from an async query).
+   * Please wrap that definition in useCallback.
    */
   onSearch?: (search: string) => void
   /**
