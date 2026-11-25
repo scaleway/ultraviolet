@@ -170,6 +170,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
         >
           <SelectRowCell
             checkboxRef={checkboxRef}
+            error={sentiment === 'danger'}
             id={id}
             isSelectDisabled={isSelectDisabled}
             selectDisabled={selectDisabled}
@@ -198,8 +199,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
         </tr>
         {expandable && expandedRowIds[id] ? (
           <tr
-            className={listStyle.expandableWrapper}
-            data-expandable-content
+            className={cn(listStyle.expandableWrapper, listStyle.expandableRowSentiment({ sentiment }))}
             data-highlight={hasHightLight}
             id={expandedRowId}
             onClick={

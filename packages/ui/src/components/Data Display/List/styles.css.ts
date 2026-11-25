@@ -28,32 +28,23 @@ const colorChange = keyframes({
 
 function makeRowStyleSentiment(sentiment: (typeof SENTIMENTS)[number]) {
   const color = theme.colors[sentiment]
-  const base = {
-    backgroundColor: color.background,
-    borderColor: color.border,
-    color: color.text,
-  }
-  if (sentiment === 'neutral') {
-    return {
-      ...base,
-      selectors: {
-        '&:not([aria-disabled="true"]):hover': {
-          borderColor: theme.colors.primary.border,
-          boxShadow: theme.shadows.hoverPrimary,
-        },
-        '&[data-expandable-content]': {
-          borderColor: color.border,
-        },
-      },
-    }
-  }
+  const borderHoverColor = sentiment === 'neutral' ? theme.colors.primary.border : color.border
 
   return {
-    ...base,
+    backgroundColor: color.background,
+    borderColor: theme.colors.neutral.border,
+    color: color.text,
     selectors: {
-      '&[data-expandable-content]': {
-        borderColor: color.border,
+      '&:not([aria-disabled="true"]):is(:focus-within, :hover, [aria-expanded="true"], [data-highlight="true"])': {
+        borderColor: borderHoverColor,
       },
+      ...(sentiment === 'neutral'
+        ? {
+            '&:not([aria-disabled="true"]):hover': {
+              boxShadow: theme.shadows.hoverPrimary,
+            },
+          }
+        : {}),
     },
   }
 }
@@ -175,55 +166,35 @@ const row = recipe({
 })
 
 const cell = style({
-  borderBottom: `1px solid ${theme.colors.neutral.border}`,
-  borderTop: `1px solid ${theme.colors.neutral.border}`,
+  borderColor: 'inherit',
+  borderStyle: 'solid',
+  borderWidth: '1px 0',
   display: 'table-cell',
   height: theme.sizing[750],
   maxWidth: maxWidthCell,
   minWidth: minWidthCell,
   padding: `0 ${listCellPadding}`,
   selectors: {
-    [`${listRowBase}[aria-expanded="true"] > &`]: {
-      borderTopColor: theme.colors.primary.border,
-    },
     '&:first-child, &:last-child': {
       transition: 'box-shadow 200ms ease, border-color 200ms ease',
     },
-    [`${listRowBase}:not([aria-disabled='true']):hover + ${expandableWrapper} > &`]: {
-      borderColor: theme.colors.primary.border,
-    },
-    [`${listRowBase}[aria-expanded='true'] > &`]: {
-      borderBottomColor: theme.colors.primary.border,
-    },
-    [`${listRowBase}[data-highlight='true'] > &`]: {
-      borderColor: theme.colors.primary.border,
-    },
     '&:last-child': {
       borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
-      borderRight: `1px solid ${theme.colors.neutral.border}`,
+      borderRightWidth: '1px',
     },
     [`${listRowBase}[aria-expanded='true'] > &:last-child`]: {
       borderRadius: `0 ${theme.radii.default} 0 0`,
-      borderRight: `1px solid ${theme.colors.primary.border}`,
-    },
-    [`${listRowBase}[data-highlight='true'] > &:last-child`]: {
-      borderRight: `1px solid ${theme.colors.primary.border}`,
     },
     '&:first-child': {
-      borderLeft: `1px solid ${theme.colors.neutral.border}`,
+      borderLeftWidth: '1px',
       borderRadius: ` ${theme.radii.default} 0 0 ${theme.radii.default}`,
     },
     [`${listRowBase}[aria-expanded='true'] > &:first-child`]: {
-      borderLeft: `1px solid ${theme.colors.primary.border}`,
       borderRadius: `${theme.radii.default} 0 0 0`,
     },
     [`${listRowBase}[data-highlight='true'] > &:first-child`]: {
       borderRadius: `${theme.radii.default} 0 0 0`,
     },
-    [`${listRowBase}:not([aria-disabled='true']):hover > &, ${listRowBase}:not([aria-disabled='true']):focus-within > &`]:
-      {
-        borderColor: theme.colors.primary.border,
-      },
   },
   transition: 'box-shadow 200ms ease, border-color 200ms ease',
   verticalAlign: 'middle',
@@ -272,13 +243,34 @@ const expandableCell = style({
       transition: 'box-shadow 200ms ease, border-color 200ms ease',
     },
     [`${expandableWrapper} > &`]: {
-      border: `1px solid ${theme.colors.neutral.border}`,
       borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
-      borderTop: 'none',
+      borderStyle: 'solid',
+      borderWidth: '0 1px 1px',
     },
-    [`${expandableWrapper}[data-highlight="true"] > &`]: {
-      borderColor: theme.colors.primary.border,
-    },
+  },
+})
+
+const expandableRowSentiment = recipe({
+  base: {
+    borderColor: theme.colors.neutral.border,
+  },
+  defaultVariants: {
+    sentiment: 'neutral',
+  },
+  variants: {
+    sentiment: Object.fromEntries(
+      SENTIMENTS.map(sentiment => [
+        sentiment,
+        {
+          selectors: {
+            [`${listRowBase}:not([aria-disabled='true']):is(:hover, [aria-expanded='true']) + &, &[data-highlight='true']`]:
+              {
+                borderColor: sentiment === 'neutral' ? theme.colors.primary.border : theme.colors[sentiment].border,
+              },
+          },
+        },
+      ]),
+    ),
   },
 })
 
@@ -289,6 +281,7 @@ export const listStyle = {
   headerCell,
   headerRow,
   expandableWrapper,
+  expandableRowSentiment,
   checkboxInRange,
   row,
   cell,

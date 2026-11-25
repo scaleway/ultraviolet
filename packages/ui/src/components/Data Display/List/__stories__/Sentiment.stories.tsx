@@ -6,6 +6,7 @@ export const Sentiments = Template.bind({})
 
 Sentiments.args = {
   ...Template.args,
+  selectable: true,
   children: (
     <>
       {SENTIMENTS.map(sentiment => (

@@ -12,11 +12,13 @@ export const SelectRowCell = ({
   id,
   isSelectDisabled,
   checkboxRef,
+  error,
 }: {
   selectDisabled?: string | boolean
   id: string
   isSelectDisabled: boolean
   checkboxRef: RefObject<HTMLInputElement | null>
+  error?: boolean
 }) => {
   const { selectable, selectedRowIds, inRange, handleOnChange } = useListContext()
 
@@ -30,6 +32,7 @@ export const SelectRowCell = ({
               checked={selectedRowIds[id]}
               className={inRange?.includes(id) ? listStyle.checkboxInRange : ''}
               disabled={isSelectDisabled}
+              error={error}
               name="list-select-checkbox"
               onChange={() => handleOnChange(id, selectedRowIds[id])}
               ref={checkboxRef}

@@ -165,7 +165,6 @@ export const Row = ({
       {expandable && expandedRowIds[id] ? (
         <tr
           className={tableStyle.expandableWrapper}
-          data-expandable-content
           onClick={
             canClickRowToExpand
               ? e => {
