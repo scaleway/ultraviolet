@@ -191,4 +191,43 @@ describe('keyValueField', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
+  it('should translate regex error like other fields', async () => {
+    renderWithForm(
+      <KeyValueField
+        addButton={{ name: 'add' }}
+        inputKey={{ label: 'key', regex: [/^[a-zA-Z]*$/u] }}
+        inputValue={{ label: 'value' }}
+        name="test"
+      />,
+      {},
+      { errors: mockFormErrors },
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: /add/i }))
+    await userEvent.type(screen.getByRole('textbox', { name: 'key' }), '1')
+
+    // one error under the key input and one global error, both translated
+    expect(screen.getAllByText(/This field should match the regex/)).toHaveLength(2)
+  })
+
+  it('should translate required error instead of a pattern error', async () => {
+    renderWithForm(
+      <KeyValueField
+        addButton={{ name: 'add' }}
+        inputKey={{ label: 'key', required: true }}
+        inputValue={{ label: 'value' }}
+        name="test"
+      />,
+      {},
+      { errors: mockFormErrors },
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: /add/i }))
+    // type in the value to trigger validation, the key stays empty
+    await userEvent.type(screen.getByRole('textbox', { name: 'value' }), 'a')
+
+    expect(screen.getByText('This field is required')).toBeInTheDocument()
+    expect(screen.queryByText(/This field should match the regex/)).not.toBeInTheDocument()
+  })
 })
