@@ -83,11 +83,23 @@ export const SearchBar = ({
   resultCountId,
   inputRef,
 }: SearchBarProps) => {
-  const { onChange, onSearch, setSearchInput, searchInput, options, multiselect, setSelectedData, selectedData, size } =
-    useSelectInput()
+  const {
+    onChange,
+    onSearch,
+    setDisplayedOptions,
+    setSearchInput,
+    searchInput,
+    options,
+    multiselect,
+    setSelectedData,
+    selectedData,
+    size,
+  } = useSelectInput()
 
   const handleChange = (search: string) => {
-    if (search.length > 0) {
+    if (onSearch) {
+      onSearch(search)
+    } else if (search.length > 0) {
       const query = escapeRegExp(search)
       const filteredOptions = Array.isArray(options)
         ? searchRegex([...options], query)
@@ -95,9 +107,9 @@ export const SearchBar = ({
             Object.entries(options).map(([group, groupOptions]) => [group, searchRegex(groupOptions, query)]),
           )
 
-      onSearch(filteredOptions)
+      setDisplayedOptions(filteredOptions)
     } else {
-      onSearch(options)
+      setDisplayedOptions(options)
     }
     setSearchInput(search)
   }

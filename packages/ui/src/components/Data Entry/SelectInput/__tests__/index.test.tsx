@@ -1856,4 +1856,100 @@ describe('selectInput', () => {
 
     expect(onClick).toHaveBeenCalledTimes(2)
   })
+
+  it('should be searchable when onSearch is provided and there are less than 6 items', async () => {
+    renderWithTheme(
+      <SelectInput
+        name="test"
+        onSearch={() => {}}
+        options={dataGroupedSmall}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+      />,
+    )
+    await userEvent.click(screen.getByText('placeholder'))
+
+    await waitFor(() => {
+      expect(screen.getByRole('textbox', { name: 'search-bar' })).toBeInTheDocument()
+    })
+  })
+
+  it('should call onSearch on each keystroke and not filter the list when onSearch is provided', async () => {
+    const onSearch = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        name="test"
+        onSearch={onSearch}
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+      />,
+    )
+    await userEvent.click(screen.getByText('placeholder'))
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
+    await userEvent.keyboard('e')
+
+    expect(onSearch).toHaveBeenCalledWith('e')
+    // The list is not filtered locally: all options are still displayed
+    expect(screen.getByTestId('option-venus')).toBeVisible()
+    expect(screen.getByTestId('option-earth')).toBeVisible()
+
+    await userEvent.keyboard('a')
+    expect(onSearch).toHaveBeenLastCalledWith('ea')
+
+    // Clearing the search calls the callback with an empty string
+    await userEvent.keyboard('[Backspace]')
+    await userEvent.keyboard('[Backspace]')
+    expect(onSearch).toHaveBeenLastCalledWith('')
+  })
+
+  it('should display options from an async search when onSearch updates the options', async () => {
+    const AsyncSelect = () => {
+      const [options, setOptions] = useState(dataUnGrouped)
+
+      return (
+        <SelectInput
+          isLoading={options.length === 0}
+          name="test"
+          onSearch={search => {
+            if (search.length === 0) {
+              setOptions(dataUnGrouped)
+            } else {
+              // Simulates an async query returning filtered options
+              setTimeout(() => {
+                setOptions(dataUnGrouped.filter(option => option.value.startsWith(search.toLowerCase())))
+              }, 100)
+            }
+          }}
+          options={options}
+          placeholder="placeholder"
+          placeholderSearch="placeholdersearch"
+        />
+      )
+    }
+
+    renderWithTheme(<AsyncSelect />)
+    await userEvent.click(screen.getByText('placeholder'))
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
+    await userEvent.keyboard('Mer')
+
+    // Async results replace the displayed options
+    await waitFor(() => {
+      expect(screen.getByTestId('option-mercury')).toBeVisible()
+      expect(screen.queryByTestId('option-venus')).not.toBeInTheDocument()
+    })
+    // The search bar is still visible and keeps its value while options update
+    expect(screen.getByRole('textbox', { name: 'search-bar' })).toHaveValue('Mer')
+  })
 })
