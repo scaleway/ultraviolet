@@ -39,7 +39,7 @@ Enabled when there is no search bar (`searchable=false`). `handleKeyDown` listen
 
 ### "Smart" search (searchable)
 
-Enabled automatically when `options.length >= 6` or `addOption` is set. The fuzzy `SearchBar` is a plain `TextInput` with `aria-label="search-bar"`. Notes:
+Enabled automatically when `options.length >= 6`, `addOption` is set or `onSearch` is provided. The fuzzy `SearchBar` is a plain `TextInput` with `aria-label="search-bar"`. Notes:
 
 - The typing input is a plain `TextInput`.
 - Filtered results / "No options" empty state are announced via a `VisuallyHidden` `output` live region (`aria-live="polite"`, `aria-atomic`) wired with `aria-describedby` on the search bar (4.1.3).

@@ -14,7 +14,8 @@ import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 
 type ContextProps = {
   options: DataType
-  onSearch: Dispatch<SetStateAction<DataType>>
+  setDisplayedOptions: Dispatch<SetStateAction<DataType>>
+  onSearch?: (search: string) => void
   isDropdownVisible: boolean
   setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
   searchInput: string
@@ -45,7 +46,7 @@ const SelectInputContext = createContext<ContextProps>({
   numberOfOptions: 0,
   numberOfDisabledOptions: 0,
   onChange: () => {},
-  onSearch: () => {},
+  onSearch: undefined,
   options: [],
   searchInput: '',
   selectAll: { label: '' },
@@ -54,6 +55,7 @@ const SelectInputContext = createContext<ContextProps>({
   setIsDropdownVisible: () => {},
   setSearchInput: () => {},
   setSelectedData: () => {},
+  setDisplayedOptions: () => {},
   size: 'large',
 })
 
@@ -72,6 +74,7 @@ type SelectInputProviderProps<IsMulti extends boolean> = {
   refSelect?: RefObject<HTMLDivElement | null>
   onChange?: IsMulti extends true ? (value: string[]) => void : (value: string) => void
   onOpen?: () => void
+  onSearch?: (search: string) => void
 }
 
 export const SelectInputProvider = <T extends boolean>({
@@ -86,6 +89,7 @@ export const SelectInputProvider = <T extends boolean>({
   onChange,
   refSelect,
   onOpen,
+  onSearch,
   size,
 }: SelectInputProviderProps<T>) => {
   const currentValue = useMemo(() => {
@@ -196,7 +200,7 @@ export const SelectInputProvider = <T extends boolean>({
         numberOfOptions,
         numberOfDisabledOptions,
         onChange,
-        onSearch: setDisplayedOptions,
+        onSearch,
         options,
         searchInput,
         selectAll,
@@ -205,6 +209,7 @@ export const SelectInputProvider = <T extends boolean>({
         setIsDropdownVisible: handleDropDownVisible,
         setSearchInput,
         setSelectedData,
+        setDisplayedOptions,
         size,
       }) as ContextProps,
     [
@@ -220,6 +225,7 @@ export const SelectInputProvider = <T extends boolean>({
       selectedData,
       size,
       onChange,
+      onSearch,
       numberOfDisabledOptions,
     ],
   )
