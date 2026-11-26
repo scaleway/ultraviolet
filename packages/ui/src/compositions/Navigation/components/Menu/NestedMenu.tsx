@@ -53,8 +53,6 @@ export const NestedMenu = ({
         target={target}
       />
     }
-    dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
-    placement="right"
     triggerMethod="hover"
   >
     <Menu.Group label={label}>

@@ -39,8 +39,7 @@ export const ItemMenu = ({
             )}
           </Button>
         }
-        dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
-        placement="right"
+        placement="right-start"
         triggerMethod="hover"
       >
         <Menu.Group label={label}>

@@ -2,6 +2,7 @@
 
 import { Children } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
+import { isPlainTextContent } from '../../../../helpers/isPlainTextContent'
 import { Stack } from '../../../Layout/Stack'
 import { Text } from '../../../Typography/Text'
 import { menuStyle } from '../styles.css'
@@ -20,6 +21,14 @@ type GroupProps = {
 export const Group = ({ label, children, labelDescription, emptyState, style }: GroupProps) => {
   const isChildrenEmpty = Children.count(children) === 0
 
+  const emptyStateContent = isPlainTextContent(emptyState) ? (
+    <Text as="p" sentiment="neutral" variant="bodySmall" placement="center">
+      {emptyState}
+    </Text>
+  ) : (
+    emptyState
+  )
+
   return (
     <>
       <span className={menuStyle.group} style={style}>
@@ -30,7 +39,7 @@ export const Group = ({ label, children, labelDescription, emptyState, style }: 
           {labelDescription ?? null}
         </Stack>
       </span>
-      {isChildrenEmpty && emptyState ? emptyState : children}
+      {isChildrenEmpty && emptyState ? emptyStateContent : children}
     </>
   )
 }

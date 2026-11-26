@@ -1,6 +1,7 @@
 import type { KeyboardEvent } from 'react'
 // oxlint-disable typescript/no-unsafe-type-assertion
 import { describe, expect, it, vi } from 'vitest'
+import { isPlainTextContent } from '../isPlainTextContent'
 import { isStringOrNumberArray } from '../isStringOrNumberArray'
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
@@ -79,6 +80,23 @@ describe(parseIntOr, () => {
       ${'is (string[] | string)[]'}  | ${['string', ['string']]} | ${false}
     `('returns "$expected" when $test', current => {
       expect(isStringOrNumberArray(current.value as string)).toBe(current.expected)
+    })
+  })
+
+  describe(isPlainTextContent, () => {
+    it.each`
+      test                            | value                          | expected
+      ${'is string'}                  | ${'test'}                      | ${true}
+      ${'is number'}                  | ${1}                           | ${true}
+      ${'is string array'}            | ${['hello', 'world']}          | ${true}
+      ${'is string and number array'} | ${['hello', 1]}                | ${true}
+      ${'is empty array'}             | ${[]}                          | ${true}
+      ${'is element'}                 | ${{ type: 'span' }}            | ${false}
+      ${'is array with an element'}   | ${['hello', { type: 'span' }]} | ${false}
+      ${'is undefined'}               | ${undefined}                   | ${false}
+      ${'is function'}                | ${() => 'hello'}               | ${false}
+    `('returns "$expected" when $test', current => {
+      expect(isPlainTextContent(current.value as string)).toBe(current.expected)
     })
   })
 })
