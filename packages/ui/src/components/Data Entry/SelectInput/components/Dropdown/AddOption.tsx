@@ -19,9 +19,15 @@ export const AddOption = ({
   searchable?: boolean
   isEmpty?: boolean
 }) => {
-  const { setIsDropdownVisible, multiselect, setDisplayedOptions, searchInput, setSearchInput } = useSelectInput()
+  const { setIsDropdownVisible, multiselect, setDisplayedOptions, searchInput, setSearchInput, onSearch } =
+    useSelectInput()
 
-  if (!addOption || !searchable || !(isEmpty || searchInput)) {
+  const handleOnSearch = (search: string) => {
+    setSearchInput(search)
+    onSearch?.(search)
+  }
+
+  if (!addOption || !searchable || !(isEmpty || onSearch)) {
     return null
   }
 
@@ -30,7 +36,7 @@ export const AddOption = ({
     addOption.onClick(searchInput)
     setDisplayedOptions([newOption])
     setIsDropdownVisible(multiselect)
-    setSearchInput('')
+    handleOnSearch('')
   }
 
   return (
