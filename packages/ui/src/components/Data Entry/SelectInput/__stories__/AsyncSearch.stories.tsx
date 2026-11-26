@@ -3,6 +3,8 @@ import { useCallback, useState } from 'react'
 import { SelectInput } from '..'
 import { dataUnGrouped } from './resources'
 
+let timeoutIdOnSearch: NodeJS.Timeout | null = null
+
 export const AsyncSearch: StoryFn<typeof SelectInput> = () => {
   const [options, setOptions] = useState(dataUnGrouped)
   const [isLoading, setIsLoading] = useState(false)
@@ -10,7 +12,11 @@ export const AsyncSearch: StoryFn<typeof SelectInput> = () => {
   // Simulates an async query with the search as a param, debounced by 300ms by the component
   const onSearch = useCallback((search: string) => {
     setIsLoading(true)
-    setTimeout(() => {
+    if (timeoutIdOnSearch) {
+      clearTimeout(timeoutIdOnSearch)
+    }
+
+    timeoutIdOnSearch = setTimeout(() => {
       setOptions(search ? dataUnGrouped.filter(option => option.value.startsWith(search.toLowerCase())) : dataUnGrouped)
       setIsLoading(false)
     }, 500)

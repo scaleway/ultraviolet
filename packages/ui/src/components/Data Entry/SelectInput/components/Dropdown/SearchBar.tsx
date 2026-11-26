@@ -77,7 +77,6 @@ const escapeRegExp = (string: string) => string.replaceAll(/[.*+?^{}()|[\]\\]/gu
 
 const noop = () => {}
 
-// Debounce of the onSearch callback, in milliseconds
 const SEARCH_DEBOUNCE = 300
 
 export const SearchBar = ({
@@ -92,8 +91,8 @@ export const SearchBar = ({
     onChange,
     onSearch,
     setDisplayedOptions,
-    setSearchInput,
     searchInput,
+    setSearchInput,
     options,
     multiselect,
     setSelectedData,
