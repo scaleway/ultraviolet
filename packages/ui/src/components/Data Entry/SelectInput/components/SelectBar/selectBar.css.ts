@@ -42,19 +42,17 @@ function makeStateStyle(state: 'neutral' | 'success' | 'danger') {
 
   return {
     selectors: {
-      '&:not([data-disabled="true"])': {
+      '&:not([aria-disabled="true"])': {
         border: `1px solid ${theme.colors[state].border}`,
       },
-      '&:not([data-disabled="true"]):not([data-readonly="true"]):active': {
-        borderColor: theme.colors[state].borderHover,
+      '&:not([aria-disabled="true"]):not([aria-readonly="true"]):is(:active, :focus-visible)': {
+        outline: 'none',
+        borderColor: theme.colors[correctSentiment].borderHover,
         boxShadow: theme.shadows[
           `focus${capitalizeFirstLetter(correctSentiment)}` as keyof typeof theme.shadows
         ] as string,
       },
-      '&:not([data-disabled="true"]):not([data-readonly="true"]):focus-visible': {
-        outline: '5px auto Highlight',
-      },
-      '&:not([data-disabled="true"]):not([data-readonly="true"]):hover': {
+      '&:not([aria-disabled="true"]):not([aria-readonly="true"]):hover': {
         borderColor: theme.colors[correctSentiment].borderHover,
         outline: 'none',
       },
@@ -105,29 +103,8 @@ export const selectBarBase = style({
 
 export const selectBar = recipe({
   base: selectBarBase,
-  compoundVariants: [
-    {
-      style: {
-        borderColor: theme.colors.primary.borderHover,
-      },
-      variants: { dropdownVisible: true, state: 'neutral' },
-    },
-    {
-      style: {
-        borderColor: theme.colors.success.borderHover,
-      },
-      variants: { dropdownVisible: true, state: 'success' },
-    },
-    {
-      style: {
-        borderColor: theme.colors.danger.borderHover,
-      },
-      variants: { dropdownVisible: true, state: 'danger' },
-    },
-  ],
   defaultVariants: {
     disabled: false,
-    dropdownVisible: false,
     readOnly: false,
     size: 'large',
     state: 'neutral',
@@ -143,11 +120,6 @@ export const selectBar = recipe({
             borderColor: theme.colors.neutral.borderDisabled,
           },
         },
-      },
-    },
-    dropdownVisible: {
-      true: {
-        borderColor: theme.colors.primary.borderHover,
       },
     },
 

@@ -75,6 +75,7 @@ export const dropdownSection = style({
 export const dropdownGroupWrapper = style({
   position: 'sticky',
   top: 0,
+  zIndex: 1,
 })
 
 export const emptyStateGroupStyle = style({

@@ -344,7 +344,12 @@ describe('selectInput', () => {
     )
     const input = screen.getByRole('combobox', { name: 'label' })
 
-    await userEvent.click(input) // it shouldn't open the dropdown
+    await userEvent.click(input)
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+
+    await userEvent.keyboard('{Enter}')
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -383,7 +388,12 @@ describe('selectInput', () => {
 
     const input = screen.getByRole('combobox', { name: 'label' })
 
-    await userEvent.click(input) // it shouldn't open the dropdown
+    await userEvent.click(input)
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+
+    await userEvent.keyboard('{Enter}')
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+
     expect(asFragment()).toMatchSnapshot()
   })
 

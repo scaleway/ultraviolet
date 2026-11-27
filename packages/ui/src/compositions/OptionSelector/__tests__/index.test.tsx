@@ -58,7 +58,7 @@ describe('optionSelector', () => {
     )
     const secondSelector = screen.getByTestId('second-selector')
     expect(secondSelector).toBeInTheDocument()
-    expect(secondSelector).toHaveAttribute('data-disabled', 'true')
+    expect(secondSelector).toHaveAttribute('aria-disabled', 'true')
 
     expect(asFragment).toMatchSnapshot()
   })
@@ -122,7 +122,7 @@ describe('optionSelector', () => {
     )
 
     const secondSelector = screen.getByTestId('second-selector')
-    expect(secondSelector).toHaveAttribute('data-disabled', 'true')
+    expect(secondSelector).toHaveAttribute('aria-disabled', 'true')
     expect(asFragment).toMatchSnapshot()
   })
 
@@ -195,9 +195,9 @@ describe('optionSelector', () => {
     const secondSelector = screen.getByTestId('second-selector')
     const firstSelector = screen.getByTestId('first-selector')
 
-    expect(firstSelector).toHaveAttribute('data-readonly', 'true')
+    expect(firstSelector).toHaveAttribute('aria-readonly', 'true')
     expect(secondSelector).toBeVisible()
-    expect(secondSelector).toHaveAttribute('data-readonly', 'true')
+    expect(secondSelector).toHaveAttribute('aria-readonly', 'true')
     expect(screen.getAllByText('PAR 1')[0]).toBeVisible()
     expect(asFragment).toMatchSnapshot()
   })

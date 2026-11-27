@@ -72,6 +72,7 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
           onKeyDown={event => {
             const shouldClick = [' ', 'Enter'].includes(event.key) && !option.disabled
             if (shouldClick) {
+              event.preventDefault() // prevent scroll with space
               handleClick({
                 clickedOption: option,
                 event,
