@@ -76,5 +76,5 @@ const getButtonOrLink = (element: Element | null) => {
 
 export const getListItem = (listItems: Element[]) =>
   listItems
-    .map(child => (getButtonOrLink(child) ? getButtonOrLink(child) : getButtonOrLink(child.firstElementChild)))
+    .map(child => getButtonOrLink(child) || getButtonOrLink(child.firstElementChild))
     .filter(element => typeof element !== 'boolean')

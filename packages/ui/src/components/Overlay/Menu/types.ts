@@ -1,19 +1,22 @@
 import type { Placement } from '@floating-ui/react'
-import type { ButtonHTMLAttributes, CSSProperties, ReactElement, ReactNode, Ref } from 'react'
+import type { ButtonHTMLAttributes, CSSProperties, ReactElement, ReactNode, RefAttributes } from 'react'
 
 type ChildMenuProps = {
   toggle: () => void
 }
 
 type DisclosureElement =
-  | ((disclosure: DisclosureProps) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
-  | (ReactElement<ButtonHTMLAttributes<HTMLButtonElement>> & {
-      ref?: Ref<HTMLButtonElement>
-    })
+  | ((
+      disclosure: DisclosureProps,
+    ) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement> & RefAttributes<HTMLButtonElement>>)
+  | ReactElement<ButtonHTMLAttributes<HTMLButtonElement> & RefAttributes<HTMLButtonElement>>
 
 export type DisclosureProps = { visible: boolean }
 
 export type MenuProps = {
+  /**
+   * @deprecated the panel id is auto-generated.
+   */
   id?: string
   ariaLabel?: string
   children?: ReactNode | (({ toggle }: ChildMenuProps) => ReactNode)
