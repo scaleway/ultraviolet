@@ -100,7 +100,6 @@ export const Text = ({
             aria-live={ariaLive}
             aria-atomic={ariaAtomic}
             className={cn(
-              className,
               textStyle.text({
                 disabled,
                 italic,
@@ -112,6 +111,7 @@ export const Text = ({
                 variant,
               }),
               oneLine ? textStyle.oneLine : '',
+              className,
             )}
             data-testid={dataTestId}
             dir={dir}
