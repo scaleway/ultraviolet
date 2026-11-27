@@ -1,261 +1,139 @@
 'use client'
 
+import { useInteractions, useListNavigation, useMergeRefs } from '@floating-ui/react'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import {
-  cloneElement,
-  forwardRef,
-  isValidElement,
-  useCallback,
-  useEffect,
-  useId,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
-import type { ButtonHTMLAttributes, KeyboardEvent, MouseEvent, ReactNode, Ref } from 'react'
+import { cloneElement, forwardRef, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import type { KeyboardEvent, ReactNode, Ref } from 'react'
 import { SearchInput } from '../../Data Entry/SearchInput'
 import { Stack } from '../../Layout/Stack'
-import { Popup } from '../Popup'
+import { Popup } from '../Popup/v2'
+import { usePopupContext } from '../Popup/v2/context'
 import { getListItem, searchChildren } from './helpers'
-import { DisclosureContext, useMenu } from './MenuProvider'
+import { DisclosureContext, ListNavigationContext, useMenu } from './MenuProvider'
 import type { MenuProps } from './types'
-import { heightAvailableSpace, heightMenu, menuStyle } from './styles.css'
-
-const SPACE_DISCLOSURE_POPUP = 24 // in px
-
-const moveFocusDown = (indexOfCurrent: number, listItem: (HTMLButtonElement | HTMLAnchorElement)[]) => {
-  if (indexOfCurrent < listItem.length - 1) {
-    listItem[indexOfCurrent + 1].focus()
-  } else {
-    listItem[0].focus()
-  }
-}
-const moveFocusUp = (indexOfCurrent: number, listItem: (HTMLButtonElement | HTMLAnchorElement)[]) => {
-  if (indexOfCurrent > 0) {
-    listItem[indexOfCurrent - 1].focus()
-  } else {
-    listItem.at(-1)?.focus()
-  }
-}
+import { heightMenu, menuStyle } from './styles.css'
 
 export const Menu = forwardRef(
   (
     {
-      id,
       ariaLabel = 'Menu',
       children,
       disclosure,
       hasArrow = false,
-      placement = 'auto-bottom',
+      placement,
       className,
       'data-testid': dataTestId,
       maxHeight,
-      portalTarget = document.body,
-      triggerMethod = 'click',
-      dynamicDomRendering,
-      align,
+      portalTarget,
+      triggerMethod,
       searchable = false,
       footer,
-      shrink,
       style,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible, isNested, disclosureRef, menuRef, setShouldBeVisible, shouldBeVisible } = useMenu()
-    const searchInputRef = useRef<HTMLInputElement>(null)
+    const { isNested, disclosureRef, menuRef } = useMenu()
+    const { context, open, setOpen } = usePopupContext()
+    const [wasOpen, setWasOpen] = useState(open)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
-    const [popupMaxHeight, setPopupMaxHeight] = useState(maxHeight ?? '30rem')
+    const [activeIndex, setActiveIndex] = useState<number | null>(null)
     const contentRef = useRef<HTMLDivElement>(null)
-    const tempId = useId()
-    const finalId = `menu-${id ?? tempId}`
-    const isTriggerMethodHover = triggerMethod === 'hover'
+    const listRef = useRef<(HTMLElement | null)[]>([])
+    const finalTriggerMethod = triggerMethod ?? (isNested ? 'hover' : 'click')
+    const isTriggerMethodHover = finalTriggerMethod === 'hover'
+    const mergedRef = useMergeRefs([ref, disclosureRef])
+    const target = typeof disclosure === 'function' ? disclosure({ visible: open }) : disclosure
+    const finalDisclosure = cloneElement(target, { ref: mergedRef })
 
-    // if you need dialog inside your component, use function, otherwise component is fine
-    const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(disclosure)
-      ? disclosure
-      : disclosure({ visible: isVisible })
-    const innerRef = useRef(target as unknown as HTMLButtonElement)
-
-    useImperativeHandle(ref, () => innerRef.current)
-
-    const finalDisclosure = cloneElement(target, {
-      'aria-expanded': isVisible,
-      'aria-haspopup': 'dialog',
-      onClick: (event: MouseEvent<HTMLButtonElement>) => {
-        target.props.onClick?.(event)
-        setIsVisible(!isVisible)
-      },
-      // @ts-expect-error not sure how to fix this
-      ref: disclosureRef,
+    // Keep listRef in sync so that Floating UI's list navigation follows the rendered items.
+    useLayoutEffect(() => {
+      listRef.current = contentRef.current ? getListItem([...contentRef.current.children]) : []
     })
+
+    const listNavigation = useListNavigation(context, {
+      listRef,
+      activeIndex,
+      onNavigate: setActiveIndex,
+      loop: true,
+      focusItemOnHover: false,
+      focusItemOnOpen: false,
+    })
+    const { getFloatingProps } = useInteractions([listNavigation])
+    const { item: listItemProps } = listNavigation
 
     const onSearch = useCallback(
       (value: string) => {
         if (typeof children === 'object') {
           setLocalChild(searchChildren(children, value))
+          setActiveIndex(null)
         }
       },
       [children],
     )
 
-    useEffect(() => {
-      if (!(isVisible && searchable)) {
-        return undefined
-      }
-
-      const timeout = setTimeout(() => {
-        searchInputRef.current?.focus()
-      }, 50)
-
-      return () => clearTimeout(timeout)
-    }, [isVisible, searchable])
-
-    useEffect(() => {
-      if (disclosureRef.current && isTriggerMethodHover) {
-        const handler = (value: boolean | undefined) => {
-          setShouldBeVisible(value)
-        }
-        const onFocus = () => handler(true)
-        const onMouseEnter = () => handler(true)
-        const onMouseLeave = () => handler(false)
-        const onKeyDown = (event: globalThis.KeyboardEvent) => {
-          if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-            handler(false) // force close menu when navigating with arrow keys
-          }
-        }
-
-        const disclosureElement = disclosureRef.current
-        disclosureElement.addEventListener('focus', onFocus)
-        disclosureElement.addEventListener('mouseenter', onMouseEnter)
-        disclosureElement.addEventListener('mouseleave', onMouseLeave)
-        disclosureElement.addEventListener('keydown', onKeyDown)
-
-        return () => {
-          disclosureElement.removeEventListener('focus', onFocus)
-          disclosureElement.removeEventListener('mouseenter', onMouseEnter)
-          disclosureElement.removeEventListener('mouseleave', onMouseLeave)
-          disclosureElement.removeEventListener('keydown', onKeyDown)
-        }
-      }
-
-      return undefined
-    }, [setShouldBeVisible, disclosureRef, isTriggerMethodHover])
-
-    const finalChild = useMemo(() => {
+    const finalChild = useMemo((): ReactNode | null => {
       if (typeof children === 'function') {
-        return children({ toggle: () => setIsVisible(!isVisible) })
+        return children({ toggle: () => setOpen(!open) })
       }
-
       if (searchable && localChild) {
         return localChild
       }
-
       return children
-    }, [children, isVisible, localChild, searchable, setIsVisible])
+    }, [children, localChild, open, searchable, setOpen])
 
-    const handleTabOpen = (event: KeyboardEvent) => {
-      if (contentRef.current) {
-        const listItem = getListItem([...contentRef.current.children])
-        if (listItem && isVisible && ['Tab', 'ArrowDown'].includes(event.key)) {
-          event?.preventDefault()
-          listItem[0]?.focus()
-        }
+    // Reset the filter when the menu opens (not when it closes) so the full list
+    // is shown from the first frame instead of during the close animation.
+    if (open !== wasOpen) {
+      setWasOpen(open)
+      if (open) {
+        setLocalChild(null)
       }
     }
 
-    const handleFocusKey = (
-      key: string,
-      indexOfCurrent: number,
-      listItem: (HTMLButtonElement | HTMLAnchorElement)[],
-    ) => {
-      if (key === 'ArrowDown') {
-        moveFocusDown(indexOfCurrent, listItem)
-      } else if (key === 'ArrowUp') {
-        moveFocusUp(indexOfCurrent, listItem)
-      } else if (key === 'ArrowLeft' && isTriggerMethodHover) {
+    const handleArrowLeft = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft' && isTriggerMethodHover) {
         disclosureRef.current?.focus()
-        setShouldBeVisible(undefined)
       }
     }
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (contentRef.current) {
-        const listItem = getListItem([...contentRef.current.children])
-        if (listItem) {
-          const currentElement = listItem.find(item => item === document.activeElement)
-          if (currentElement) {
-            const indexOfCurrent = listItem.indexOf(currentElement)
-            event.preventDefault()
-
-            handleFocusKey(event.key, indexOfCurrent, listItem)
-          }
-        }
-      }
-    }
-
-    useEffect(() => {
-      if (disclosureRef.current && placement === 'bottom' && shrink) {
-        const disclosureRect = disclosureRef.current.getBoundingClientRect()
-        const disclosureBottom = disclosureRect.bottom
-        const targetSize = portalTarget.getBoundingClientRect().bottom
-        const availableSpace = targetSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
-        setPopupMaxHeight(`${availableSpace}px`)
-      }
-    }, [isVisible, portalTarget, disclosureRef, placement, shrink])
+    // oxlint-disable-next-line react/refs -- handleArrowLeft reads disclosureRef only when a key is pressed
+    const floatingProps = getFloatingProps({ onKeyDown: handleArrowLeft })
 
     return (
-      <Popup
-        align={align}
-        aria-label={ariaLabel}
-        className={cn(className, menuStyle.menu({ arrow: hasArrow, searchable }))}
-        debounceDelay={isTriggerMethodHover ? 250 : 0}
-        dynamicDomRendering={dynamicDomRendering}
-        hasArrow={hasArrow}
-        hideOnClickOutside
-        id={finalId}
-        maxHeight={maxHeight ?? 'fit-content'}
-        onClose={() => {
-          setIsVisible(false)
-          setLocalChild(null)
-          if (triggerMethod === 'click') {
-            disclosureRef.current?.focus()
-          }
-          setShouldBeVisible(undefined)
-        }}
-        onKeyDown={handleTabOpen}
-        placement={isNested ? 'nested-menu' : placement}
-        portalTarget={portalTarget}
-        ref={menuRef}
-        role="dialog"
-        style={style}
-        tabIndex={-1}
-        text={
+      <>
+        <Popup.Trigger triggerEvent={finalTriggerMethod}>
+          <DisclosureContext.Provider value>{finalDisclosure}</DisclosureContext.Provider>
+        </Popup.Trigger>
+        <Popup.Panel
+          aria-label={ariaLabel}
+          className={cn(className, menuStyle.menu({ arrow: hasArrow, searchable }))}
+          arrow={hasArrow}
+          placement={placement ?? (isNested ? 'right-start' : 'bottom-end')}
+          portalTarget={portalTarget}
+          ref={menuRef}
+          style={style}
+        >
           <Stack
             className={cn(className, menuStyle.list)}
             data-testid={dataTestId}
-            onKeyDown={handleKeyDown}
-            onMouseEnter={() => setShouldBeVisible(true)}
-            onMouseLeave={() => setShouldBeVisible(false)}
+            {...floatingProps}
             role="menu"
             style={assignInlineVars({
               [heightMenu]: maxHeight ?? '30rem',
-              [heightAvailableSpace]: popupMaxHeight,
             })}
           >
             <Stack className={menuStyle.content} ref={contentRef}>
               {searchable && typeof children !== 'function' ? (
-                <SearchInput className={menuStyle.searchInput} onSearch={onSearch} ref={searchInputRef} size="small" />
+                <SearchInput className={menuStyle.searchInput} onSearch={onSearch} size="small" />
               ) : null}
-              {finalChild}
+              <ListNavigationContext.Provider value={typeof listItemProps === 'function' ? undefined : listItemProps}>
+                {finalChild}
+              </ListNavigationContext.Provider>
             </Stack>
             {footer ? <Stack className={menuStyle.footer}>{footer}</Stack> : null}
           </Stack>
-        }
-        visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
-      >
-        <DisclosureContext.Provider value>{finalDisclosure}</DisclosureContext.Provider>
-      </Popup>
+        </Popup.Panel>
+      </>
     )
   },
 )

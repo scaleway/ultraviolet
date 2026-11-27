@@ -2,16 +2,20 @@
 import {
   autoUpdate,
   flip,
+  FloatingNode,
+  FloatingTree,
   offset,
   shift,
   useDismiss,
   useFloating,
+  useFloatingNodeId,
+  useFloatingTree,
   useInteractions,
   useTransitionStatus,
 } from '@floating-ui/react'
-import type { Middleware, Placement } from '@floating-ui/react'
+import type { Middleware, OpenChangeReason, Placement, UseFloatingReturn } from '@floating-ui/react'
 import { usePrefersReducedMotion } from '@ultraviolet/animations'
-import { useCallback, useEffect, useId, useMemo, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { isHeadlessTestEnvironment } from '../../../../helpers/isHeadlessTestEnvironment'
 import { PopupContext } from './context'
@@ -19,6 +23,17 @@ import type { PopupRole } from './context'
 import { ANIMATION_DURATION } from './styles.css'
 
 const DEFAULT_MIDDLEWARE = [offset(8), flip(), shift()]
+
+const isInDialog = (element: EventTarget | null | undefined, floatingElement: HTMLElement | null | undefined) => {
+  const dialog = element instanceof Element ? element.closest('dialog') : null
+  return dialog?.open && !dialog.contains(floatingElement ?? null) ? dialog : null
+}
+
+const stopEscapePropagation = (event: KeyboardEvent) => {
+  if (event.key === 'Escape') {
+    event.stopPropagation()
+  }
+}
 
 type PopupRootProps = {
   children: ReactNode
@@ -43,7 +58,11 @@ type PopupRootProps = {
  * Owns the floating context, the controlled/uncontrolled open state and the
  * dismiss behavior (outside click + Escape). Renders no DOM element.
  */
-export const Root = ({ children, defaultVisible = false, onOpenChange, visible }: PopupRootProps) => {
+const PopupRoot = ({ children, defaultVisible = false, onOpenChange, visible }: PopupRootProps) => {
+  // Register the popup in the shared `FloatingTree` so that nested popups (see nested Menu) share the same tree,
+  // in order for Floating UI to keep parent popups open while a nested popup is open or focused.
+  const nodeId = useFloatingNodeId() ?? ''
+
   const [uncontrolledOpen, setUncontrolledOpen] = useState(defaultVisible)
   const isControlled = visible !== undefined
   const open = isControlled ? visible : uncontrolledOpen
@@ -58,6 +77,31 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
     [isControlled, onOpenChange],
   )
 
+  const floatingRef = useRef<UseFloatingReturn | null>(null)
+  const handleOpenChange = useCallback(
+    (shouldOpen: boolean, event?: Event, reason?: OpenChangeReason) => {
+      if (!shouldOpen && reason === 'focus-out') {
+        const newlyFocusedElement = (event as FocusEvent | undefined)?.relatedTarget
+        if (isInDialog(newlyFocusedElement, floatingRef.current?.refs.floating.current)) {
+          // a dialog opened from a button in the floating element (i.e. Menu.Item) should not close the Menu
+          return
+        }
+      }
+
+      if (!shouldOpen && reason === 'escape-key') {
+        // let an open Modal inside the popup close on Escape without closing the popup
+        if (isInDialog(document.activeElement, floatingRef.current?.refs.floating.current)) {
+          return
+        }
+        // Escape must not close an enclosing Modal, which closes on the Escape keyup.
+        document.addEventListener('keyup', stopEscapePropagation, { capture: true, once: true })
+      }
+
+      setOpen(shouldOpen)
+    },
+    [setOpen],
+  )
+
   const [placement, setPlacement] = useState<Placement>('bottom')
   const [panelMiddleware, setPanelMiddleware] = useState<Middleware[]>([])
   const [role, setRole] = useState<PopupRole>('dialog')
@@ -65,46 +109,24 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
   const middleware = useMemo(() => [...DEFAULT_MIDDLEWARE, ...panelMiddleware], [panelMiddleware])
 
   const floating = useFloating({
+    nodeId,
     open,
-    onOpenChange: setOpen,
+    onOpenChange: handleOpenChange,
     placement,
     middleware,
     whileElementsMounted: autoUpdate,
   })
 
-  const dismiss = useDismiss(floating.context)
+  // floatingRef allows to use handleOpenChange as a parameter of useFloating
+  // while reading its output (floating.refs) in handleOpenChange
+  // oxlint-disable-next-line react/refs
+  floatingRef.current = floating
+
+  // Escape is handled by Floating UI's useDismiss, which skips ancestors of an
+  // open nested popup (only the innermost one closes) and stops the keydown from
+  // reaching an enclosing Modal.
+  const dismiss = useDismiss(floating.context, { capture: { escapeKey: true } })
   const { getFloatingProps } = useInteractions([dismiss])
-
-  // Escape must close the popup and not an enclosing Modal, which reacts to Escape too.
-  // We listen to keyboard events in the capture phase, before all other listeners that are in the bubble phase.
-  useEffect(() => {
-    const handleKeyUp = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        event.stopPropagation()
-      }
-    }
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (!open || event.key !== 'Escape') {
-        return
-      }
-
-      // A Modal opened inside the popup is above it: let it handle Escape first.
-      const activeDialog = document.activeElement?.closest('dialog')
-      if (activeDialog?.open && !activeDialog.contains(floating.refs.floating.current)) {
-        return
-      }
-
-      event.stopPropagation()
-      setOpen(false)
-      document.addEventListener('keyup', handleKeyUp, { capture: true, once: true })
-    }
-
-    document.addEventListener('keydown', handleKeyDown, { capture: true })
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown, { capture: true })
-    }
-  }, [open, setOpen, floating.refs])
 
   const prefersReducedMotion = usePrefersReducedMotion()
 
@@ -112,14 +134,12 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
     duration: isHeadlessTestEnvironment || prefersReducedMotion ? 0 : ANIMATION_DURATION,
   })
 
-  const id = useId()
-
   const value = useMemo(
     () => ({
       ...floating,
       open,
       setOpen,
-      id,
+      id: nodeId,
       role,
       setRole,
       setPlacement,
@@ -133,7 +153,7 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
       floating,
       open,
       setOpen,
-      id,
+      nodeId,
       role,
       setRole,
       setPlacement,
@@ -145,7 +165,24 @@ export const Root = ({ children, defaultVisible = false, onOpenChange, visible }
     ],
   )
 
-  return <PopupContext.Provider value={value}>{children}</PopupContext.Provider>
+  return (
+    <FloatingNode id={nodeId}>
+      <PopupContext.Provider value={value}>{children}</PopupContext.Provider>
+    </FloatingNode>
+  )
+}
+
+export const Root = (props: PopupRootProps) => {
+  const parentTree = useFloatingTree()
+  if (parentTree) {
+    return <PopupRoot {...props} />
+  }
+
+  return (
+    <FloatingTree>
+      <PopupRoot {...props} />
+    </FloatingTree>
+  )
 }
 
 Root.displayName = 'Popup.Root'

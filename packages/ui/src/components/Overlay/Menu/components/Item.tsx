@@ -2,15 +2,27 @@
 
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { cn } from '@ultraviolet/utils'
-import { forwardRef, useCallback } from 'react'
-import type { CSSProperties, KeyboardEvent, MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
+import { forwardRef } from 'react'
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  CSSProperties,
+  KeyboardEvent,
+  MouseEvent,
+  MouseEventHandler,
+  ReactNode,
+  Ref,
+} from 'react'
 import { Stack } from '../../../Layout/Stack'
+import { usePopupContext } from '../../Popup/v2/context'
 import { Tooltip } from '../../Tooltip'
-import { getListItem } from '../helpers'
-import { useDisclosureContext, useMenu } from '../MenuProvider'
+import { useDisclosureContext, useListNavigationProps, useMenu } from '../MenuProvider'
 import { menuStyle } from '../styles.css'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
+
+// The item is either an <a> or a <button>, so its props are the intersection of both.
+type MenuItemElementProps = AnchorHTMLAttributes<HTMLAnchorElement> & ButtonHTMLAttributes<HTMLButtonElement>
 
 type ItemProps = {
   href?: HTMLAnchorElement['href']
@@ -32,15 +44,6 @@ type ItemProps = {
   style?: CSSProperties
   rightComponent?: ReactNode
   hideOnClick?: boolean | undefined
-}
-
-const focusFistElement = (firstElementInNestedMenu: HTMLAnchorElement | HTMLButtonElement) => {
-  if (['BUTTON', 'A'].includes(firstElementInNestedMenu.tagName)) {
-    ;(firstElementInNestedMenu as HTMLElement).focus()
-  } else if (firstElementInNestedMenu.firstChild instanceof HTMLElement) {
-    // Another nested menu
-    firstElementInNestedMenu.firstChild.focus()
-  }
 }
 
 export const Item = forwardRef<HTMLElement, ItemProps>(
@@ -65,121 +68,59 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
     },
     ref,
   ) => {
-    const { hideOnClickItem, setIsVisible, isVisible, menuRef, isNested, parentDisclosureRef, disclosureRef } =
-      useMenu()
+    const { hideOnClickItem, isNested, closeMenu: closeCurrentMenu, parentCloseMenu, disclosureRef } = useMenu()
+    const { open, setOpen } = usePopupContext()
     const isDisclosure = useDisclosureContext()
+    const listNavigationProps = useListNavigationProps()
+    // `HTMLProps` types `type` as `string`, incompatible with the button's `type` union; list navigation never sets it.
+    const { type: _type, ...listNavigationElementProps } = listNavigationProps ?? {}
+    const closeMenu = isDisclosure ? parentCloseMenu : closeCurrentMenu
 
-    const onClickHandle = useCallback(
-      (event: MouseEvent<HTMLAnchorElement>) => {
-        if (disabled) {
-          return undefined
-        }
-        onClick?.(event)
-        if (hideOnClickItem || hideOnClick) {
-          setIsVisible(false)
-        }
+    const isLink = Boolean(href) && !disabled
+    const Element = isLink ? 'a' : 'button'
+    const linkProps: MenuItemElementProps = { href, rel, target }
+    const buttonProps: MenuItemElementProps = { disabled, type: 'button' }
 
-        return undefined
-      },
-      [disabled, hideOnClickItem, hideOnClick, onClick, setIsVisible],
-    )
-
-    const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => {
-      if (isDisclosure && ['Enter', ' ', 'ArrowRight'].includes(event.key)) {
-        disclosureRef?.current?.click()
-        setTimeout(() => {
-          if (menuRef.current?.children) {
-            const listItem = getListItem([...menuRef.current.children[0].children[0].children])
-            if (listItem[0]) {
-              focusFistElement(listItem[0])
-            }
-          }
-        }, 50)
-      } else if (
-        event.key === 'ArrowLeft' &&
-        isNested &&
-        ((isDisclosure && parentDisclosureRef?.current?.dataset['isMenuItem']) || !isDisclosure) &&
-        parentDisclosureRef?.current
-      ) {
-        // Focus the disclosure in the parent menu & close the nested menu
-        // When the item is a disclosure, we must click the parent disclosure (since disclosureRef is the Item itself)
-        ;(isDisclosure ? parentDisclosureRef : disclosureRef).current?.click()
+    const handleClick = (event: MouseEvent<HTMLElement>) => {
+      const focusedDialog = document.activeElement?.closest('dialog')
+      // A dialog opened by this item (e.g. a Modal disclosure) already took focus: don't steal it back.
+      if (!focusedDialog || focusedDialog.contains(event.currentTarget)) {
+        listNavigationProps?.onClick?.(event)
+      }
+      // Items inside a submenu open it, they don't navigate.
+      if (!isLink && isNested) {
+        event.preventDefault()
+      }
+      onClick?.(event)
+      if (hideOnClickItem || hideOnClick) {
+        setOpen(false)
       }
     }
 
-    if (href && !disabled) {
-      return (
-        <div className={menuStyle.itemContainer({ borderless })} data-search-text={searchText} style={style}>
-          <Tooltip text={tooltip}>
-            <a
-              className={cn(className, menuStyle.item({ borderless: true, disabled, sentiment }))}
-              data-active={active}
-              data-is-disclosure={isDisclosure}
-              data-is-menu-item
-              data-testid={dataTestId}
-              href={href}
-              onClick={onClickHandle}
-              onKeyDown={handleKeyDown}
-              // oxlint-disable-next-line typescript/no-unsafe-type-assertion
-              ref={ref as Ref<HTMLAnchorElement>}
-              rel={rel}
-              role="menuitem"
-              target={target}
-            >
-              {isDisclosure || rightComponent ? (
-                <Stack alignItems="center" direction="row" justifyContent="space-between" width="100%">
-                  {children}
-                  {rightComponent ? (
-                    // oxlint-disable-next-line jsx-a11y/interactive-supports-focus
-                    <div
-                      onClick={event => {
-                        event.stopPropagation()
-                        event.preventDefault()
-                      }}
-                      onKeyDown={event => {
-                        event.stopPropagation()
-                        event.preventDefault()
-                      }}
-                      role="menuitem"
-                    >
-                      {rightComponent}
-                    </div>
-                  ) : null}
-                  {isDisclosure ? <ArrowRightIcon /> : null}
-                </Stack>
-              ) : (
-                children
-              )}
-            </a>
-          </Tooltip>
-        </div>
-      )
+    const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+      if (isDisclosure && event.key === 'ArrowRight') {
+        disclosureRef?.current?.click()
+      } else if (event.key === 'ArrowLeft' && isNested && closeMenu?.()) {
+        event.stopPropagation()
+      }
     }
 
     return (
       <div className={menuStyle.itemContainer({ borderless })} data-search-text={searchText} style={style}>
         <Tooltip text={tooltip}>
-          <button
-            className={cn(className, menuStyle.item({ borderless, disabled, sentiment }))}
-            data-active={active || (isVisible && isDisclosure)}
+          <Element
+            {...listNavigationElementProps}
+            {...(isLink ? linkProps : buttonProps)}
+            className={cn(className, menuStyle.item({ disabled, sentiment }))}
+            data-active={active || (open && isDisclosure)}
             data-is-disclosure={isDisclosure}
             data-is-menu-item
             data-testid={dataTestId}
-            disabled={disabled}
-            onClick={event => {
-              if (isNested) {
-                event.preventDefault()
-              }
-              onClick?.(event)
-              if (hideOnClickItem || hideOnClick) {
-                setIsVisible(false)
-              }
-            }}
+            onClick={handleClick}
             onKeyDown={handleKeyDown}
             // oxlint-disable-next-line typescript/no-unsafe-type-assertion
-            ref={ref as Ref<HTMLButtonElement>}
+            ref={ref as unknown as Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>}
             role="menuitem"
-            type="button"
           >
             {isDisclosure || rightComponent ? (
               <Stack alignItems="center" direction="row" justifyContent="space-between" width="100%">
@@ -192,8 +133,10 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
                       event.preventDefault()
                     }}
                     onKeyDown={event => {
-                      event.stopPropagation()
-                      event.preventDefault()
+                      if (event.key !== 'Tab') {
+                        event.stopPropagation()
+                        event.preventDefault()
+                      }
                     }}
                     role="menuitem"
                   >
@@ -205,7 +148,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
             ) : (
               children
             )}
-          </button>
+          </Element>
         </Tooltip>
       </div>
     )

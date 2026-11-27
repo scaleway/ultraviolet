@@ -1,4 +1,4 @@
-import { screen, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { useRef } from 'react'
 import { describe, expect, it, vi } from 'vitest'
@@ -102,6 +102,30 @@ describe('popup v2', () => {
       expect(screen.queryByRole('menuitem', { name: 'Create' })).not.toBeInTheDocument()
       expect(onClose).not.toHaveBeenCalled()
       expect(screen.getByRole('dialog')).toBeVisible()
+    })
+
+    it('should not close the popup on Escape while an open Modal inside it is focused', async () => {
+      const onOpenChange = vi.fn()
+      renderWithTheme(
+        <Popup.Root onOpenChange={onOpenChange} visible>
+          <Popup.Trigger>
+            <button type="button">Open</button>
+          </Popup.Trigger>
+          <Popup.Panel>
+            <Modal disclosure={<button type="button">Open modal</button>}>
+              <button type="button">In Modal</button>
+            </Modal>
+          </Popup.Panel>
+        </Popup.Root>,
+      )
+
+      await userEvent.click(await screen.findByRole('button', { name: 'Open modal' }))
+      const inModalButton = await screen.findByRole('button', { name: 'In Modal' })
+      inModalButton.focus()
+      fireEvent.keyDown(inModalButton, { key: 'Escape' })
+
+      expect(onOpenChange).not.toHaveBeenCalled()
+      expect(inModalButton).toBeVisible()
     })
 
     it('should call onOpenChange when dismissed by an outside click', async () => {

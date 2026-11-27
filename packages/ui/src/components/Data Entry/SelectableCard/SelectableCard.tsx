@@ -4,6 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { forwardRef, useCallback, useMemo, useRef } from 'react'
 import type { ForwardedRef, KeyboardEventHandler, MouseEventHandler } from 'react'
+import { isPlainTextContent } from '../../../helpers/isPlainTextContent'
 import { Stack } from '../../Layout/Stack'
 import { Tooltip } from '../../Overlay/Tooltip'
 import { Text } from '../../Typography/Text'
@@ -70,13 +71,7 @@ export const SelectableCard = forwardRef(
       [innerRef],
     )
 
-    const isTextChildren = useMemo(
-      () =>
-        (Array.isArray(children) ? children : [children]).every(
-          child => typeof child === 'string' || typeof child === 'number',
-        ),
-      [children],
-    )
+    const isTextChildren = typeof children !== 'function' && isPlainTextContent(children)
 
     const isComplexChildren = typeof children === 'function' || (typeof children === 'object' && !isTextChildren)
 

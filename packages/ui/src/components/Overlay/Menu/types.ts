@@ -1,19 +1,22 @@
-import type { ButtonHTMLAttributes, ComponentProps, ReactElement, ReactNode, Ref } from 'react'
-import type { Popup } from '../Popup'
+import type { Placement } from '@floating-ui/react'
+import type { ButtonHTMLAttributes, CSSProperties, ReactElement, ReactNode, RefAttributes } from 'react'
 
 type ChildMenuProps = {
   toggle: () => void
 }
 
 type DisclosureElement =
-  | ((disclosure: DisclosureProps) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
-  | (ReactElement<ButtonHTMLAttributes<HTMLButtonElement>> & {
-      ref?: Ref<HTMLButtonElement>
-    })
+  | ((
+      disclosure: DisclosureProps,
+    ) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement> & RefAttributes<HTMLButtonElement>>)
+  | ReactElement<ButtonHTMLAttributes<HTMLButtonElement> & RefAttributes<HTMLButtonElement>>
 
 export type DisclosureProps = { visible: boolean }
 
 export type MenuProps = {
+  /**
+   * @deprecated the panel id is auto-generated.
+   */
   id?: string
   ariaLabel?: string
   children?: ReactNode | (({ toggle }: ChildMenuProps) => ReactNode)
@@ -43,9 +46,20 @@ export type MenuProps = {
    */
   hideOnClickItem?: boolean
   footer?: ReactNode
-  placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
+  placement?: Placement
   /**
    * When set to true, the menu shrinks (height) to avoid overflow on the page
+   * @deprecated popup position will flip to avoid overflow on the page, the prop is ignored
    */
   shrink?: boolean
-} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align' | 'style'>
+  /**
+   * @deprecated the popup is always rendered dynamically.
+   * This property is ignored and will be removed in the next major release.
+   */
+  dynamicDomRendering?: boolean
+  /**
+   * @deprecated the alignment is now included in the placement prop.
+   */
+  align?: 'start' | 'center'
+  style?: CSSProperties
+}

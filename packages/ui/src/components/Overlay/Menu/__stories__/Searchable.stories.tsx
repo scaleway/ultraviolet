@@ -1,11 +1,10 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import type { ComponentProps, ReactNode } from 'react'
 import { Menu } from '..'
-import { Button } from '../../../Action/Button'
 import { Badge } from '../../../Badges/Badge'
 import { Stack } from '../../../Layout/Stack'
 import { Avatar } from '../../../Other/Avatar'
+import { DefaultDisclosure } from './Template.stories'
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof Menu.Item>['sentiment']
@@ -25,17 +24,7 @@ const Item = ({ sentiment, active, colors, children, searchText }: ItemProps) =>
 )
 
 export const Searchable: StoryFn<typeof Menu> = props => (
-  <Menu
-    {...props}
-    align="start"
-    disclosure={
-      <Button sentiment="neutral" size="small" variant="ghost">
-        <DotsHorizontalIcon />
-      </Button>
-    }
-    hideOnClickItem
-    searchable
-  >
+  <Menu {...props} disclosure={DefaultDisclosure} hideOnClickItem searchable>
     <Item active colors={['#BF95F9', '#3D1862']} searchText="default project" sentiment="primary">
       <Stack alignItems="center" direction="row" gap={1}>
         Default Project

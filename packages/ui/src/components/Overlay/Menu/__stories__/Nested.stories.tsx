@@ -14,7 +14,7 @@ export const Nested: StoryFn<typeof Menu> = ({ ...props }) => (
     {/**
      * VERY NESTED MENUS
      */}
-    <Menu disclosure={<Menu.Item>click for a very nested menu</Menu.Item>}>
+    <Menu disclosure={<Menu.Item>Very nested menu</Menu.Item>}>
       <Menu disclosure={<Menu.Item>nested 1</Menu.Item>}>
         <Menu.Item borderless>Item</Menu.Item>
         <Menu.Item borderless>Item</Menu.Item>
