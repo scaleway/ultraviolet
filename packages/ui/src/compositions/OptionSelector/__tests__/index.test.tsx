@@ -2,7 +2,7 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { describe, expect, it, vi } from 'vitest'
 import { OptionSelector } from '..'
-import { renderWithTheme, shouldMatchSnapshot } from '../../../__tests__/helpers'
+import { renderWithTheme } from '../../../__tests__/helpers'
 import { firstSelectorOptions, franceOptions } from '../__mock__/resources'
 
 const value = { first: firstSelectorOptions[0].value }
@@ -13,8 +13,8 @@ const valueBoth = {
 const valueSecond = { second: franceOptions[0].value }
 
 describe('optionSelector', () => {
-  it('should work with default props', () =>
-    shouldMatchSnapshot(
+  it('should work with default props', () => {
+    const { asFragment } = renderWithTheme(
       <OptionSelector
         firstSelector={{
           label: 'Region',
@@ -25,10 +25,13 @@ describe('optionSelector', () => {
           options: franceOptions,
         }}
       />,
-    ))
+    )
 
-  it('should work with direction vertical', () =>
-    shouldMatchSnapshot(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should work with direction vertical', () => {
+    const { asFragment } = renderWithTheme(
       <OptionSelector
         direction="vertical"
         firstSelector={{
@@ -40,7 +43,10 @@ describe('optionSelector', () => {
           options: franceOptions,
         }}
       />,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should work without hideWhenEmpty', () => {
     const { asFragment } = renderWithTheme(
@@ -56,11 +62,11 @@ describe('optionSelector', () => {
         }}
       />,
     )
-    const secondSelector = screen.getByTestId('second-selector')
+    const secondSelector = screen.getByRole('combobox', { name: 'Zone' })
     expect(secondSelector).toBeInTheDocument()
-    expect(secondSelector).toHaveAttribute('data-disabled', 'true')
+    expect(secondSelector).toHaveAttribute('aria-disabled', 'true')
 
-    expect(asFragment).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should work with hideWhenEmpty', () => {
@@ -79,8 +85,8 @@ describe('optionSelector', () => {
       />,
     )
 
-    expect(screen.queryByTestId('second-selector')).not.toBeInTheDocument()
-    expect(asFragment).toMatchSnapshot()
+    expect(screen.queryByRole('combobox', { name: 'Zone' })).not.toBeInTheDocument()
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should work with default values', () => {
@@ -100,9 +106,9 @@ describe('optionSelector', () => {
       />,
     )
 
-    const secondSelector = screen.getByTestId('second-selector')
+    const secondSelector = screen.getAllByRole('combobox')[1]
     expect(secondSelector).toBeInTheDocument()
-    expect(asFragment).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should work with error - first selector', () => {
@@ -121,9 +127,9 @@ describe('optionSelector', () => {
       />,
     )
 
-    const secondSelector = screen.getByTestId('second-selector')
-    expect(secondSelector).toHaveAttribute('data-disabled', 'true')
-    expect(asFragment).toMatchSnapshot()
+    const secondSelector = screen.getAllByRole('combobox')[1]
+    expect(secondSelector).toHaveAttribute('aria-disabled', 'true')
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should work with error - second selector', () => {
@@ -142,11 +148,11 @@ describe('optionSelector', () => {
       />,
     )
 
-    expect(asFragment).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should work with disabled', () =>
-    shouldMatchSnapshot(
+  it('should work with disabled', () => {
+    const { asFragment } = renderWithTheme(
       <OptionSelector
         disabled
         firstSelector={{
@@ -158,10 +164,13 @@ describe('optionSelector', () => {
           options: franceOptions,
         }}
       />,
-    ))
+    )
 
-  it('should work readonly', () =>
-    shouldMatchSnapshot(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should work readonly', () => {
+    const { asFragment } = renderWithTheme(
       <OptionSelector
         firstSelector={{
           label: 'Region',
@@ -173,7 +182,10 @@ describe('optionSelector', () => {
           options: franceOptions,
         }}
       />,
-    ))
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('should work with only one option', () => {
     const { asFragment } = renderWithTheme(
@@ -192,14 +204,13 @@ describe('optionSelector', () => {
     const paris = screen.getByText('PARIS')
     expect(paris).toBeVisible()
 
-    const secondSelector = screen.getByTestId('second-selector')
-    const firstSelector = screen.getByTestId('first-selector')
+    const [firstSelector, secondSelector] = screen.getAllByRole('combobox')
 
-    expect(firstSelector).toHaveAttribute('data-readonly', 'true')
+    expect(firstSelector).toHaveAttribute('aria-readonly', 'true')
     expect(secondSelector).toBeVisible()
-    expect(secondSelector).toHaveAttribute('data-readonly', 'true')
+    expect(secondSelector).toHaveAttribute('aria-readonly', 'true')
     expect(screen.getAllByText('PAR 1')[0]).toBeVisible()
-    expect(asFragment).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should work onChange - first selector', async () => {
@@ -224,18 +235,18 @@ describe('optionSelector', () => {
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
 
-    expect(screen.queryByTestId('second-selector')).not.toBeInTheDocument()
+    expect(screen.getAllByRole('combobox')).toHaveLength(1)
 
     const dropdown = screen.getByRole('dialog')
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
 
-    await userEvent.click(screen.getByTestId('option-pl'))
+    await userEvent.click(screen.getByRole('option', { name: 'WARSAW' }))
     expect(dropdown).not.toBeVisible()
     expect(screen.getByText('WARSAW')).toBeVisible()
     expect(onChange).toHaveBeenCalledOnce()
-    expect(asFragment).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should work onChang - second selector', async () => {
@@ -264,10 +275,10 @@ describe('optionSelector', () => {
       expect(dropdown).toBeVisible()
     })
 
-    await userEvent.click(screen.getByTestId('option-par-1'))
+    await userEvent.click(screen.getByRole('option', { name: /^PAR 1/v }))
     expect(dropdown).not.toBeVisible()
     expect(screen.getAllByText('PAR 1')[0]).toBeVisible()
     expect(onChange).toHaveBeenCalledOnce()
-    expect(asFragment).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot()
   })
 })

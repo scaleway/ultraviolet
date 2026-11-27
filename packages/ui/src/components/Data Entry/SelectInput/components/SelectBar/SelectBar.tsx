@@ -184,32 +184,39 @@ const SelectBar = ({
         aria-expanded={isDropdownVisible}
         aria-invalid={!!error}
         aria-required={required}
+        aria-disabled={disabled}
+        aria-readonly={readOnly}
         autoFocus={autoFocus}
         className={selectInputStyle.selectBar({
           disabled,
-          dropdownVisible: isDropdownVisible,
           readOnly,
           size,
           state,
         })}
-        data-disabled={disabled}
-        data-readonly={readOnly}
         data-testid={dataTestId}
         id={id}
-        onClick={openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined}
+        onClick={event => {
+          if (!openable) {
+            event.stopPropagation()
+          }
+        }}
         onKeyDown={event => {
-          if (event.key === 'ArrowDown') {
+          const { key } = event
+          if (key === 'ArrowDown' && openable) {
+            event.preventDefault()
             if (isDropdownVisible) {
               document.getElementById(listboxId)?.querySelector<HTMLElement>(OPTION_SELECTOR)?.focus()
             } else {
               setIsDropdownVisible(true)
             }
+            return
           }
-          if (event.key === ' ') {
-            event.preventDefault()
+          if (!openable && (key === 'Enter' || key === ' ')) {
+            event.stopPropagation()
+            if (key === ' ') {
+              event.preventDefault()
+            }
           }
-
-          return ['Enter', ' '].includes(event.key) && openable ? setIsDropdownVisible(!isDropdownVisible) : null
         }}
         ref={innerRef}
 
