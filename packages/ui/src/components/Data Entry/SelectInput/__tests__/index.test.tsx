@@ -1925,20 +1925,20 @@ describe('selectInput', () => {
     const AsyncSelect = () => {
       const [options, setOptions] = useState(dataUnGrouped)
 
+      // avoid use of timeout to simulate async as we have an internal debounce
+      const onSearch = (search: string) => {
+        setOptions(
+          search.length > 0
+            ? dataUnGrouped.filter(({ value }) => value.startsWith(search.toLowerCase()))
+            : dataUnGrouped,
+        )
+      }
+
       return (
         <SelectInput
           isLoading={options.length === 0}
           name="test"
-          onSearch={search => {
-            if (search.length === 0) {
-              setOptions(dataUnGrouped)
-            } else {
-              // Simulates an async query returning filtered options
-              setTimeout(() => {
-                setOptions(dataUnGrouped.filter(option => option.value.startsWith(search.toLowerCase())))
-              }, 100)
-            }
-          }}
+          onSearch={onSearch}
           options={options}
           placeholder="placeholder"
           placeholderSearch="placeholdersearch"

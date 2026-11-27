@@ -27,7 +27,7 @@ export const AddOption = ({
     onSearch?.(search)
   }
 
-  if (!addOption || !searchable || !(isEmpty || onSearch)) {
+  if (!addOption || !searchable || !(isEmpty || searchInput)) {
     return null
   }
 

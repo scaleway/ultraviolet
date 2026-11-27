@@ -113,7 +113,7 @@ export const Dropdown = ({
     if (!searchInput || onSearch) {
       setDisplayedOptions(options)
     }
-  }, [setDisplayedOptions, options, searchInput, onSearch])
+  }, [searchInput, setDisplayedOptions, options, onSearch])
 
   useEffect(() => {
     const eventKeydown = (event: globalThis.KeyboardEvent) =>

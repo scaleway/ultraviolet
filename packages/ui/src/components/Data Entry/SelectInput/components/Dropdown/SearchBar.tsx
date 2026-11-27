@@ -3,7 +3,7 @@
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
 import { cn, useDebouncedCallback } from '@ultraviolet/utils'
-import type { Dispatch, KeyboardEvent, RefObject, SetStateAction } from 'react'
+import type { ChangeEventHandler, Dispatch, KeyboardEvent, RefObject, SetStateAction } from 'react'
 import { searchInputStyle } from '../../../../styles'
 import { TextInput } from '../../../TextInput'
 import { OPTION_SELECTOR } from '../../constants'
@@ -102,10 +102,8 @@ export const SearchBar = ({
 
   const debouncedOnSearch = useDebouncedCallback(onSearch ?? noop, SEARCH_DEBOUNCE)
 
-  const handleChange = (search: string) => {
-    if (onSearch) {
-      debouncedOnSearch(search)
-    } else if (search.length > 0) {
+  const internalSearch = (search: string) => {
+    if (search.length > 0) {
       const query = escapeRegExp(search)
       const filteredOptions = Array.isArray(options)
         ? searchRegex([...options], query)
@@ -116,6 +114,15 @@ export const SearchBar = ({
       setDisplayedOptions(filteredOptions)
     } else {
       setDisplayedOptions(options)
+    }
+  }
+
+  const handleChange: ChangeEventHandler<HTMLInputElement, HTMLInputElement> = event => {
+    const search = event.target.value
+    if (onSearch) {
+      debouncedOnSearch(search)
+    } else {
+      internalSearch(search)
     }
     setSearchInput(search)
   }
@@ -153,7 +160,7 @@ export const SearchBar = ({
       className={cn(selectInputStyle.searchBar, searchInputStyle.searchInput)}
       data-testid="search-bar"
       onBlur={() => setSearchBarActive(false)}
-      onChange={event => handleChange(event.target.value)}
+      onChange={handleChange}
       onFocus={() => setSearchBarActive(true)}
       onKeyDown={event => handleKeyDown(event, searchInput)}
       placeholder={placeholder}
