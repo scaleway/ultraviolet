@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.31.1
+
+### Patch Changes
+
+- [`652d035`](https://github.com/scaleway/ultraviolet/commit/652d035797f53d9d814ef010507d78fc61cf5638) Thanks [@jsulpis](https://github.com/jsulpis)! - `List`: row hover, selected and expanded borders now follow the row `sentiment`, and on selectable rows the error state is forwarded to the checkbox.
+
+- [`652d035`](https://github.com/scaleway/ultraviolet/commit/652d035797f53d9d814ef010507d78fc61cf5638) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectableCard`: correctly apply the disabled state on a string description
+
+- [#7191](https://github.com/scaleway/ultraviolet/pull/7191) [`2acd033`](https://github.com/scaleway/ultraviolet/commit/2acd0334dbd7afe1763380a9b5c915736df9bded) Thanks [@jsulpis](https://github.com/jsulpis)! - `SelectInput` fix bugs:
+  - don't open when readonly
+  - fix stacking issue with the checkboxes in multiselect
+  - don't scroll when pressing ArrowDown or Space
+  - make keyboard focus states consistent with other components
+
+- [`652d035`](https://github.com/scaleway/ultraviolet/commit/652d035797f53d9d814ef010507d78fc61cf5638) Thanks [@jsulpis](https://github.com/jsulpis)! - `Slider`: remove the min-width on the double slider track that broke the component when space is limited
+
 ## 3.31.0
 
 ### Minor Changes
