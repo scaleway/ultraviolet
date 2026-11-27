@@ -12,13 +12,30 @@ import {
 } from './reducerFunctions'
 import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 
+type SelectInputProviderProps<IsMulti extends true | false> = {
+  options: DataType
+  selectAll?: { label: ReactNode; description?: string }
+  children: ReactNode
+  value?: string | string[]
+  size: 'small' | 'medium' | 'large'
+  selectAllGroup: boolean
+  numberOfOptions: number
+  numberOfDisabledOptions: number
+  multiselect: IsMulti
+  refSelect?: RefObject<HTMLDivElement | null>
+  onChange?: IsMulti extends true ? (value: string[]) => void : (value: string) => void
+  onOpen?: () => void
+  onSearch?: (search: string) => void
+}
+
 type ContextProps = {
   options: DataType
-  onSearch: Dispatch<SetStateAction<DataType>>
+  setDisplayedOptions: Dispatch<SetStateAction<DataType>>
   isDropdownVisible: boolean
-  setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
+  setIsDropdownVisible: (bool: boolean) => void
   searchInput: string
-  setSearchInput: Dispatch<SetStateAction<string>>
+  setSearchInput: (search: string) => void
+  onSearch?: (search: string) => void
   selectAll?: { label: ReactNode; description?: string }
   selectAllGroup: boolean
   numberOfOptions: number
@@ -41,10 +58,11 @@ type ContextProps = {
 const SelectInputContext = createContext<ContextProps>({
   displayedOptions: [],
   isDropdownVisible: false,
-  multiselect: false as true | false,
+  multiselect: false,
   numberOfOptions: 0,
   numberOfDisabledOptions: 0,
   onChange: () => {},
+  setSearchInput: () => {},
   onSearch: () => {},
   options: [],
   searchInput: '',
@@ -52,29 +70,14 @@ const SelectInputContext = createContext<ContextProps>({
   selectAllGroup: false,
   selectedData: { selectedGroups: [], selectedValues: [] },
   setIsDropdownVisible: () => {},
-  setSearchInput: () => {},
   setSelectedData: () => {},
+  setDisplayedOptions: () => {},
   size: 'large',
 })
 
 export const useSelectInput = () => useContext(SelectInputContext)
 
-type SelectInputProviderProps<IsMulti extends boolean> = {
-  options: DataType
-  selectAll?: { label: ReactNode; description?: string }
-  children: ReactNode
-  value?: string | string[]
-  size: 'small' | 'medium' | 'large'
-  selectAllGroup: boolean
-  numberOfOptions: number
-  numberOfDisabledOptions: number
-  multiselect: IsMulti
-  refSelect?: RefObject<HTMLDivElement | null>
-  onChange?: IsMulti extends true ? (value: string[]) => void : (value: string) => void
-  onOpen?: () => void
-}
-
-export const SelectInputProvider = <T extends boolean>({
+export const SelectInputProvider = <T extends true | false>({
   options,
   multiselect,
   selectAll,
@@ -86,6 +89,7 @@ export const SelectInputProvider = <T extends boolean>({
   onChange,
   refSelect,
   onOpen,
+  onSearch,
   size,
 }: SelectInputProviderProps<T>) => {
   const currentValue = useMemo(() => {
@@ -187,42 +191,54 @@ export const SelectInputProvider = <T extends boolean>({
     })
   }, [currentValue, selectedGroups])
 
-  const providerValue = useMemo(
-    () =>
-      ({
-        displayedOptions,
-        isDropdownVisible,
-        multiselect,
-        numberOfOptions,
-        numberOfDisabledOptions,
-        onChange,
-        onSearch: setDisplayedOptions,
-        options,
-        searchInput,
-        selectAll,
-        selectAllGroup,
-        selectedData,
-        setIsDropdownVisible: handleDropDownVisible,
-        setSearchInput,
-        setSelectedData,
-        size,
-      }) as ContextProps,
-    [
+  const providerValue = useMemo(() => {
+    const commonContextProps = {
+      displayedOptions,
       isDropdownVisible,
-      handleDropDownVisible,
-      searchInput,
+      numberOfOptions,
+      numberOfDisabledOptions,
       options,
-      multiselect,
+      searchInput,
       selectAll,
       selectAllGroup,
-      numberOfOptions,
-      displayedOptions,
       selectedData,
+      setIsDropdownVisible: handleDropDownVisible,
+      setSearchInput,
+      onSearch,
+      setSelectedData,
+      setDisplayedOptions,
       size,
-      onChange,
-      numberOfDisabledOptions,
-    ],
-  )
+    }
+
+    // to avoid  casting on the full context object
+    return multiselect
+      ? {
+          ...commonContextProps,
+          multiselect: multiselect as true,
+          onChange: onChange as ((value: string[]) => void) | undefined,
+        }
+      : {
+          ...commonContextProps,
+          multiselect: multiselect as false,
+          onChange: onChange as ((value: string) => void) | undefined,
+        }
+  }, [
+    isDropdownVisible,
+    handleDropDownVisible,
+    searchInput,
+    options,
+    multiselect,
+    selectAll,
+    selectAllGroup,
+    numberOfOptions,
+    displayedOptions,
+    selectedData,
+    size,
+    onChange,
+    onSearch,
+    setSearchInput,
+    numberOfDisabledOptions,
+  ])
 
   return <SelectInputContext.Provider value={providerValue}>{children}</SelectInputContext.Provider>
 }

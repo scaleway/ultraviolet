@@ -82,8 +82,16 @@ export const Dropdown = ({
   listboxId,
   listboxLabelledBy,
 }: DropdownProps) => {
-  const { setIsDropdownVisible, isDropdownVisible, onSearch, searchInput, options, displayedOptions, numberOfOptions } =
-    useSelectInput()
+  const {
+    setIsDropdownVisible,
+    isDropdownVisible,
+    onSearch,
+    setDisplayedOptions,
+    searchInput,
+    options,
+    displayedOptions,
+    numberOfOptions,
+  } = useSelectInput()
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearchValue] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
@@ -102,10 +110,10 @@ export const Dropdown = ({
   }
 
   useEffect(() => {
-    if (!searchInput) {
-      onSearch(options)
+    if (!searchInput || onSearch) {
+      setDisplayedOptions(options)
     }
-  }, [onSearch, options, searchInput])
+  }, [searchInput, setDisplayedOptions, options, onSearch])
 
   useEffect(() => {
     const eventKeydown = (event: globalThis.KeyboardEvent) =>
@@ -174,7 +182,7 @@ export const Dropdown = ({
         initialFocus={!searchable && !isLoading && displayedOptionCount > 0 ? initialFocusRef : undefined}
       >
         <Stack>
-          {searchable && !isLoading ? (
+          {searchable && (!isLoading || onSearch) ? (
             <SearchBar
               displayedOptions={displayedOptions}
               inputRef={searchBarRef}

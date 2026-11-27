@@ -2,8 +2,8 @@
 
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
-import { cn } from '@ultraviolet/utils'
-import type { Dispatch, KeyboardEvent, RefObject, SetStateAction } from 'react'
+import { cn, useDebouncedCallback } from '@ultraviolet/utils'
+import type { ChangeEventHandler, Dispatch, KeyboardEvent, RefObject, SetStateAction } from 'react'
 import { searchInputStyle } from '../../../../styles'
 import { TextInput } from '../../../TextInput'
 import { OPTION_SELECTOR } from '../../constants'
@@ -75,6 +75,10 @@ const findClosestOption = (options: DataType, searchInput: string | undefined) =
 
 const escapeRegExp = (string: string) => string.replaceAll(/[.*+?^{}()|[\]\\]/gu, String.raw`\$&`)
 
+const noop = () => {}
+
+const SEARCH_DEBOUNCE = 300
+
 export const SearchBar = ({
   placeholder,
   displayedOptions,
@@ -83,10 +87,22 @@ export const SearchBar = ({
   resultCountId,
   inputRef,
 }: SearchBarProps) => {
-  const { onChange, onSearch, setSearchInput, searchInput, options, multiselect, setSelectedData, selectedData, size } =
-    useSelectInput()
+  const {
+    onChange,
+    onSearch,
+    setDisplayedOptions,
+    searchInput,
+    setSearchInput,
+    options,
+    multiselect,
+    setSelectedData,
+    selectedData,
+    size,
+  } = useSelectInput()
 
-  const handleChange = (search: string) => {
+  const debouncedOnSearch = useDebouncedCallback(onSearch ?? noop, SEARCH_DEBOUNCE)
+
+  const internalSearch = (search: string) => {
     if (search.length > 0) {
       const query = escapeRegExp(search)
       const filteredOptions = Array.isArray(options)
@@ -95,9 +111,18 @@ export const SearchBar = ({
             Object.entries(options).map(([group, groupOptions]) => [group, searchRegex(groupOptions, query)]),
           )
 
-      onSearch(filteredOptions)
+      setDisplayedOptions(filteredOptions)
     } else {
-      onSearch(options)
+      setDisplayedOptions(options)
+    }
+  }
+
+  const handleChange: ChangeEventHandler<HTMLInputElement, HTMLInputElement> = event => {
+    const search = event.target.value
+    if (onSearch) {
+      debouncedOnSearch(search)
+    } else {
+      internalSearch(search)
     }
     setSearchInput(search)
   }
@@ -135,7 +160,7 @@ export const SearchBar = ({
       className={cn(selectInputStyle.searchBar, searchInputStyle.searchInput)}
       data-testid="search-bar"
       onBlur={() => setSearchBarActive(false)}
-      onChange={event => handleChange(event.target.value)}
+      onChange={handleChange}
       onFocus={() => setSearchBarActive(true)}
       onKeyDown={event => handleKeyDown(event, searchInput)}
       placeholder={placeholder}

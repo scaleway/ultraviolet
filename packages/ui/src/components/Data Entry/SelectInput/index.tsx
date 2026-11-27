@@ -67,7 +67,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    */
   error?: string | boolean
   /**
-   * @deprecated This property is automatically enabled when options.length >= 6 or if addOption is enable.
+   * @deprecated This property is automatically enabled when options.length >= 6, if addOption is enabled or if onSearch is provided.
    * Otherwise, no search bar
    */
   searchable?: boolean
@@ -75,6 +75,13 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = BaseFormCom
    * When searchable, set a combobox to dynamically add an option
    */
   addOption?: { text: string; onClick: (searchText: string) => void }
+  /**
+   * When provided, the search bar does not filter the options locally anymore:
+   * it is called with the search value, debounced by 300 milliseconds,
+   * and the consumer is responsible for updating `options` accordingly (e.g. from an async query).
+   * Please wrap that definition in useCallback.
+   */
+  onSearch?: (search: string) => void
   /**
    * Display a success message under the select bar
    */
@@ -162,6 +169,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   onChange,
   onFocus,
   onOpen,
+  onSearch,
   optionalInfoPlacement = 'right',
   options,
   placeholder = 'Select item',
@@ -201,6 +209,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
       numberOfOptions={numberOfOptions}
       onChange={onChange}
       onOpen={onOpen}
+      onSearch={onSearch}
       options={options}
       refSelect={ref}
       selectAll={selectAll}
@@ -235,7 +244,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             optionalInfoPlacement={optionalInfoPlacement}
             placeholder={placeholderSearch}
             portalTarget={portalTarget}
-            searchable={numberOfOptions >= 6 || !!addOption}
+            searchable={numberOfOptions >= 6 || !!addOption || !!onSearch}
           >
             <SelectBar
               aria-describedby={ariaDescribedBy || (hasHelperText(helper, error, success) ? helperId : undefined)}

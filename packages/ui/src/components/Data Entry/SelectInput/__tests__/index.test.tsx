@@ -9,6 +9,10 @@ import { cities, dataGrouped, dataGroupedSmall, dataGroupEmpty, dataUnGrouped, O
 // checkboxes are hidden (to avoid inputs inside a button)
 const getDecorativeCheckbox = (container: HTMLElement) => within(container).getByRole('checkbox', { hidden: true })
 
+// the plus tag is a decorative span (a Tag without onClose/copiable) with no ARIA role and
+// its only visible text is a dynamic overflow count, so it can't be queried by role or text
+const getPlusTag = () => screen.getByTestId('plus-tag')
+
 describe('selectInput', () => {
   beforeEach(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
@@ -1088,7 +1092,7 @@ describe('selectInput', () => {
     await userEvent.click(options[5])
     await userEvent.click(options[6])
 
-    const plustag = screen.getByTestId('plus-tag')
+    const plustag = getPlusTag()
     expect(plustag).toBeInTheDocument()
   })
 
@@ -1126,7 +1130,7 @@ describe('selectInput', () => {
       'earth',
       'pluto',
     ])
-    const plustag = screen.getByTestId('plus-tag')
+    const plustag = getPlusTag()
     expect(plustag).toBeInTheDocument()
 
     const venus = screen.getByRole('option', { name: 'Venus' })
@@ -1222,7 +1226,7 @@ describe('selectInput', () => {
     const selectAllCheckBox = getDecorativeCheckbox(selectAll)
     await userEvent.click(selectAll)
     expect(onChange).toHaveBeenCalledWith(['mercury', 'venus', 'earth', 'jupiter', 'saturn', 'uranus', 'neptune'])
-    const plustag = screen.getByTestId('plus-tag')
+    const plustag = getPlusTag()
     expect(plustag).toBeInTheDocument()
 
     const venus = screen.getByRole('option', { name: 'Venus' })
@@ -1855,5 +1859,112 @@ describe('selectInput', () => {
     await userEvent.keyboard('[Enter]')
 
     expect(onClick).toHaveBeenCalledTimes(2)
+  })
+
+  it('should be searchable when onSearch is provided and there are less than 6 items', async () => {
+    renderWithTheme(
+      <SelectInput
+        name="test"
+        onSearch={() => {}}
+        options={dataGroupedSmall}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+      />,
+    )
+    await userEvent.click(screen.getByText('placeholder'))
+
+    await waitFor(() => {
+      expect(screen.getByRole('textbox', { name: 'search-bar' })).toBeInTheDocument()
+    })
+  })
+
+  it('should debounce the onSearch callback, not filter the list and be called with the final value', async () => {
+    const onSearch = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        name="test"
+        onSearch={onSearch}
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+      />,
+    )
+    await userEvent.click(screen.getByText('placeholder'))
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
+    await userEvent.keyboard('e')
+
+    // The callback is debounced, it is not called synchronously
+    expect(onSearch).not.toHaveBeenCalled()
+    // The list is not filtered locally: all options are still displayed
+    expect(screen.getByRole('option', { name: 'Venus' })).toBeVisible()
+    expect(screen.getByRole('option', { name: /earth/iv })).toBeVisible()
+
+    await userEvent.keyboard('a')
+
+    // Only one call, with the final search value
+    await waitFor(() => {
+      expect(onSearch).toHaveBeenCalledTimes(1)
+    })
+    expect(onSearch).toHaveBeenCalledWith('ea')
+
+    // Clearing the search calls the callback with an empty string
+    await userEvent.keyboard('[Backspace]')
+    await userEvent.keyboard('[Backspace]')
+    await waitFor(() => {
+      expect(onSearch).toHaveBeenLastCalledWith('')
+    })
+  })
+
+  it('should display options from an async search when onSearch updates the options', async () => {
+    const AsyncSelect = () => {
+      const [options, setOptions] = useState(dataUnGrouped)
+
+      // avoid use of timeout to simulate async as we have an internal debounce
+      const onSearch = (search: string) => {
+        setOptions(
+          search.length > 0
+            ? dataUnGrouped.filter(({ value }) => value.startsWith(search.toLowerCase()))
+            : dataUnGrouped,
+        )
+      }
+
+      return (
+        <SelectInput
+          isLoading={options.length === 0}
+          name="test"
+          onSearch={onSearch}
+          options={options}
+          placeholder="placeholder"
+          placeholderSearch="placeholdersearch"
+        />
+      )
+    }
+
+    renderWithTheme(<AsyncSelect />)
+    await userEvent.click(screen.getByText('placeholder'))
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+
+    await userEvent.click(screen.getByRole('textbox', { name: 'search-bar' }))
+    await userEvent.keyboard('Mer')
+
+    // Async results replace the displayed options
+    await waitFor(
+      () => {
+        expect(screen.getByRole('option', { name: 'Mercury' })).toBeVisible()
+        expect(screen.queryByRole('option', { name: 'Venus' })).not.toBeInTheDocument()
+      },
+      { timeout: 2000 },
+    )
+    // The search bar is still visible and keeps its value while options update
+    expect(screen.getByRole('textbox', { name: 'search-bar' })).toHaveValue('Mer')
   })
 })
