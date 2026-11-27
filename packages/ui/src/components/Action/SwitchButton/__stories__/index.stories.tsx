@@ -9,10 +9,10 @@ export default {
   title: 'UI/Action/SwitchButton',
   parameters: {
     a11yStatus: {
-      perceivable: undefined,
-      operable: undefined,
-      understandable: undefined,
-      robust: undefined,
+      perceivable: true,
+      operable: false,
+      understandable: true,
+      robust: false,
     },
   },
 } as Meta
