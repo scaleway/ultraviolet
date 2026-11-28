@@ -604,8 +604,8 @@ importers:
   packages/form:
     dependencies:
       '@scaleway/phonenumber':
-        specifier: 1.0.1
-        version: 1.0.1
+        specifier: 1.0.2
+        version: 1.0.2
       '@ultraviolet/icons':
         specifier: workspace:^
         version: link:../icons
@@ -858,8 +858,8 @@ importers:
         specifier: 2.0.3
         version: 2.0.3
       '@scaleway/phonenumber':
-        specifier: 1.0.1
-        version: 1.0.1
+        specifier: 1.0.2
+        version: 1.0.2
       '@scaleway/types':
         specifier: 1.2.0
         version: 1.2.0(typescript@7.0.2)
@@ -4003,8 +4003,8 @@ packages:
     peerDependencies:
       oxlint: '>=1.80.0'
 
-  '@scaleway/phonenumber@1.0.1':
-    resolution: {integrity: sha512-pYjnaGF8RmeXzpQOqRE/slEaxyonsqnZ4w+NkwdP8LumEezWZF1jblp4rD4EmbfJ10Hi/oQVwHPjsGQM3yuyvg==}
+  '@scaleway/phonenumber@1.0.2':
+    resolution: {integrity: sha512-ANHjRdStNVPJLi40v8Mr5eF6JBa74g+Zcw7Xcw9QWnUYYLp2yo3GFZB0YoNHlCwX9XHpVDsB5dSR+GZrh6S3ew==}
     engines: {node: 24.x || 25.x || 26.x}
 
   '@scaleway/random-name@6.0.2':
@@ -11315,7 +11315,7 @@ snapshots:
     dependencies:
       oxlint: 1.85.0(oxlint-tsgolint@7.0.2003)
 
-  '@scaleway/phonenumber@1.0.1':
+  '@scaleway/phonenumber@1.0.2':
     dependencies:
       awesome-phonenumber: 7.8.0
 
