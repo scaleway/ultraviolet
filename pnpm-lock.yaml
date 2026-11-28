@@ -647,8 +647,8 @@ importers:
   packages/icons:
     dependencies:
       '@scaleway/types':
-        specifier: 1.2.0
-        version: 1.2.0(typescript@7.0.2)
+        specifier: 1.2.1
+        version: 1.2.1(typescript@7.0.2)
       '@ultraviolet/themes':
         specifier: workspace:^
         version: link:../themes
@@ -767,8 +767,8 @@ importers:
   packages/themes:
     dependencies:
       '@scaleway/types':
-        specifier: 1.2.0
-        version: 1.2.0(typescript@7.0.2)
+        specifier: 1.2.1
+        version: 1.2.1(typescript@7.0.2)
       '@scaleway/use-storage':
         specifier: 4.0.3
         version: 4.0.3(react@19.3.1)
@@ -861,8 +861,8 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@scaleway/types':
-        specifier: 1.2.0
-        version: 1.2.0(typescript@7.0.2)
+        specifier: 1.2.1
+        version: 1.2.1(typescript@7.0.2)
       '@scaleway/use-clipboard':
         specifier: 1.1.2
         version: 1.1.2(react@19.3.1)
@@ -4020,6 +4020,11 @@ packages:
 
   '@scaleway/types@1.2.0':
     resolution: {integrity: sha512-gPecxSR3x2JnUsJ3JBGFyWPiE2a2hBWPJX6BG87GuePiXzXDSPnCVHLOip/iGERizFQ525VkxL3ylR7k6x4wiA==}
+    peerDependencies:
+      typescript: '>=4.1'
+
+  '@scaleway/types@1.2.1':
+    resolution: {integrity: sha512-qz+VF4BLKcZPNvMviGQgWZXAufjOWWM67nwsaf9/kYY7bUNRAkdjEdx8g030siVS9brFrfqh7t8KAorwqoJf6A==}
     peerDependencies:
       typescript: '>=4.1'
 
@@ -11326,6 +11331,10 @@ snapshots:
   '@scaleway/tsconfig@1.1.6': {}
 
   '@scaleway/types@1.2.0(typescript@7.0.2)':
+    dependencies:
+      typescript: 7.0.2
+
+  '@scaleway/types@1.2.1(typescript@7.0.2)':
     dependencies:
       typescript: 7.0.2
 
